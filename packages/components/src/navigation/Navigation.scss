@@ -1,0 +1,35 @@
+:host {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    block-size: 100%;
+    background: var(--n-color-nav-surface);
+    overflow: hidden auto
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+
+nav {
+    flex-grow: 1;
+    padding: var(--n-space-m)
+}
+
+slot[name=footer],
+slot[name=header] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+slot[name=header] {
+    min-block-size: var(--n-space-xxl);
+    border-block-end: 1px solid var(--n-color-border)
+}
+
+slot[name=footer] {
+    padding: var(--n-space-m)
+}
