@@ -1,0 +1,85 @@
+:host {
+    --_n-button-group-border-radius: var(--n-button-group-border-radius, var(--n-border-radius-s));
+    --_n-button-group-box-shadow: var(--n-button-group-box-shadow, var(--n-box-shadow));
+    --n-button-border-radius: 0;
+    --n-button-box-shadow: none
+}
+
+.n-button-group {
+    display: flex;
+    max-inline-size: max-content;
+    border-radius: var(--_n-button-group-border-radius);
+    box-shadow: var(--_n-button-group-box-shadow)
+}
+
+:host([direction=horizontal]) ::slotted(*) {
+    margin-inline-end: -1px
+}
+
+::slotted(:is(:hover, :focus, :focus-within, [aria-pressed=true])) {
+    z-index: var(--n-index-masked)
+}
+
+::slotted([aria-pressed=true]) {
+    --n-button-background-color: var(--n-color-status-info-weak);
+    --n-button-border-color: var(--n-color-accent)
+}
+
+::slotted(:first-child) {
+    --n-button-border-radius: var(--_n-button-group-border-radius) 0 0 var(--_n-button-group-border-radius);
+    border-radius: var(--_n-button-group-border-radius) 0 0 var(--_n-button-group-border-radius)
+}
+
+::slotted(:last-child) {
+    --n-button-border-radius: 0 var(--_n-button-group-border-radius) var(--_n-button-group-border-radius) 0;
+    border-radius: 0 var(--_n-button-group-border-radius) var(--_n-button-group-border-radius) 0
+}
+
+:host([direction=vertical]) .n-button-group {
+    flex-direction: column
+}
+
+:host([direction=vertical]) ::slotted(*) {
+    margin-block-end: -1px
+}
+
+:host([direction=vertical]) ::slotted(:first-child) {
+    --n-button-border-radius: var(--_n-button-group-border-radius) var(--_n-button-group-border-radius) 0 0
+}
+
+:host([direction=vertical]) ::slotted(:last-child) {
+    --n-button-border-radius: 0 0 var(--_n-button-group-border-radius) var(--_n-button-group-border-radius)
+}
+
+::slotted(nord-button[variant=primary]) {
+    position: relative
+}
+
+::slotted(nord-button[variant=primary]:not(:is(:focus, :first-child)))::before,
+::slotted(nord-button[variant=primary]:not(:is(:focus, :last-child)))::after {
+    content: "";
+    position: absolute;
+    z-index: var(--n-index-mask);
+    background: var(--n-color-text);
+    opacity: .25
+}
+
+:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::after,
+:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::before {
+    inline-size: 1px;
+    inset-block: 0
+}
+
+:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::after {
+    inset-inline-end: 0
+}
+
+:host([direction=vertical]) ::slotted(nord-button[variant=primary])::after,
+:host([direction=vertical]) ::slotted(nord-button[variant=primary])::before {
+    block-size: 1px;
+    inset-inline: 0
+}
+
+:host([direction=vertical]) ::slotted(nord-button[variant=primary])::after {
+    inset-block-end: 0
+}

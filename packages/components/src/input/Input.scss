@@ -1,0 +1,160 @@
+.n-input::-webkit-search-cancel-button,
+.n-input::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none
+}
+
+.n-input-container {
+    font-size: var(--n-font-size-m);
+    display: grid;
+    grid-template-columns: max-content 1fr max-content
+}
+
+.n-input {
+    grid-area: 1/1/2/4
+}
+
+slot[name=end],
+slot[name=start] {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    color: var(--n-color-icon)
+}
+
+slot[name=start] {
+    grid-area: 1/1/2/2;
+    order: 1
+}
+
+slot[name=end] {
+    grid-area: 1/3/2/4
+}
+
+.is-rtl slot[name=end],
+slot[name=start] {
+    --n-button-border-radius: var(--n-border-radius-s) 0 0 var(--n-border-radius-s)
+}
+
+.is-rtl slot[name=start],
+slot[name=end] {
+    --n-button-border-radius: 0 var(--n-border-radius-s) var(--n-border-radius-s) 0
+}
+
+:is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
+nord-icon {
+    margin-inline-start: var(--n-space-m);
+    margin-inline-end: var(--n-space-m)
+}
+
+:host([size="s"]) :is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
+:host([size="s"]) nord-icon {
+    margin-inline-start: var(--n-space-s);
+    margin-inline-end: var(--n-space-s)
+}
+
+:host([size="l"]) :is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
+:host([size="l"]) nord-icon {
+    margin-inline-start: var(--n-space-m);
+    margin-inline-end: var(--n-space-m)
+}
+
+.has-start .n-input {
+    padding-inline-start: var(--n-space-xl)
+}
+
+.has-end .n-input {
+    padding-inline-end: var(--n-space-xl)
+}
+
+:host([size="s"]) .has-start .n-input,
+:host([size="s"][type=search]) .n-input {
+    padding-inline-start: var(--n-space-l)
+}
+
+:host([size="s"]) .has-end .n-input {
+    padding-inline-end: var(--n-space-l)
+}
+
+:host([size="l"]) .has-start .n-input,
+:host([size="l"][type=search]) .n-input {
+    padding-inline-start: calc(var(--n-space-xl) * 1.1)
+}
+
+:host([size="l"]) .has-end .n-input {
+    padding-inline-end: calc(var(--n-space-xl) * 1.1)
+}
+
+::slotted(nord-button:not([disabled])),
+::slotted(nord-dropdown) {
+    pointer-events: auto;
+    position: relative;
+    --n-button-box-shadow: none
+}
+
+::slotted(nord-button:active),
+::slotted(nord-dropdown:active:not([open])) {
+    inset-block-start: -1px
+}
+
+::slotted(nord-button[disabled]) {
+    --n-button-background-color: transparent
+}
+
+.n-input-container:hover:not(:focus-within) ::slotted(:is(nord-button, nord-dropdown)),
+.n-label-container:hover~.n-input-container:not(:focus-within) ::slotted(:is(nord-button, nord-dropdown)) {
+    --n-button-border-color: var(--n-input-border-color, var(--n-color-border-hover))
+}
+
+.n-input-container:focus-within ::slotted(:is(nord-button, nord-dropdown:not([open]))) {
+    --n-button-border-color: var(--n-input-border-color, var(--n-color-accent))
+}
+
+:host([error]) .n-input-container ::slotted(:is(nord-button:not(:focus), nord-dropdown:not(:focus-within), nord-dropdown[open])) {
+    --n-button-border-color: var(--n-input-border-color, var(--n-color-status-danger))
+}
+
+.has-start-button .n-input {
+    padding-inline-start: calc(var(--n-space-l) * 2)
+}
+
+.has-end-button .n-input {
+    padding-inline-end: calc(var(--n-space-l) * 2)
+}
+
+:host([size="s"]) .has-start-button .n-input {
+    padding-inline-start: calc(var(--n-space-m) * 2.5)
+}
+
+:host([size="s"]) .has-end-button .n-input {
+    padding-inline-end: calc(var(--n-space-m) * 2.5)
+}
+
+:host([size="l"]) .has-start-button .n-input {
+    padding-inline-start: calc(var(--n-space-l) * 2.5)
+}
+
+:host([size="l"]) .has-end-button .n-input {
+    padding-inline-end: calc(var(--n-space-l) * 2.5)
+}
+
+:host([size="s"]) ::slotted(nord-button) {
+    --_n-button-padding-inline: calc(var(--n-space-s) * 1.4)
+}
+
+:host {
+    --_n-input-icon-size: var(--n-size-icon-s)
+}
+
+:host([size="s"]) {
+    --_n-input-icon-size: var(--n-size-icon-xs)
+}
+
+:host([size="l"]) {
+    --_n-input-icon-size: var(--n-size-icon-m)
+}
+
+::slotted(nord-icon:not([size])),
+nord-icon {
+    --_n-icon-size: var(--_n-input-icon-size)
+}

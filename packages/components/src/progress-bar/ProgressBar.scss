@@ -1,0 +1,67 @@
+:host {
+    --_n-progress-size: var(--n-progress-size, var(--n-space-s));
+    --_n-progress-border-radius: var(--n-progress-border-radius, var(--n-border-radius-s));
+    --_n-progress-color: var(--n-progress-color, var(--n-color-accent));
+    inline-size: 100%
+}
+
+progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    inline-size: 100%;
+    block-size: var(--_n-progress-size);
+    background-color: var(--n-color-nav-hover);
+    border-radius: var(--_n-progress-border-radius);
+    box-shadow: none;
+    display: block;
+    border: 0;
+    margin: 0
+}
+
+label {
+    display: block
+}
+
+progress::-webkit-progress-bar {
+    background-color: transparent;
+    border-radius: var(--_n-progress-border-radius)
+}
+
+progress::-moz-progress-bar {
+    background: var(--_n-progress-color);
+    border-radius: var(--_n-progress-border-radius)
+}
+
+progress::-webkit-progress-value {
+    background: var(--_n-progress-color);
+    border-radius: var(--_n-progress-border-radius);
+    transition: width .25s ease-out, background .25s ease-out
+}
+
+progress:indeterminate {
+    background-color: var(--n-color-nav-hover);
+    background-image: linear-gradient(to right, transparent 45%, var(--n-color-accent) 0, var(--n-color-accent) 55%, transparent 0);
+    background-position: right;
+    background-size: 225% 100%;
+    animation: animate-indeterminate 2s infinite ease
+}
+
+progress:indeterminate::-moz-progress-bar {
+    background-color: transparent
+}
+
+progress:indeterminate::-webkit-progress-value {
+    background-color: transparent
+}
+
+@keyframes animate-indeterminate {
+    50% {
+        background-position: left
+    }
+}
+
+progress:focus {
+    box-shadow: 0 0 0 1px var(--n-color-background), 0 0 0 3px var(--n-color-accent);
+    outline: 0
+}

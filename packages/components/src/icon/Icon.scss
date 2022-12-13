@@ -1,0 +1,39 @@
+:host {
+    --_n-icon-size: var(--n-size-icon-m);
+    display: inline-block;
+    block-size: var(--_n-icon-size);
+    inline-size: var(--_n-icon-size);
+    min-inline-size: var(--_n-icon-size)
+}
+
+:host([size=xxs]) {
+    --_n-icon-size: var(--n-size-icon-xxs)
+}
+
+:host([size=xs]) {
+    --_n-icon-size: var(--n-size-icon-xs)
+}
+
+:host([size="s"]) {
+    --_n-icon-size: var(--n-size-icon-s)
+}
+
+:host([size="l"]) {
+    --_n-icon-size: var(--n-size-icon-l)
+}
+
+:host([size=xl]) {
+    --_n-icon-size: var(--n-size-icon-xl)
+}
+
+:host([size=xxl]) {
+    --_n-icon-size: var(--n-size-icon-xxl)
+}
+
+.n-icon {
+    display: block
+}
+
+svg {
+    display: block
+}

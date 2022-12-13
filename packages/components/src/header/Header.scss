@@ -1,0 +1,40 @@
+:host {
+    color: var(--n-color-text);
+    --_n-header-gutter: var(--n-space-l);
+    --_n-header-box-shadow: var(--n-box-shadow-header)
+}
+
+::slotted(*) {
+    margin: 0 !important
+}
+
+::slotted(a) {
+    color: var(--n-color-text-link);
+    text-decoration: underline
+}
+
+::slotted(a:hover) {
+    text-decoration: none
+}
+
+.n-header,
+.n-header-end {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: var(--n-space-m)
+}
+
+.n-header {
+    padding: var(--n-space-m) var(--n-space-l);
+    padding-inline-start: var(--_n-header-gutter);
+    background-color: var(--n-color-surface);
+    border-block-end: 1px solid var(--n-color-border);
+    box-shadow: var(--_n-header-box-shadow);
+    min-block-size: var(--n-space-xxl)
+}
+
+.n-header-end {
+    margin-inline-start: auto;
+    gap: var(--n-space-s)
+}

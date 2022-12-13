@@ -1,0 +1,1 @@
+:host{display:inline-flex}nord-icon{display:block}nord-icon[name=navigation-toggle-lock]{display:none}.is-rtl nord-icon[name=navigation-toggle-lock]{transform:rotate(180deg)}@media (min-width:768px){:host(:is(:hover,:focus-within)) nord-icon[name=navigation-toggle-lock]{display:block}:host(:is(:hover,:focus-within)) nord-icon[name=navigation-toggle]{display:none}}

@@ -1,0 +1,1 @@
+:host{--_n-divider-color:var(--n-divider-color, var(--n-color-border));--_n-divider-size:var(--n-divider-size, 1px)}:host([direction=horizontal]){display:block;border-block-start:var(--_n-divider-size) solid var(--_n-divider-color)}:host([direction=vertical]){display:inline-block;min-block-size:100%;border-inline-start:var(--_n-divider-size) solid var(--_n-divider-color)}

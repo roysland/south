@@ -1,0 +1,68 @@
+:host {
+    display: flex
+}
+
+.n-command {
+    display: flex;
+    flex: 1;
+    border-inline-start: 2px solid transparent;
+    align-items: center;
+    color: var(--n-color-text);
+    border-block-end: 1px solid var(--n-color-border);
+    padding: calc(var(--n-space-m)/ 1.5) var(--n-space-m)
+}
+
+.n-command.n-selected,
+.n-command:hover {
+    cursor: pointer;
+    background-color: var(--n-color-active)
+}
+
+.n-command.n-selected {
+    border-inline-start-color: var(--n-color-accent)
+}
+
+nord-icon {
+    color: var(--n-color-icon)
+}
+
+.n-command-icon {
+    margin-inline-start: 2px;
+    margin-inline-end: calc(var(--n-space-s) * 1.4);
+    line-height: var(--n-line-height-tight)
+}
+
+.n-selected .n-command-icon nord-icon {
+    color: var(--n-color-icon-hover)
+}
+
+.n-title {
+    flex: 1;
+    margin-inline-end: calc(var(--n-space-s)/ 2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.n-shortcuts {
+    display: flex;
+    gap: calc(var(--n-space-s)/ 2)
+}
+
+.n-shortcut {
+    padding: calc(var(--n-space-s)/ 4) calc(var(--n-space-s)/ 3);
+    text-transform: capitalize;
+    font-size: var(--n-font-size-xs);
+    border: 1px solid var(--n-color-border-strong);
+    font-weight: var(--n-font-weight);
+    box-shadow: var(--n-box-shadow);
+    border-radius: var(--n-border-radius-s);
+    color: var(--n-color-icon);
+    background: var(--n-color-button);
+    line-height: var(--n-line-height-tight);
+    min-inline-size: var(--n-space-s);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none
+}

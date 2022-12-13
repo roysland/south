@@ -1,0 +1,223 @@
+:host {
+    --_n-calendar-box-shadow: var(--n-calendar-box-shadow, var(--n-box-shadow-popout));
+    --_n-calendar-border-radius: var(--n-calendar-border-radius, var(--n-border-radius-s));
+    --_n-calendar-highlight-color: var(--n-calendar-highlight-color, var(--n-color-accent));
+    --_n-calendar-padding: var(--n-space-m) var(--n-space-m) calc(var(--n-space-m) * 1.25);
+    --_n-calendar-inline-size: max-content;
+    font-feature-settings: var(--n-font-features-reduced)
+}
+
+.n-calendar {
+    -webkit-user-select: none;
+    user-select: none;
+    background: var(--n-color-surface);
+    box-shadow: var(--_n-calendar-box-shadow);
+    border-radius: var(--_n-calendar-border-radius);
+    inline-size: var(--_n-calendar-inline-size);
+    min-inline-size: min-content;
+    padding: var(--_n-calendar-padding)
+}
+
+:host([expand]) {
+    --_n-calendar-inline-size: 100%
+}
+
+.n-calendar-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: var(--n-color-text);
+    font-size: var(--n-font-size-m);
+    font-weight: var(--n-font-weight);
+    text-align: center;
+    inline-size: 100%
+}
+
+.n-calendar-table-header {
+    font-size: var(--n-font-size-s);
+    font-weight: var(--n-font-weight-active);
+    letter-spacing: 1px;
+    padding-block-end: var(--n-space-s);
+    text-decoration: none;
+    text-transform: uppercase
+}
+
+.n-calendar-cell {
+    text-align: center;
+    padding: 1px
+}
+
+.n-calendar-day {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: 0 0;
+    border: 0;
+    border-radius: var(--n-border-radius-s);
+    color: var(--n-color-text);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--n-font-family);
+    font-size: var(--n-font-size-m);
+    font-weight: var(--n-font-weight);
+    font-variant-numeric: tabular-nums;
+    block-size: var(--n-space-xl);
+    inline-size: var(--n-space-xl);
+    padding: 0 0 1px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle
+}
+
+.n-calendar-day[aria-current=date] {
+    box-shadow: 0 0 0 1px var(--n-color-accent);
+    color: var(--n-color-text-link);
+    position: relative
+}
+
+.n-calendar-day:hover {
+    background: var(--n-color-active)
+}
+
+.n-calendar-day:focus,
+.n-calendar-day[aria-pressed=true] {
+    background: var(--n-color-accent);
+    box-shadow: none;
+    color: var(--n-color-text-on-accent);
+    outline: 0
+}
+
+.n-calendar-day:active {
+    background: var(--n-color-accent);
+    box-shadow: none !important;
+    color: var(--n-color-text-on-accent)
+}
+
+.n-calendar-day:focus {
+    box-shadow: 0 0 5px var(--n-color-accent)
+}
+
+.n-calendar-day:not(.is-month) {
+    box-shadow: none
+}
+
+.n-calendar-day:not(.is-month),
+.n-calendar-day[aria-disabled=true] {
+    background: 0 0;
+    color: var(--n-color-text-weakest);
+    cursor: default
+}
+
+.n-calendar-day[aria-disabled=true] {
+    color: var(--n-color-text-weaker);
+    text-decoration: line-through
+}
+
+.n-calendar-day:not(.is-month)[aria-disabled=true] {
+    color: var(--n-color-text-weakest);
+    text-decoration: none
+}
+
+.n-calendar-day[aria-disabled=true][aria-current=date] {
+    box-shadow: 0 0 0 1px var(--n-color-accent);
+    color: var(--n-color-text-link)
+}
+
+.n-calendar-day[aria-disabled=true][aria-current=date]:focus {
+    box-shadow: 0 0 5px var(--n-color-accent);
+    background: var(--n-color-accent);
+    color: var(--n-color-text-on-accent)
+}
+
+.n-calendar-day[aria-disabled=true]:not([aria-current=date])::before {
+    display: none
+}
+
+.n-calendar-day.is-outside {
+    background: 0 0;
+    box-shadow: none;
+    color: var(--n-color-text-weakest);
+    cursor: default;
+    pointer-events: none
+}
+
+.n-calendar-day.is-outside::before {
+    display: none
+}
+
+.n-calendar-day.is-highlighted::after {
+    --_n-calendar-highlight-size: 5px;
+    content: "";
+    position: absolute;
+    inset-inline-start: calc(50% - (var(--_n-calendar-highlight-size)/ 2));
+    inset-block-end: calc(var(--n-space-s)/ 2);
+    block-size: var(--_n-calendar-highlight-size);
+    inline-size: var(--_n-calendar-highlight-size);
+    border-radius: var(--n-border-radius-circle);
+    background-color: var(--_n-calendar-highlight-color)
+}
+
+.n-calendar-day.is-highlighted.is-month:is([aria-pressed=true], :focus):not([aria-disabled=true])::after {
+    background-color: var(--n-color-text-on-accent)
+}
+
+.n-calendar-day.is-highlighted:is(:not(.is-month), .is-outside, [aria-disabled=true])::after {
+    background-color: var(--n-color-text-weakest)
+}
+
+.n-calendar-header {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: var(--n-space-m);
+    inline-size: 100%
+}
+
+.n-calendar-nav {
+    white-space: nowrap
+}
+
+.n-calendar-nav nord-button {
+    --_n-button-padding-inline: 11px;
+    margin-inline-start: calc(var(--n-space-s)/ 2)
+}
+
+.n-calendar-select {
+    display: inline-flex;
+    margin-block-start: calc(var(--n-space-s)/ 2);
+    position: relative;
+    line-height: var(--n-line-height)
+}
+
+.n-calendar-select span {
+    margin-inline-end: var(--n-space-s)
+}
+
+.n-calendar-select select {
+    cursor: pointer;
+    font-size: var(--n-font-size-l);
+    block-size: 100%;
+    inset-inline-start: 0;
+    opacity: 0;
+    position: absolute;
+    inset-block-start: 0;
+    inline-size: 100%
+}
+
+.n-calendar-select select:focus+.n-calendar-select-label {
+    box-shadow: 0 0 0 2px var(--n-color-accent)
+}
+
+.n-calendar-select-label {
+    display: flex;
+    align-items: center;
+    border-radius: var(--n-border-radius-s);
+    color: var(--n-color-text);
+    font-size: var(--n-font-size-xl);
+    font-weight: var(--n-font-weight-active);
+    padding-block: 0;
+    padding-inline-start: var(--n-space-s);
+    padding-inline-end: calc(var(--n-space-s)/ 2);
+    pointer-events: none;
+    position: relative;
+    inline-size: 100%
+}

@@ -1,0 +1,54 @@
+:host {
+    --_n-badge-color: var(--n-color-text);
+    --_n-badge-chip-color: var(--n-color-status-neutral-weak);
+    display: inline;
+    vertical-align: middle
+}
+
+.n-badge {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    border-radius: var(--n-border-radius-pill);
+    background: var(--_n-badge-chip-color);
+    font-size: var(--n-font-size-s);
+    font-family: var(--n-font-family);
+    font-weight: var(--n-font-weight);
+    font-feature-settings: var(--n-font-features);
+    line-height: var(--n-line-height);
+    letter-spacing: 0;
+    padding-block-start: calc(var(--n-space-s)/ 4);
+    padding-block-end: calc(var(--n-space-s)/ 4);
+    padding-inline-start: var(--n-space-s);
+    padding-inline-end: var(--n-space-s);
+    color: var(--_n-badge-color);
+    gap: calc(var(--n-space-s)/ 2);
+    align-items: center;
+    display: inline-flex;
+    white-space: nowrap;
+    position: relative
+}
+
+:host([type=success]) {
+    --_n-badge-chip-color: var(--n-color-status-success-weak)
+}
+
+:host([type=warning]) {
+    --_n-badge-chip-color: var(--n-color-status-warning-weak)
+}
+
+:host([type=highlight]) {
+    --_n-badge-chip-color: var(--n-color-status-highlight-weak)
+}
+
+:host([type=info]) {
+    --_n-badge-chip-color: var(--n-color-status-info-weak)
+}
+
+:host([type=progress]) {
+    --_n-badge-chip-color: var(--n-color-status-progress-weak)
+}
+
+:host([type=danger]) {
+    --_n-badge-chip-color: var(--n-color-status-danger);
+    --_n-badge-color: var(--n-color-text-on-accent)
+}

@@ -1,0 +1,45 @@
+:host {
+    --_n-banner-box-shadow: var(--n-banner-box-shadow, none);
+    --_n-banner-border-radius: var(--n-banner-border-radius, var(--n-border-radius));
+    --_n-banner-background: var(--n-color-status-info-weak);
+    color: var(--n-color-text)
+}
+
+.n-banner {
+    background: var(--_n-banner-background);
+    border-radius: var(--_n-banner-border-radius);
+    box-shadow: var(--_n-banner-box-shadow);
+    padding: calc(var(--n-space-m)/ 1.2) var(--n-space-l);
+    margin: 0;
+    inline-size: 100%
+}
+
+.n-banner-content {
+    inline-size: calc(100% - var(--n-space-xl))
+}
+
+nord-icon {
+    transform: translateY(2px);
+    color: var(--n-color-icon-hover)
+}
+
+::slotted(a) {
+    color: var(--n-color-text) !important;
+    text-decoration: underline !important
+}
+
+::slotted(p) {
+    margin: 0 !important
+}
+
+:host([variant=success]) {
+    --_n-banner-background: var(--n-color-status-success-weak)
+}
+
+:host([variant=danger]) {
+    --_n-banner-background: var(--n-color-status-danger-weak)
+}
+
+:host([variant=warning]) {
+    --_n-banner-background: var(--n-color-status-warning-weak)
+}

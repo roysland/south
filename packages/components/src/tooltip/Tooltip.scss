@@ -1,0 +1,57 @@
+:host {
+    --_n-tooltip-max-size: var(--n-tooltip-max-size, 50ch);
+    --_n-tooltip-background: rgba(20, 20, 20, 0.95);
+    --_n-tooltip-color: #fff;
+    --_n-tooltip-key-border: rgba(255, 255, 255, 0.03);
+    --_n-tooltip-key-background: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity var(--n-transition-slowly), visibility var(--n-transition-slowly);
+    transition-timing-function: ease;
+    z-index: var(--n-index-popout)
+}
+
+.n-tooltip {
+    gap: var(--n-space-s);
+    font-family: var(--n-font-family);
+    font-size: var(--n-font-size-xs);
+    line-height: var(--n-line-height);
+    color: var(--_n-tooltip-color);
+    padding: calc(var(--n-space-s)/ 1.5) var(--n-space-s);
+    background-color: var(--_n-tooltip-background);
+    border-radius: var(--n-border-radius-s);
+    word-break: break-word;
+    max-inline-size: var(--_n-tooltip-max-size)
+}
+
+.n-tooltip,
+.n-tooltip-shortcut {
+    display: flex;
+    align-items: center
+}
+
+.n-tooltip-shortcut {
+    gap: 2px
+}
+
+::slotted([slot=shortcut]) {
+    box-sizing: border-box;
+    margin: 0;
+    inline-size: var(--n-size-icon-m);
+    block-size: var(--n-size-icon-m);
+    border-radius: var(--n-border-radius-s);
+    border: 1px solid var(--_n-tooltip-key-border) !important;
+    padding: 1px !important;
+    text-align: center;
+    font-size: var(--n-font-size-xs);
+    line-height: var(--n-line-height-tight);
+    letter-spacing: -.5px;
+    vertical-align: middle !important;
+    background-color: var(--_n-tooltip-key-background)
+}
+
+[slot=shortcut]::slotted(nord-icon:not([size])) {
+    --_n-icon-size: var(--n-size-icon-s)
+}

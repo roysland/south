@@ -1,0 +1,20 @@
+.n-dropdown-group-heading {
+    font-size: var(--n-font-size-xs);
+    font-weight: var(--n-font-weight-heading);
+    color: var(--n-color-text-weaker);
+    padding: calc(var(--n-space-s)/ 2) var(--n-space-s);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+@media (max-width:35.9375em) {
+    .n-dropdown-group-heading {
+        padding: calc(var(--n-space-s)/ 1.5) var(--n-space-m)
+    }
+}
+
+.n-dropdown-group-content {
+    display: flex;
+    flex-direction: column
+}

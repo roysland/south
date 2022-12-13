@@ -1,0 +1,75 @@
+:host {
+    --_n-card-padding: var(--n-card-padding, var(--n-space-m));
+    --_n-card-slot-padding: var(--n-card-slot-padding, var(--n-space-m));
+    --_n-card-box-shadow: var(--n-card-box-shadow, var(--n-box-shadow-card));
+    --_n-card-border-radius: var(--n-card-border-radius, var(--n-border-radius));
+    color: var(--n-color-text);
+    display: block;
+    inline-size: 100%
+}
+
+.n-card {
+    background: var(--n-color-surface);
+    border-radius: var(--_n-card-border-radius);
+    box-shadow: var(--_n-card-box-shadow);
+    block-size: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.header {
+    border-block-end: 1px solid var(--n-color-border);
+    padding: var(--n-space-m) var(--_n-card-slot-padding);
+    display: flex;
+    gap: var(--n-space-s);
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+:host([padding="l"]) {
+    --_n-card-padding: var(--n-card-padding, var(--n-space-l));
+    --_n-card-slot-padding: var(--n-card-slot-padding, var(--n-space-l))
+}
+
+:host([padding=none]) {
+    --_n-card-padding: var(--n-card-padding, 0)
+}
+
+slot {
+    display: block
+}
+
+slot:not([name]) {
+    padding: var(--_n-card-padding);
+    flex: 1
+}
+
+slot[name=footer] {
+    padding: var(--_n-card-slot-padding);
+    padding-block-start: 0;
+    white-space: nowrap
+}
+
+::slotted([slot=header-end]) {
+    --n-stack-gap: var(--n-space-s);
+    display: flex;
+    gap: var(--n-stack-gap);
+    align-items: center;
+    flex-wrap: wrap
+}
+
+::slotted([slot=header]) {
+    font-size: var(--n-font-size-m);
+    font-weight: var(--n-font-weight-heading);
+    margin: 0
+}
+
+::slotted(a) {
+    color: var(--n-color-text-link);
+    text-decoration: underline
+}
+
+::slotted(a:hover) {
+    text-decoration: none
+}
