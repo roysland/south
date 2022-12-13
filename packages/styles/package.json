@@ -1,12 +1,19 @@
 {
-  "name": "styles",
+  "name": "@pageup/styles",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.css",
+  "type": "module",
+  "exports": {
+    ".": "./dist/bundle.css"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/south.scss dist/bundle.css",
+    "dev": "sass src/south.scss dist/bundle.css 2> /dev/null"
   },
   "keywords": [],
   "author": "",
   "license": "ISC"
 }
+

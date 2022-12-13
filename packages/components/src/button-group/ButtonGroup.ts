@@ -2,8 +2,8 @@ import { LitElement, html } from "lit"
 import { customElement, property } from "lit/decorators.js"
 import { DraftComponentMixin } from "../common/mixins/DraftComponentMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./ButtonGroup.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./ButtonGroup.scss"
 
 /**
  * Button groups are designed to bring together button controls that are of a similar nature. For example text formatting controls.

@@ -1,6 +1,6 @@
 import { LitElement, html, render } from "lit"
 import { customElement, property } from "lit/decorators.js"
-import style from "./Table.css"
+import style from "./Table.scss"
 
 function isDocument(node: Node): node is Document {
   return node.nodeType === Node.DOCUMENT_NODE

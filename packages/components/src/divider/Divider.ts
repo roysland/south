@@ -2,8 +2,8 @@ import { LitElement } from "lit"
 import { customElement, property } from "lit/decorators.js"
 import { observe } from "../common/decorators/observe.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Divider.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Divider.scss"
 
 /**
  * Divider components are used to separate and distinguish sections of

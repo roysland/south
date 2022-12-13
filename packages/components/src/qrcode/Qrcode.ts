@@ -4,8 +4,8 @@ import { styleMap } from "lit/directives/style-map.js"
 import QrCreator from "qr-creator"
 import { observe } from "../common/decorators/observe.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Qrcode.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Qrcode.scss"
 
 /**
  * QR Code component is used for providing information or links

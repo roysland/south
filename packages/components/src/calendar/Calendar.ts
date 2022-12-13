@@ -39,8 +39,8 @@ import {
 import { observe } from "../common/decorators/observe.js"
 
 import { DateSelectEvent } from "./DateSelectEvent.js"
-import componentStyle from "../common/styles/Component.css"
-import style from "./Calendar.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Calendar.scss"
 
 export type DatePredicate = (date: Date) => boolean
 

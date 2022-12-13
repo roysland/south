@@ -6,8 +6,8 @@ import { ScrollbarController } from "../common/controllers/ScrollbarController.j
 import { NordEvent } from "../common/events.js"
 import { FloatingMixin } from "../common/mixins/FloatingComponentMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Popout.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Popout.scss"
 import { logicalToPhysical } from "../common/positioning.js"
 import { DirectionController } from "../common/controllers/DirectionController.js"
 import { observe } from "../common/decorators/observe.js"

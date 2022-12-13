@@ -3,8 +3,8 @@ import { customElement, property } from "lit/decorators.js"
 import { SlotController } from "../common/controllers/SlotController.js"
 import { DraftComponentMixin } from "../common/mixins/DraftComponentMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Drawer.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Drawer.scss"
 
 /**
  * Drawer is used to display context-sensitive actions and  information.

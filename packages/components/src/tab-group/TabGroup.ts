@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit"
 import { customElement, property, state } from "lit/decorators.js"
 
-import componentStyle from "../common/styles/Component.css"
-import stickyStyle from "../common/styles/Sticky.css"
-import style from "./TabGroup.css"
+import componentStyle from "../common/styles/Component.scss"
+import stickyStyle from "../common/styles/Sticky.scss"
+import style from "./TabGroup.scss"
 import Tab from "../tab/Tab.js"
 
 import { DirectionController } from "../common/controllers/DirectionController.js"

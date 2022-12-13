@@ -3,8 +3,8 @@ import { customElement, property } from "lit/decorators.js"
 import { observe } from "../common/decorators/observe.js"
 import { SlotController } from "../common/controllers/SlotController.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Tab.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Tab.scss"
 
 /**
  * The interactive tab button for use within the tab group component.

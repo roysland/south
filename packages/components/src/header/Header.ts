@@ -1,8 +1,8 @@
 import { LitElement, html } from "lit"
 import { customElement } from "lit/decorators.js"
 import { SlotController } from "../common/controllers/SlotController.js"
-import componentStyle from "../common/styles/Component.css"
-import style from "./Header.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Header.scss"
 
 /**
  * The header is a block of designated space for labelling the currently

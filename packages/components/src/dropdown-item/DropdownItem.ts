@@ -4,8 +4,8 @@ import { ifDefined } from "lit/directives/if-defined.js"
 import { ref } from "lit/directives/ref.js"
 import { FocusableMixin } from "../common/mixins/FocusableMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./DropdownItem.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./DropdownItem.scss"
 
 /**
  * Dropdown item populates dropdown with actions. Items can be

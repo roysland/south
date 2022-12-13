@@ -2,8 +2,8 @@ import { LitElement, html } from "lit"
 import { customElement, property } from "lit/decorators.js"
 import { ifDefined } from "lit/directives/if-defined.js"
 import { cond } from "../common/directives/cond.js"
-import componentStyle from "../common/styles/Component.css"
-import style from "./Spinner.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Spinner.scss"
 
 /**
  * Spinner component is used to indicate users that their action is being

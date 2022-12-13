@@ -4,8 +4,8 @@ import { customElement, property } from "lit/decorators.js"
 import { ref } from "lit/directives/ref.js"
 import { FocusableMixin } from "../common/mixins/FocusableMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./ProgressBar.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./ProgressBar.scss"
 
 /**
  * Progress Bar is used to visually represent the completion

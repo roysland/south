@@ -1,8 +1,8 @@
 import { LitElement, html, nothing } from "lit"
 import { customElement, property } from "lit/decorators.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./DropdownGroup.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./DropdownGroup.scss"
 
 /**
  * Dropdown group includes all the actions or items in a single dropdown

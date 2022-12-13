@@ -11,7 +11,7 @@ import { observe } from "../common/decorators/observe.js"
 import Icon from "../icon/Icon.js"
 import "../visually-hidden/VisuallyHidden.js"
 
-import style from "./CommandMenuAction.css"
+import style from "./CommandMenuAction.scss"
 
 const KEY_REGEX = /(?:Key|Digit)([A-Z0-9])/g
 const isMacintosh = () => navigator.platform.indexOf("Mac") > -1

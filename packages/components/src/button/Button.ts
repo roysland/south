@@ -9,8 +9,8 @@ import "../spinner/Spinner.js"
 
 import { FocusableMixin } from "../common/mixins/FocusableMixin.js"
 import { InputMixin } from "../common/mixins/InputMixin.js"
-import componentStyle from "../common/styles/Component.css"
-import style from "./Button.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Button.scss"
 import { SlotController } from "../common/controllers/SlotController.js"
 
 /**

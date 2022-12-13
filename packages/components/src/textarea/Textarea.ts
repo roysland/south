@@ -11,10 +11,10 @@ import { ReadonlyMixin } from "../common/mixins/ReadonlyMixin.js"
 import { AutocompleteMixin } from "../common/mixins/AutocompleteMixin.js"
 import { SizeMixin } from "../common/mixins/SizeMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import formFieldStyle from "../common/styles/FormField.css"
-import textFieldStyle from "../common/styles/TextField.css"
-import style from "./Textarea.css"
+import componentStyle from "../common/styles/Component.scss"
+import formFieldStyle from "../common/styles/FormField.scss"
+import textFieldStyle from "../common/styles/TextField.scss"
+import style from "./Textarea.scss"
 import { LocalizeController } from "../localization/LocalizeController.js"
 
 function createLengthMeasurer(locale: string) {

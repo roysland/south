@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit"
 import { customElement } from "lit/decorators.js"
-import style from "./VisuallyHidden.css"
+import style from "./VisuallyHidden.scss"
 
 /**
  * Visually hidden is used when an element needs to be available

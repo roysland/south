@@ -2,7 +2,7 @@ import { LitElement, html, nothing } from "lit"
 import { customElement, property } from "lit/decorators.js"
 import "../icon/Icon.js"
 
-import style from "./NavGroup.css"
+import style from "./NavGroup.scss"
 
 /**
  * Navigation group includes all the actions or items in a single

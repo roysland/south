@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit"
 import { customElement } from "lit/decorators.js"
 
-import style from "./Navigation.css"
+import style from "./Navigation.scss"
 
 /**
  * Navigation is used to display the primary navigation in the sidebar

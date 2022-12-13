@@ -1,10 +1,19 @@
 {
-  "name": "root",
+  "name": "@pageup/ui",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^6.1.0"
+    "esbuild": "^0.15.18",
+    "esbuild-plugin-lit": "^0.1.1",
+    "esbuild-plugin-lit-css": "^2.0.0",
+    "esbuild-plugin-sass": "^1.0.1",
+    "lerna": "^6.1.0",
+    "sass": "^1.56.2",
+    "web-component-analyzer": "^2.0.0-next.4"
+  },
+  "dependencies": {
+    "tinykeys": "^1.4.0"
   }
 }

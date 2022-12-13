@@ -7,9 +7,9 @@ import { SlotController } from "../common/controllers/SlotController.js"
 import { observe } from "../common/decorators/observe.js"
 import { NordEvent } from "../common/events.js"
 
-import componentStyle from "../common/styles/Component.css"
+import componentStyle from "../common/styles/Component.scss"
 import { LocalizeController } from "../localization/LocalizeController.js"
-import style from "./Modal.css"
+import style from "./Modal.scss"
 import { ModalController } from "./ModalController.js"
 
 Icon.registerIcon(closeIcon)

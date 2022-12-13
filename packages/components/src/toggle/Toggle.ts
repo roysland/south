@@ -8,9 +8,9 @@ import { FocusableMixin } from "../common/mixins/FocusableMixin.js"
 import { FormAssociatedMixin } from "../common/mixins/FormAssociatedMixin.js"
 import { InputMixin } from "../common/mixins/InputMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import formFieldStyle from "../common/styles/FormField.css"
-import style from "./Toggle.css"
+import componentStyle from "../common/styles/Component.scss"
+import formFieldStyle from "../common/styles/FormField.scss"
+import style from "./Toggle.scss"
 
 /**
  * Toggle switch gives control over a feature or option that can be

@@ -1,8 +1,8 @@
 import { LitElement, html } from "lit"
 import { customElement, property } from "lit/decorators.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Skeleton.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Skeleton.scss"
 
 /**
  * Skeletons are used to provide a low fidelity representation of content

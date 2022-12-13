@@ -15,9 +15,9 @@ import { storage } from "../common/storage.js"
 
 import "../nav-toggle/NavToggle.js"
 
-import componentStyle from "../common/styles/Component.css"
-import stickyStyle from "../common/styles/Sticky.css"
-import style from "./Layout.css"
+import componentStyle from "../common/styles/Component.scss"
+import stickyStyle from "../common/styles/Sticky.scss"
+import style from "./Layout.scss"
 
 const NAV_DEFAULT_WIDTH = 250
 const NAV_MIN_WIDTH = 220

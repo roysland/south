@@ -6,8 +6,8 @@ import * as incompleteIcon from "@nordhealth/icons/lib/assets/interface-incomple
 import * as partiallyCompleteIcon from "@nordhealth/icons/lib/assets/interface-partially-complete-small.js"
 import Icon from "../icon/Icon.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Badge.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Badge.scss"
 
 Icon.registerIcon(cancelledIcon)
 Icon.registerIcon(completeIcon)

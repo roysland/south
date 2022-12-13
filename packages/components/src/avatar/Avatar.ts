@@ -1,8 +1,8 @@
 import { LitElement, html, nothing } from "lit"
 import { customElement, property, state } from "lit/decorators.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Avatar.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Avatar.scss"
 import { fsm, States } from "../common/fsm.js"
 import { observe } from "../common/decorators/observe.js"
 import "../visually-hidden/VisuallyHidden.js"

@@ -3,9 +3,9 @@ import { customElement, property } from "lit/decorators.js"
 import { SlotController } from "../common/controllers/SlotController.js"
 import { cond } from "../common/directives/cond.js"
 
-import componentStyle from "../common/styles/Component.css"
-import formFieldStyle from "../common/styles/FormField.css"
-import style from "./Fieldset.css"
+import componentStyle from "../common/styles/Component.scss"
+import formFieldStyle from "../common/styles/FormField.scss"
+import style from "./Fieldset.scss"
 
 /**
  * Fieldset is used for grouping sets of input components.

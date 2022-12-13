@@ -1,0 +1,20 @@
+:host {
+    --_n-skeleton-border-radius: var(--n-skeleton-border-radius, var(--n-border-radius));
+    --_n-skeleton-color: var(--n-skeleton-color, var(--n-color-border));
+    --_n-skeleton-sheen-color: var(--n-skeleton-sheen-color, var(--n-color-border-strong));
+    --_n-skeleton-animation: none;
+}
+
+.n-skeleton {
+    display: flex;
+    inline-size: 100%;
+    block-size: 100%;
+    min-block-size: var(--n-space-m);
+    .n-skeleton-indicator {
+        flex: 1 1 auto;
+        background: var(--_n-skeleton-color);
+        border-radius: var(--_n-skeleton-border-radius);
+        opacity: 0.6;
+        animation: var(--_n-skeleton-animation);
+    }
+}

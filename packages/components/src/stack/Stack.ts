@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit"
 import { customElement, property } from "lit/decorators.js"
-import componentStyle from "../common/styles/Component.css"
-import style from "./Stack.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Stack.scss"
 
 /**
  * Stack component manages layout of immediate children along the

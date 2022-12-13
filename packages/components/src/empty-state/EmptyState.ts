@@ -1,8 +1,8 @@
 import { LitElement, html } from "lit"
 import { customElement } from "lit/decorators.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./EmptyState.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./EmptyState.scss"
 
 /**
  * Empty state can be used when there is no data to display to

@@ -1,8 +1,8 @@
 import { LitElement, html } from "lit"
 import { customElement, property } from "lit/decorators.js"
 import { SlotController } from "../common/controllers/SlotController.js"
-import componentStyle from "../common/styles/Component.css"
-import style from "./Card.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Card.scss"
 
 /**
  * Cards are shadowed surfaces that display content and actions on a

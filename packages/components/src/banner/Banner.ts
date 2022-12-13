@@ -6,8 +6,8 @@ import * as infoIcon from "@nordhealth/icons/lib/assets/interface-info.js"
 import * as successIcon from "@nordhealth/icons/lib/assets/interface-checked-circle.js"
 import Icon from "../icon/Icon.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Banner.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Banner.scss"
 
 Icon.registerIcon(warningIcon)
 Icon.registerIcon(dangerIcon)

@@ -13,8 +13,8 @@ import "../button/Button.js"
 import Icon from "../icon/Icon.js"
 import "../visually-hidden/VisuallyHidden.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./NavToggle.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./NavToggle.scss"
 
 Icon.registerIcon(unlockIcon)
 Icon.registerIcon(lockIcon)

@@ -1,15 +1,27 @@
 {
-  "name": "components",
+  "name": "@pageup/components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.js",
+  "type": "module",
+  "exports": {
+    ".": "./dist/bundle.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./build.js",
+    "dev": "node ./serve.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit": "^2.5.0"
+    "@floating-ui/dom": "^1.0.10",
+    "@nordhealth/icons": "^1.8.0",
+    "lit": "^2.5.0",
+    "@pageup/styles": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
   }
 }

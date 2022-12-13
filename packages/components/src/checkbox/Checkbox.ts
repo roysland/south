@@ -11,9 +11,9 @@ import { FormAssociatedMixin } from "../common/mixins/FormAssociatedMixin.js"
 import { InputMixin } from "../common/mixins/InputMixin.js"
 import { SizeMixin } from "../common/mixins/SizeMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import formFieldStyle from "../common/styles/FormField.css"
-import style from "./Checkbox.css"
+import componentStyle from "../common/styles/Component.scss"
+import formFieldStyle from "../common/styles/FormField.scss"
+import style from "./Checkbox.scss"
 
 Icon.registerIcon(checkedIcon)
 Icon.registerIcon(indeterminateIcon)

@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit"
 import { customElement } from "lit/decorators.js"
 
-import componentStyle from "../common/styles/Component.css"
+import componentStyle from "../common/styles/Component.scss"
 import Toast from "../toast/Toast.js"
-import style from "./ToastGroup.css"
+import style from "./ToastGroup.scss"
 
 type ToastOptions = Partial<Pick<Toast, "variant" | "autoDismiss">>
 

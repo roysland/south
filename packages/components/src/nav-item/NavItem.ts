@@ -8,7 +8,7 @@ import { cond } from "../common/directives/cond.js"
 import { NordEvent } from "../common/events.js"
 import { FocusableMixin } from "../common/mixins/FocusableMixin.js"
 
-import style from "./NavItem.css"
+import style from "./NavItem.scss"
 
 /**
  * Navigation item populates sidebar navigation with links.

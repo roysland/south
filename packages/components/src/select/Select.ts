@@ -14,9 +14,9 @@ import { FormAssociatedMixin } from "../common/mixins/FormAssociatedMixin.js"
 import { AutocompleteMixin } from "../common/mixins/AutocompleteMixin.js"
 import { SizeMixin } from "../common/mixins/SizeMixin.js"
 
-import componentStyle from "../common/styles/Component.css"
-import formFieldStyle from "../common/styles/FormField.css"
-import style from "./Select.css"
+import componentStyle from "../common/styles/Component.scss"
+import formFieldStyle from "../common/styles/FormField.scss"
+import style from "./Select.scss"
 import { SlotController } from "../common/controllers/SlotController.js"
 
 Icon.registerIcon(dropdownIcon)

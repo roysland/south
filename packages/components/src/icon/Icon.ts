@@ -5,8 +5,8 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js"
 import { observe } from "../common/decorators/observe.js"
 import { cond } from "../common/directives/cond.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Icon.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Icon.scss"
 
 export type IconResolver = (iconName: string) => Promise<string>
 

@@ -6,8 +6,8 @@ import { FloatingMixin } from "../common/mixins/FloatingComponentMixin.js"
 import type Popout from "../popout/Popout.js"
 import "../popout/Popout.js"
 
-import componentStyle from "../common/styles/Component.css"
-import style from "./Dropdown.css"
+import componentStyle from "../common/styles/Component.scss"
+import style from "./Dropdown.scss"
 
 /**
  * Dropdown menu displays a list of actions or selectable options for
