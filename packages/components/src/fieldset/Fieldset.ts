@@ -18,7 +18,7 @@ import style from "./Fieldset.scss"
  * @slot hint - Optional slot that holds hint text for the fieldset.
  * @slot error - Optional slot that holds error text for the fieldset.
  */
-@customElement("nord-fieldset")
+@customElement("kabal-fieldset")
 export default class Fieldset extends LitElement {
   static styles = [componentStyle, formFieldStyle, style]
 
@@ -93,6 +93,6 @@ export default class Fieldset extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-fieldset": Fieldset
+    "kabal-fieldset": Fieldset
   }
 }

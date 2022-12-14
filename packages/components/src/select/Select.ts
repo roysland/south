@@ -32,7 +32,7 @@ Icon.registerIcon(dropdownIcon)
  * @slot hint - Use when a hint requires more than plain text.
  * @slot error - Optional slot that holds error text for the input.
  */
-@customElement("nord-select")
+@customElement("kabal-select")
 export default class Select extends SizeMixin(
   FormAssociatedMixin(AutocompleteMixin(InputMixin(FocusableMixin(LitElement))))
 ) {
@@ -76,7 +76,7 @@ export default class Select extends SizeMixin(
           ${slottedOptions.map(option => this.renderOption(option))}
         </select>
 
-        <nord-button
+        <kabal-button
           size=${this.size}
           tabindex="-1"
           ?disabled=${this.disabled}
@@ -86,8 +86,8 @@ export default class Select extends SizeMixin(
         >
           <slot slot="start" name="icon"></slot>
           ${buttonText}
-          <nord-icon slot="end" name="interface-dropdown-small"></nord-icon>
-        </nord-button>
+          <kabal-icon slot="end" name="interface-dropdown-small"></kabal-icon>
+        </kabal-button>
       </div>
 
       ${this.renderError()}
@@ -131,6 +131,6 @@ export default class Select extends SizeMixin(
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-select": Select
+    "kabal-select": Select
   }
 }

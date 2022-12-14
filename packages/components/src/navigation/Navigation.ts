@@ -14,7 +14,7 @@ import style from "./Navigation.scss"
  * @slot header - The top section of the sidebar.
  * @slot footer - The bottom section of the sidebar.
  */
-@customElement("nord-navigation")
+@customElement("kabal-navigation")
 export default class Navigation extends LitElement {
   static styles = style
 
@@ -31,6 +31,6 @@ export default class Navigation extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-navigation": Navigation
+    "kabal-navigation": Navigation
   }
 }

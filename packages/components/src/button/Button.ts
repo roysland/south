@@ -32,7 +32,7 @@ import { SlotController } from "../common/controllers/SlotController.js"
  * @cssprop [--n-button-text-align=center] - Controls the text alignment for the text in the button.
  * @cssprop [--n-button-box-shadow=var(--n-box-shadow)] - Controls the surrounding shadow, using [box shadow tokens](/tokens/#box-shadow).
  */
-@customElement("nord-button")
+@customElement("kabal-button")
 export default class Button extends InputMixin(FocusableMixin(LitElement)) {
   static styles = [componentStyle, style]
 
@@ -126,7 +126,7 @@ export default class Button extends InputMixin(FocusableMixin(LitElement)) {
   render() {
     const isSwitch = this.variant === "switch"
     const isDropdownToggle = this.assignedSlot?.name === "toggle"
-    const isIconButton = this.defaultSlot.assigned.some(node => node.localName === "nord-icon")
+    const isIconButton = this.defaultSlot.assigned.some(node => node.localName === "kabal-icon")
     const shouldShowDropdownIcon = (isSwitch || (isDropdownToggle && !isIconButton)) && !this.href
 
     const innards = html`
@@ -134,13 +134,13 @@ export default class Button extends InputMixin(FocusableMixin(LitElement)) {
       <div class="n-content">
         <slot></slot>
       </div>
-      <nord-spinner
+      <kabal-spinner
         class="n-button-spinner"
         color="currentColor"
         ?hidden=${!this.loading || Boolean(this.href)}
-      ></nord-spinner>
+      ></kabal-spinner>
       <slot name="end">
-        ${shouldShowDropdownIcon ? html`<nord-icon name="interface-dropdown-small"></nord-icon>` : nothing}
+        ${shouldShowDropdownIcon ? html`<kabal-icon name="interface-dropdown-small"></kabal-icon>` : nothing}
       </slot>
     `
 
@@ -244,6 +244,6 @@ export default class Button extends InputMixin(FocusableMixin(LitElement)) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-button": Button
+    "kabal-button": Button
   }
 }

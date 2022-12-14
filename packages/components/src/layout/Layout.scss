@@ -1,1 +1,182 @@
-:host{--_n-layout-padding:var(--n-layout-padding, var(--n-space-l));--_n-layout-drawer-inline-size:var(--n-layout-drawer-inline-size, 320px);--_n-layout-background-color:var(--n-layout-background-color, var(--n-color-background));--_n-layout-nav-transition-duration:var(--n-transition-mobile);background:var(--_n-layout-background-color);color:var(--n-color-text)}.n-layout-main,.n-layout-nav{background:var(--_n-layout-background-color);min-block-size:100%}.n-layout-nav{position:fixed;user-select:none;inline-size:var(--_n-layout-nav-width);z-index:var(--n-index-nav);inset-block-start:0;inset-inline-start:0;inset-block-end:0;transform:translateX(var(--n-nav-transform));box-shadow:var(--n-box-shadow-nav)}.n-layout-main{position:relative}main{padding:var(--_n-layout-padding)}aside{position:fixed;z-index:var(--n-index-nav);inset-block:0;inset-inline-end:0;inline-size:var(--_n-layout-drawer-inline-size);max-inline-size:100%;background:var(--n-color-surface);box-shadow:var(--n-box-shadow-nav)}@media (min-width:1240px){.n-has-drawer{margin-inline-end:var(--_n-layout-drawer-inline-size)}aside{box-shadow:var(--n-box-shadow-header);border-inline-start:1px solid var(--n-color-border)}}slot[name=drawer]::slotted(*){block-size:100%!important}:is([data-nav=closed],[data-nav=unpeek]) .n-layout-nav{transform:translateX(-110%)}.n-rtl:is([data-nav=closed],[data-nav=unpeek]) .n-layout-nav{transform:translateX(110%)}[data-screen=narrow] .n-layout-nav{z-index:var(--n-index-popout);transition:transform var(--_n-layout-nav-transition-duration)}[data-screen=wide]:is([data-nav=peek],[data-nav=wait],[data-nav=unpeek],[data-nav=blocked]) .n-layout-nav{transition:transform var(--_n-layout-nav-transition-duration);border-start-end-radius:var(--n-border-radius);border-end-end-radius:var(--n-border-radius);min-block-size:0;inset-block-start:calc(var(--n-space-m) * 4);inset-block-end:var(--n-space-l)}[data-screen=wide][data-nav=opened] .n-layout-nav{border-inline-end:1px solid var(--n-color-border);box-shadow:none}[data-screen=wide]:not([data-nav=opened]) .n-layout-nav{overflow:hidden}[data-screen=wide][data-nav=opened] .n-layout-main{margin-inline-start:var(--_n-layout-nav-width)}[data-screen=narrow] .n-layout-main::after{content:"";position:fixed;inset:0;z-index:var(--n-index-overlay);transition:opacity var(--n-transition-mobile),visibility var(--n-transition-mobile);background:var(--n-color-overlay)}[data-screen=narrow]:not([data-nav=opened],[data-nav=peek]) .n-layout-main::after{visibility:hidden;opacity:0}.n-resize{touch-action:none;position:absolute;min-block-size:100%;inset-block:0;inset-inline-end:-8px;inline-size:10px;background:0 0}[data-nav=opened] .n-resize{cursor:col-resize}.n-resize::after{content:"";position:absolute;z-index:var(--n-index-sticky);inset-block:0;inset-inline-end:5px;inline-size:3px;background:var(--n-color-accent);transition:opacity var(--n-transition-slowly);opacity:0}.n-resize:focus{outline:0}.n-dragging .n-resize::after,.n-resize:focus::after,[data-nav=opened] .n-resize:hover::after{opacity:1;transition-delay:.15s}@supports selector(:focus-visible){.n-resize:focus::after{opacity:0}.n-resize:focus-visible::after{opacity:1}}.n-dragging{cursor:col-resize!important;-webkit-user-select:none;user-select:none}:host([padding=none]){--_n-layout-padding:var(--n-layout-padding, 0)}.n-nav-toggle-container{position:absolute;padding:var(--n-space-m) var(--n-space-l);min-block-size:calc(var(--n-space-xxl) - var(--n-space-s)/ 2);display:flex;align-items:center}[data-screen=wide][data-nav=opened] .n-nav-toggle-container{display:none}:is([data-screen=wide]:not([data-nav=opened]),[data-screen=narrow]) .n-has-own-nav-toggle slot[name=header]::slotted(nord-header){--_n-header-gutter:calc(var(--n-space-l) * 3)}
+:host {
+    --_n-layout-padding: var(--n-layout-padding, var(--n-space-l));
+    --_n-layout-drawer-inline-size: var(--n-layout-drawer-inline-size, 320px);
+    --_n-layout-background-color: var(--n-layout-background-color, var(--n-color-background));
+    --_n-layout-nav-transition-duration: var(--n-transition-mobile);
+    background: var(--_n-layout-background-color);
+    color: var(--n-color-text)
+}
+
+.n-layout-main,
+.n-layout-nav {
+    background: var(--_n-layout-background-color);
+    min-block-size: 100%
+}
+
+.n-layout-nav {
+    position: fixed;
+    user-select: none;
+    inline-size: var(--_n-layout-nav-width);
+    z-index: var(--n-index-nav);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    transform: translateX(var(--n-nav-transform));
+    box-shadow: var(--n-box-shadow-nav)
+}
+
+.n-layout-main {
+    position: relative
+}
+
+main {
+    padding: var(--_n-layout-padding)
+}
+
+aside {
+    position: fixed;
+    z-index: var(--n-index-nav);
+    inset-block: 0;
+    inset-inline-end: 0;
+    inline-size: var(--_n-layout-drawer-inline-size);
+    max-inline-size: 100%;
+    background: var(--n-color-surface);
+    box-shadow: var(--n-box-shadow-nav)
+}
+
+@media (min-width:1240px) {
+    .n-has-drawer {
+        margin-inline-end: var(--_n-layout-drawer-inline-size)
+    }
+
+    aside {
+        box-shadow: var(--n-box-shadow-header);
+        border-inline-start: 1px solid var(--n-color-border)
+    }
+}
+
+slot[name=drawer]::slotted(*) {
+    block-size: 100% !important
+}
+
+:is([data-nav=closed], [data-nav=unpeek]) .n-layout-nav {
+    transform: translateX(-110%)
+}
+
+.n-rtl:is([data-nav=closed], [data-nav=unpeek]) .n-layout-nav {
+    transform: translateX(110%)
+}
+
+[data-screen=narrow] .n-layout-nav {
+    z-index: var(--n-index-popout);
+    transition: transform var(--_n-layout-nav-transition-duration)
+}
+
+[data-screen=wide]:is([data-nav=peek], [data-nav=wait], [data-nav=unpeek], [data-nav=blocked]) .n-layout-nav {
+    transition: transform var(--_n-layout-nav-transition-duration);
+    border-start-end-radius: var(--n-border-radius);
+    border-end-end-radius: var(--n-border-radius);
+    min-block-size: 0;
+    inset-block-start: calc(var(--n-space-m) * 4);
+    inset-block-end: var(--n-space-l)
+}
+
+[data-screen=wide][data-nav=opened] .n-layout-nav {
+    border-inline-end: 1px solid var(--n-color-border);
+    box-shadow: none
+}
+
+[data-screen=wide]:not([data-nav=opened]) .n-layout-nav {
+    overflow: hidden
+}
+
+[data-screen=wide][data-nav=opened] .n-layout-main {
+    margin-inline-start: var(--_n-layout-nav-width)
+}
+
+[data-screen=narrow] .n-layout-main::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: var(--n-index-overlay);
+    transition: opacity var(--n-transition-mobile), visibility var(--n-transition-mobile);
+    background: var(--n-color-overlay)
+}
+
+[data-screen=narrow]:not([data-nav=opened], [data-nav=peek]) .n-layout-main::after {
+    visibility: hidden;
+    opacity: 0
+}
+
+.n-resize {
+    touch-action: none;
+    position: absolute;
+    min-block-size: 100%;
+    inset-block: 0;
+    inset-inline-end: -8px;
+    inline-size: 10px;
+    background: 0 0
+}
+
+[data-nav=opened] .n-resize {
+    cursor: col-resize
+}
+
+.n-resize::after {
+    content: "";
+    position: absolute;
+    z-index: var(--n-index-sticky);
+    inset-block: 0;
+    inset-inline-end: 5px;
+    inline-size: 3px;
+    background: var(--n-color-accent);
+    transition: opacity var(--n-transition-slowly);
+    opacity: 0
+}
+
+.n-resize:focus {
+    outline: 0
+}
+
+.n-dragging .n-resize::after,
+.n-resize:focus::after,
+[data-nav=opened] .n-resize:hover::after {
+    opacity: 1;
+    transition-delay: .15s
+}
+
+@supports selector(:focus-visible) {
+    .n-resize:focus::after {
+        opacity: 0
+    }
+
+    .n-resize:focus-visible::after {
+        opacity: 1
+    }
+}
+
+.n-dragging {
+    cursor: col-resize !important;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+:host([padding=none]) {
+    --_n-layout-padding: var(--n-layout-padding, 0)
+}
+
+.n-nav-toggle-container {
+    position: absolute;
+    padding: var(--n-space-m) var(--n-space-l);
+    min-block-size: calc(var(--n-space-xxl) - var(--n-space-s)/ 2);
+    display: flex;
+    align-items: center
+}
+
+[data-screen=wide][data-nav=opened] .n-nav-toggle-container {
+    display: none
+}
+
+:is([data-screen=wide]:not([data-nav=opened]), [data-screen=narrow]) .n-has-own-nav-toggle slot[name=header]::slotted(kabal-header) {
+    --_n-header-gutter: calc(var(--n-space-l) * 3)
+}

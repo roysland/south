@@ -25,7 +25,7 @@ Icon.registerIcon(altKeyIcon)
  *
  * @status internal
  */
-@customElement("nord-command-menu-action")
+@customElement("kabal-command-menu-action")
 export default class CommandMenuAction extends LitElement {
   static styles = style
 
@@ -44,7 +44,7 @@ export default class CommandMenuAction extends LitElement {
         })}
       >
         <div aria-hidden="true" class="n-command-icon">
-          <nord-icon size="s" name=${this.getIconName()}></nord-icon>
+          <kabal-icon size="s" name=${this.getIconName()}></kabal-icon>
         </div>
         <div class="n-title">${this.command.title}</div>
         ${this.renderShortcut()}
@@ -78,7 +78,7 @@ export default class CommandMenuAction extends LitElement {
     const keys = this.command.shortcut.replace(KEY_REGEX, "$1")
 
     return html`
-      <nord-visually-hidden>, ${keys}</nord-visually-hidden>
+      <kabal-visually-hidden>, ${keys}</kabal-visually-hidden>
 
       <div aria-hidden="true" class="n-shortcuts">
         ${keys
@@ -87,7 +87,7 @@ export default class CommandMenuAction extends LitElement {
             key =>
               html`<div class="n-shortcut">
                 ${key.toLowerCase() === "alt" && isMacintosh()
-                  ? html`<nord-icon name=${altKeyIcon.title} size="s"></nord-icon>`
+                  ? html`<kabal-icon name=${altKeyIcon.title} size="s"></kabal-icon>`
                   : key}
               </div>`
           )}
@@ -98,6 +98,6 @@ export default class CommandMenuAction extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-command-menu-action": CommandMenuAction
+    "kabal-command-menu-action": CommandMenuAction
   }
 }

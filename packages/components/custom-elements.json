@@ -2,7 +2,7 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "nord-avatar",
+      "name": "kabal-avatar",
       "path": "./src\\avatar\\Avatar.ts",
       "description": "Avatar is used for showing a thumbnail representation of a user or entity.\r\nDefault avatar illustration is displayed when no src is specified.",
       "attributes": [
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "name": "nord-badge",
+      "name": "kabal-badge",
       "path": "./src\\badge\\Badge.ts",
       "description": "Badges are used to inform users of the status of an object\r\nor of an action that’s been taken. Commonly used in tabular\r\ndata to indicate status.",
       "attributes": [
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "name": "nord-banner",
+      "name": "kabal-banner",
       "path": "./src\\banner\\Banner.ts",
       "description": "Banner informs users about important changes or conditions in the\r\ninterface. Use this component if you need to communicate to users\r\nin a prominent way.",
       "attributes": [
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "name": "nord-button-group",
+      "name": "kabal-button-group",
       "path": "./src\\button-group\\ButtonGroup.ts",
       "description": "Button groups are designed to bring together button controls that are of a similar nature. For example text formatting controls.",
       "attributes": [
@@ -225,7 +225,7 @@
       ]
     },
     {
-      "name": "nord-button",
+      "name": "kabal-button",
       "path": "./src\\button\\Button.ts",
       "description": "Buttons are used for interface actions. Primary style should be\r\nused only once per section for main call-to-action, while other\r\nstyles can appear more frequently.",
       "attributes": [
@@ -434,7 +434,7 @@
       ]
     },
     {
-      "name": "nord-calendar",
+      "name": "kabal-calendar",
       "path": "./src\\calendar\\Calendar.ts",
       "description": "Calendar allows user to pick a date. It comes with built-in\r\nfunctionality that allows you to set a minimum and a maximum allowed date.\r\nPlease note that the date must be passed in ISO-8601 format.",
       "attributes": [
@@ -529,7 +529,7 @@
           "description": "Dispatched when a date is selected and the value changes."
         },
         {
-          "name": "nord-focus-date",
+          "name": "kabal-focus-date",
           "description": "Dispatched when the calendar's focused date changes."
         }
       ],
@@ -547,7 +547,7 @@
       ]
     },
     {
-      "name": "nord-card",
+      "name": "kabal-card",
       "path": "./src\\card\\Card.ts",
       "description": "Cards are shadowed surfaces that display content and actions on a\r\nsingle topic. They should be easy to scan for relevant and\r\nactionable information.",
       "attributes": [
@@ -614,7 +614,7 @@
       ]
     },
     {
-      "name": "nord-checkbox",
+      "name": "kabal-checkbox",
       "path": "./src\\checkbox\\Checkbox.ts",
       "description": "Checkboxes allow user to choose one or more options from a limited set of options.\r\nIf you have more than 10 options, please use Select component instead.",
       "attributes": [
@@ -808,7 +808,7 @@
       ]
     },
     {
-      "name": "nord-command-menu",
+      "name": "kabal-command-menu",
       "path": "./src\\command-menu\\CommandMenu.ts",
       "description": "Command Menu allows users to navigate and use an app without\r\ntouching the mouse and helps them transform into “power users”\r\nwho can harness more advanced features far faster.",
       "attributes": [
@@ -862,7 +862,7 @@
           "description": "The command menu was closed."
         },
         {
-          "name": "nord-select",
+          "name": "kabal-select",
           "description": "User selected a command from the menu."
         }
       ],
@@ -891,7 +891,7 @@
       ]
     },
     {
-      "name": "nord-command-menu-action",
+      "name": "kabal-command-menu-action",
       "path": "./src\\command-menu\\CommandMenuAction.ts",
       "description": "Command Menu Action displays a single action that can be executed by the user. For usage examples, please see Command Menu component.",
       "attributes": [
@@ -922,7 +922,7 @@
       ]
     },
     {
-      "name": "nord-date-picker",
+      "name": "kabal-date-picker",
       "path": "./src\\date-picker\\DatePicker.ts",
       "description": "\r\nDate Picker allows user to enter a date either through text input,\r\nor by choosing a date from the calendar. Please note that the date\r\nmust be passed in ISO-8601 format: YYYY-MM-DD.",
       "attributes": [
@@ -1211,7 +1211,7 @@
       ]
     },
     {
-      "name": "nord-divider",
+      "name": "kabal-divider",
       "path": "./src\\divider\\Divider.ts",
       "description": "Divider components are used to separate and distinguish sections of\r\ncontent or groups of menu items. Visually, they look like\r\nhorizontal or vertical lines.",
       "attributes": [
@@ -1250,7 +1250,7 @@
       ]
     },
     {
-      "name": "nord-drawer",
+      "name": "kabal-drawer",
       "path": "./src\\drawer\\Drawer.ts",
       "description": "Drawer is used to display context-sensitive actions and  information.\r\nDrawer doesn’t block users from completing their task, like a modal would.",
       "attributes": [
@@ -1298,7 +1298,7 @@
       ]
     },
     {
-      "name": "nord-dropdown-group",
+      "name": "kabal-dropdown-group",
       "path": "./src\\dropdown-group\\DropdownGroup.ts",
       "description": "Dropdown group includes all the actions or items in a single dropdown\r\ngroup and is used for grouping items into related categories.",
       "attributes": [
@@ -1329,7 +1329,7 @@
       ]
     },
     {
-      "name": "nord-dropdown-item",
+      "name": "kabal-dropdown-item",
       "path": "./src\\dropdown-item\\DropdownItem.ts",
       "description": "Dropdown item populates dropdown with actions. Items can be\r\nplaced either inside a dropdown group or directly inside a\r\ndropdown component.",
       "attributes": [
@@ -1368,7 +1368,7 @@
       ]
     },
     {
-      "name": "nord-dropdown",
+      "name": "kabal-dropdown",
       "path": "./src\\dropdown\\Dropdown.ts",
       "description": "Dropdown menu displays a list of actions or selectable options for\r\na user. Dropdown uses popout component internally to create\r\nthe overlay functionality.",
       "attributes": [
@@ -1470,7 +1470,7 @@
       ]
     },
     {
-      "name": "nord-empty-state",
+      "name": "kabal-empty-state",
       "path": "./src\\empty-state\\EmptyState.ts",
       "description": "Empty state can be used when there is no data to display to\r\ndescribe what the user can do next. Empty state provides\r\nexplanation and guidance to help user progress.",
       "properties": [
@@ -1488,7 +1488,7 @@
       ]
     },
     {
-      "name": "nord-fieldset",
+      "name": "kabal-fieldset",
       "path": "./src\\fieldset\\Fieldset.ts",
       "description": "Fieldset is used for grouping sets of input components.\r\nIt is necessary to use a fieldset with radio and checkbox components.\r\nIt can also be useful for logically grouping other types of inputs.",
       "attributes": [
@@ -1577,7 +1577,7 @@
       ]
     },
     {
-      "name": "nord-header",
+      "name": "kabal-header",
       "path": "./src\\header\\Header.ts",
       "description": "The header is a block of designated space for labelling the currently\r\nviewed context as well as providing primary actions.",
       "properties": [
@@ -1599,7 +1599,7 @@
       ]
     },
     {
-      "name": "nord-icon",
+      "name": "kabal-icon",
       "path": "./src\\icon\\Icon.ts",
       "description": "Icons are used to provide additional meaning or in places where text label doesn’t fit.\r\nIcon component allows you to display an icon from the Nordicons library.",
       "attributes": [
@@ -1665,7 +1665,7 @@
       ]
     },
     {
-      "name": "nord-input",
+      "name": "kabal-input",
       "path": "./src\\input\\Input.ts",
       "description": "Inputs are used to allow users to provide text input when the expected input is short.\r\nAs well as plain text, Input supports various types of text, including passwords and numbers.",
       "attributes": [
@@ -1933,7 +1933,7 @@
       ]
     },
     {
-      "name": "nord-layout",
+      "name": "kabal-layout",
       "path": "./src\\layout\\Layout.ts",
       "description": "Layout component is used to create the main layout of an app. Layout\r\ncurrently comes with one main configuration: two-column.",
       "attributes": [
@@ -2038,7 +2038,7 @@
       ]
     },
     {
-      "name": "nord-modal",
+      "name": "kabal-modal",
       "path": "./src\\modal\\Modal.ts",
       "description": "Modal component is used to display content that temporarily blocks interactions\r\nwith the main view of an application. Modal should be used sparingly and\r\nonly when necessary.",
       "attributes": [
@@ -2143,7 +2143,7 @@
       ]
     },
     {
-      "name": "nord-nav-group",
+      "name": "kabal-nav-group",
       "path": "./src\\nav-group\\NavGroup.ts",
       "description": "Navigation group includes all the actions or items in a single\r\ngroup and is used for grouping items into related categories.",
       "attributes": [
@@ -2173,7 +2173,7 @@
       ]
     },
     {
-      "name": "nord-nav-item",
+      "name": "kabal-nav-item",
       "path": "./src\\nav-item\\NavItem.ts",
       "description": "Navigation item populates sidebar navigation with links.\r\nEvery item should be placed inside a navigation group.",
       "attributes": [
@@ -2261,7 +2261,7 @@
       ]
     },
     {
-      "name": "nord-nav-toggle",
+      "name": "kabal-nav-toggle",
       "path": "./src\\nav-toggle\\NavToggle.ts",
       "description": "Nav toggle is meant for hiding and showing the primary navigation.\r\nThis component is used internally in the Layout component, but can also be\r\nused separate to further customize the behaviour.",
       "properties": [
@@ -2273,7 +2273,7 @@
       ]
     },
     {
-      "name": "nord-navigation",
+      "name": "kabal-navigation",
       "path": "./src\\navigation\\Navigation.ts",
       "description": "Navigation is used to display the primary navigation in the sidebar\r\nof an application. Navigation includes a list of links that users\r\nuse to move between sections of the application.",
       "properties": [
@@ -2298,7 +2298,7 @@
       ]
     },
     {
-      "name": "nord-popout",
+      "name": "kabal-popout",
       "path": "./src\\popout\\Popout.ts",
       "description": "Popouts are small overlays that open on demand. They let users access additional content and actions without cluttering the page.",
       "attributes": [
@@ -2381,7 +2381,7 @@
       ]
     },
     {
-      "name": "nord-progress-bar",
+      "name": "kabal-progress-bar",
       "path": "./src\\progress-bar\\ProgressBar.ts",
       "description": "Progress Bar is used to visually represent the completion\r\nof a task or process. It shows how much of the task has\r\nbeen completed and how much is still left.",
       "attributes": [
@@ -2449,7 +2449,7 @@
       ]
     },
     {
-      "name": "nord-qrcode",
+      "name": "kabal-qrcode",
       "path": "./src\\qrcode\\Qrcode.ts",
       "description": "QR Code component is used for providing information or links\r\nto users which they can quickly scan with their smartphone.",
       "attributes": [
@@ -2541,7 +2541,7 @@
       ]
     },
     {
-      "name": "nord-radio",
+      "name": "kabal-radio",
       "path": "./src\\radio\\Radio.ts",
       "description": "Radio buttons are graphical user interface elements that allow user to choose only one option from\r\na predefined set of mutually exclusive options.",
       "attributes": [
@@ -2717,7 +2717,7 @@
       ]
     },
     {
-      "name": "nord-range",
+      "name": "kabal-range",
       "path": "./src\\range\\Range.ts",
       "description": "Range input lets user specify a numeric value using a slider which\r\nmust be no less than a given value, and no more than another given value.",
       "attributes": [
@@ -2972,7 +2972,7 @@
       ]
     },
     {
-      "name": "nord-select",
+      "name": "kabal-select",
       "path": "./src\\select\\Select.ts",
       "description": "Select lets users choose one option from an options menu.\r\nConsider using select when you have 5 or more options to choose from.",
       "attributes": [
@@ -3170,7 +3170,7 @@
       ]
     },
     {
-      "name": "nord-skeleton",
+      "name": "kabal-skeleton",
       "path": "./src\\skeleton\\Skeleton.ts",
       "description": "Skeletons are used to provide a low fidelity representation of content\r\nbefore it appears in a view. This improves the perceived loading time\r\nfor our users.",
       "attributes": [
@@ -3214,7 +3214,7 @@
       ]
     },
     {
-      "name": "nord-spinner",
+      "name": "kabal-spinner",
       "path": "./src\\spinner\\Spinner.ts",
       "description": "Spinner component is used to indicate users that their action is being\r\nprocessed. You can customize the size and color of the spinner with the\r\nprovided properties.",
       "attributes": [
@@ -3263,7 +3263,7 @@
       ]
     },
     {
-      "name": "nord-stack",
+      "name": "kabal-stack",
       "path": "./src\\stack\\Stack.ts",
       "description": "Stack component manages layout of immediate children along the\r\nvertical or horizontal axis with optional spacing between each child.",
       "attributes": [
@@ -3368,7 +3368,7 @@
       ]
     },
     {
-      "name": "nord-tab-group",
+      "name": "kabal-tab-group",
       "path": "./src\\tab-group\\TabGroup.ts",
       "description": "Tab Group allows multiple panels to be contained within a single window,\r\nusing tabs as a navigational element.",
       "attributes": [
@@ -3438,7 +3438,7 @@
       ]
     },
     {
-      "name": "nord-tab-panel",
+      "name": "kabal-tab-panel",
       "path": "./src\\tab-panel\\TabPanel.ts",
       "description": "The panel which contains content that can be revealed using a tab\r\nin the tab group component.",
       "properties": [
@@ -3456,7 +3456,7 @@
       ]
     },
     {
-      "name": "nord-tab",
+      "name": "kabal-tab",
       "path": "./src\\tab\\Tab.ts",
       "description": "The interactive tab button for use within the tab group component.",
       "attributes": [
@@ -3501,7 +3501,7 @@
       ]
     },
     {
-      "name": "nord-table",
+      "name": "kabal-table",
       "path": "./src\\table\\Table.ts",
       "description": "Table is used to organize and display information from a data set.\r\nProvides table styles in addition to features like sticky\r\nheaders and support for narrow viewports.",
       "attributes": [
@@ -3567,7 +3567,7 @@
       ]
     },
     {
-      "name": "nord-textarea",
+      "name": "kabal-textarea",
       "path": "./src\\textarea\\Textarea.ts",
       "description": "Textarea is a component that allows user to write text over\r\nmultiple rows. Used when the expected user input is long.\r\nFor shorter input, use the Input component.",
       "attributes": [
@@ -3843,7 +3843,7 @@
       ]
     },
     {
-      "name": "nord-toast-group",
+      "name": "kabal-toast-group",
       "path": "./src\\toast-group\\ToastGroup.ts",
       "description": "Toast group is used to position and style a group of toasts, whilst ensuring they are announced by screen readers.",
       "properties": [
@@ -3861,7 +3861,7 @@
       ]
     },
     {
-      "name": "nord-toast",
+      "name": "kabal-toast",
       "path": "./src\\toast\\Toast.ts",
       "description": "Toasts are non-disruptive messages that appear in the interface\r\nto provide quick, at-a-glance feedback on the outcome of an action.",
       "attributes": [
@@ -3913,7 +3913,7 @@
       ]
     },
     {
-      "name": "nord-toggle",
+      "name": "kabal-toggle",
       "path": "./src\\toggle\\Toggle.ts",
       "description": "Toggle switch gives control over a feature or option that can be\r\nturned on or off. If a physical switch would work for the action, a\r\ntoggle is probably the best component to use.",
       "attributes": [
@@ -4107,7 +4107,7 @@
       ]
     },
     {
-      "name": "nord-tooltip",
+      "name": "kabal-tooltip",
       "path": "./src\\tooltip\\Tooltip.ts",
       "description": "Tooltips are floating containers for displaying additional information\r\nfor the currently focused element. A tooltip can be useful when you want\r\nto e.g. give a hint about an existing Command Menu shortcut.",
       "attributes": [
@@ -4190,7 +4190,7 @@
       ]
     },
     {
-      "name": "nord-visually-hidden",
+      "name": "kabal-visually-hidden",
       "path": "./src\\visually-hidden\\VisuallyHidden.ts",
       "description": "Visually hidden is used when an element needs to be available\r\nto assistive technologies like screen readers, but be otherwise\r\nhidden.",
       "properties": [

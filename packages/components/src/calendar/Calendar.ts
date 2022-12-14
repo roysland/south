@@ -66,12 +66,12 @@ const dialogLabelId = "dialog-header"
  * @status ready
  * @category list
  * @fires {DateSelectEvent} change - Dispatched when a date is selected and the value changes.
- * @fires {DateSelectEvent} nord-focus-date - Dispatched when the calendar's focused date changes.
+ * @fires {DateSelectEvent} kabal-focus-date - Dispatched when the calendar's focused date changes.
  *
  * @cssprop [--n-calendar-border-radius=var(--n-border-radius)] - Controls how rounded the corners are, using [border radius tokens](/tokens/#border-radius).
  * @cssprop [--n-calendar-box-shadow=var(--n-box-shadow-popout)] - Controls the surrounding shadow, using [box shadow tokens](/tokens/#box-shadow).
  */
-@customElement("nord-calendar")
+@customElement("kabal-calendar")
 export default class Calendar extends LitElement {
   static styles = [componentStyle, style]
 
@@ -97,7 +97,7 @@ export default class Calendar extends LitElement {
     "Shift+PageDown": preventDefault(() => this.addYears(1)),
   })
 
-  private localize = new LocalizeController<"nord-calendar">(this, {
+  private localize = new LocalizeController<"kabal-calendar">(this, {
     onLangChange: () => this.handleLangChange(),
   })
 
@@ -194,11 +194,11 @@ export default class Calendar extends LitElement {
       <div class="n-calendar">
         <div class="n-calendar-header">
           <div>
-            <nord-visually-hidden>
+            <kabal-visually-hidden>
               <h2 id=${dialogLabelId} aria-live="polite" aria-atomic="true">
                 ${this.monthNames[focusedMonth]}, ${this.focusedDay.getFullYear()}
               </h2>
-            </nord-visually-hidden>
+            </kabal-visually-hidden>
 
             <div class="n-calendar-select">
               <select
@@ -221,7 +221,7 @@ export default class Calendar extends LitElement {
               </select>
               <div class="n-calendar-select-label" aria-hidden="true">
                 <span>${this.monthNamesShort[focusedMonth]}</span>
-                <nord-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></nord-icon>
+                <kabal-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></kabal-icon>
               </div>
             </div>
 
@@ -239,31 +239,31 @@ export default class Calendar extends LitElement {
               </select>
               <div class="n-calendar-select-label" aria-hidden="true">
                 <span>${this.focusedDay.getFullYear()}</span>
-                <nord-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></nord-icon>
+                <kabal-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></kabal-icon>
               </div>
             </div>
           </div>
 
           <div class="n-calendar-nav">
-            <nord-button
+            <kabal-button
               class="n-calendar-prev"
               @click=${this.handlePreviousMonthClick}
               ?disabled=${isEqualMonth(minDate, this.focusedDay)}
               type="button"
             >
-              <nord-visually-hidden>${this.localize.term("prevMonthLabel")}</nord-visually-hidden>
-              <nord-icon name=${this.direction.isLTR ? "arrow-left-small" : "arrow-right-small"} size="s"></nord-icon>
-            </nord-button>
+              <kabal-visually-hidden>${this.localize.term("prevMonthLabel")}</kabal-visually-hidden>
+              <kabal-icon name=${this.direction.isLTR ? "arrow-left-small" : "arrow-right-small"} size="s"></kabal-icon>
+            </kabal-button>
 
-            <nord-button
+            <kabal-button
               class="n-calendar-next"
               @click=${this.handleNextMonthClick}
               ?disabled=${isEqualMonth(maxDate, this.focusedDay)}
               type="button"
             >
-              <nord-visually-hidden>${this.localize.term("nextMonthLabel")}</nord-visually-hidden>
-              <nord-icon name=${this.direction.isLTR ? "arrow-right-small" : "arrow-left-small"} size="s"></nord-icon>
-            </nord-button>
+              <kabal-visually-hidden>${this.localize.term("nextMonthLabel")}</kabal-visually-hidden>
+              <kabal-icon name=${this.direction.isLTR ? "arrow-right-small" : "arrow-left-small"} size="s"></kabal-icon>
+            </kabal-button>
           </div>
         </div>
 
@@ -282,7 +282,7 @@ export default class Calendar extends LitElement {
                   html`
                     <th class="n-calendar-table-header" scope="col">
                       <span aria-hidden="true">${this.dayNamesShort[i]}</span>
-                      <nord-visually-hidden>${dayName}</nord-visually-hidden>
+                      <kabal-visually-hidden>${dayName}</kabal-visually-hidden>
                     </th>
                   `
               )}
@@ -409,7 +409,7 @@ export default class Calendar extends LitElement {
 
   private setFocusedDay(day: Date) {
     this.focusedDay = clamp(day, parseISODate(this.min), parseISODate(this.max))
-    this.dispatchEvent(new DateSelectEvent("nord-focus-date", this.focusedDay))
+    this.dispatchEvent(new DateSelectEvent("kabal-focus-date", this.focusedDay))
   }
 
   private handleMonthSelect = (e: Event) => {
@@ -446,6 +446,6 @@ export default class Calendar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-calendar": Calendar
+    "kabal-calendar": Calendar
   }
 }

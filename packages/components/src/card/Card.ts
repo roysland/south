@@ -21,7 +21,7 @@ import style from "./Card.scss"
  * @cssprop [--n-card-padding=var(--n-space-m)] - Controls the padding on all sides of the card.
  * @cssprop [--n-card-slot-padding=var(--n-space-m)] - Controls the padding of items slotted within the card. This does not affect the block padding of items slotted into the header.
  */
-@customElement("nord-card")
+@customElement("kabal-card")
 export default class Card extends LitElement {
   static styles = [componentStyle, style]
 
@@ -51,6 +51,6 @@ export default class Card extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-card": Card
+    "kabal-card": Card
   }
 }

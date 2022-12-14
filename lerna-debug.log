@@ -1,0 +1,14 @@
+0 silly argv {
+0 silly argv   _: [ 'add' ],
+0 silly argv   scope: '@pageup/components',
+0 silly argv   globs: [],
+0 silly argv   lernaVersion: '6.1.0',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   pkg: '@types/nordhealth__icons'
+0 silly argv }
+1 notice cli v6.1.0
+2 verbose rootPath D:\Dev\Pageup\south
+3 error HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.org/@types%2fnordhealth__icons - Not found
+3 error     at D:\Dev\Pageup\south\node_modules\npm-registry-fetch\lib\check-response.js:95:15
+3 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+3 error     at async RegistryFetcher.packument (D:\Dev\Pageup\south\node_modules\pacote\lib\registry.js:92:19)

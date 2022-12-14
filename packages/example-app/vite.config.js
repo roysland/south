@@ -7,7 +7,7 @@ export default defineConfig({
     template: {
       compilerOptions: {
         isCustomElement: (tag) => {
-          return tag.startsWith('nord-')
+          return tag.startsWith('kabal-')
         } 
       }
     }

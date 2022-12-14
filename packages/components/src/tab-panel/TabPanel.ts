@@ -12,7 +12,7 @@ import style from "./TabPanel.scss"
  * @category navigation
  * @slot - The tab panel content.
  */
-@customElement("nord-tab-panel")
+@customElement("kabal-tab-panel")
 export default class TabPanel extends LitElement {
   static styles = [componentStyle, style]
 
@@ -33,6 +33,6 @@ export default class TabPanel extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-tab-panel": TabPanel
+    "kabal-tab-panel": TabPanel
   }
 }

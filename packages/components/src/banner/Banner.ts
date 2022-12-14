@@ -33,7 +33,7 @@ const iconMap: Record<Banner["variant"], string> = {
  * @cssprop [--n-banner-border-radius=var(--n-border-radius)] - Controls how rounded the corners are, using [border radius tokens](/tokens/#border-radius).
  * @cssprop [--n-banner-box-shadow=var(--n-box-shadow-card)] - Controls the surrounding shadow, using [box shadow tokens](/tokens/#box-shadow).
  */
-@customElement("nord-banner")
+@customElement("kabal-banner")
 export default class Banner extends LitElement {
   static styles = [componentStyle, style]
 
@@ -47,12 +47,12 @@ export default class Banner extends LitElement {
 
     return html`
       <div class="n-banner" role="alert">
-        <nord-stack align-items="start" direction="horizontal">
-          <nord-icon name=${icon} size="m"></nord-icon>
+        <kabal-stack align-items="start" direction="horizontal">
+          <kabal-icon name=${icon} size="m"></kabal-icon>
           <div class="n-banner-content">
             <slot></slot>
           </div>
-        </nord-stack>
+        </kabal-stack>
       </div>
     `
   }
@@ -60,6 +60,6 @@ export default class Banner extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-banner": Banner
+    "kabal-banner": Banner
   }
 }

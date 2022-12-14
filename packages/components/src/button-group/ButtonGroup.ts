@@ -16,7 +16,7 @@ import style from "./ButtonGroup.scss"
  * @cssprop [--n-button-group-box-shadow=var(--n-box-shadow)] - Controls the surrounding shadow, using [box shadow tokens](/tokens/#box-shadow).
 
  */
-@customElement("nord-button-group")
+@customElement("kabal-button-group")
 export default class ButtonGroup extends DraftComponentMixin(LitElement) {
   static styles = [componentStyle, style]
 
@@ -41,6 +41,6 @@ export default class ButtonGroup extends DraftComponentMixin(LitElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-button-group": ButtonGroup
+    "kabal-button-group": ButtonGroup
   }
 }

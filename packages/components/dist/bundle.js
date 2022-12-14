@@ -877,7 +877,7 @@ Possible properties: ${Object.keys(target).map((p5) => `'${p5}'`).join(", ")}`
   };
   VisuallyHidden.styles = VisuallyHidden_default;
   VisuallyHidden = __decorateClass([
-    e4("nord-visually-hidden")
+    e4("kabal-visually-hidden")
   ], VisuallyHidden);
 
   // src/avatar/Avatar.ts
@@ -929,7 +929,7 @@ Possible properties: ${Object.keys(target).map((p5) => `'${p5}'`).join(", ")}`
     }
     renderFallback() {
       return y`
-      <nord-visually-hidden>${this.name}</nord-visually-hidden>
+      <kabal-visually-hidden>${this.name}</kabal-visually-hidden>
       <div class="n-avatar-inner" aria-hidden="true">
         <slot></slot>
       </div>
@@ -969,7 +969,7 @@ Possible properties: ${Object.keys(target).map((p5) => `'${p5}'`).join(", ")}`
     observe("src")
   ], Avatar.prototype, "handleSrcChange", 1);
   Avatar = __decorateClass([
-    e4("nord-avatar")
+    e4("kabal-avatar")
   ], Avatar);
 
   // ../../node_modules/@nordhealth/icons/lib/assets/interface-cancelled-small.js
@@ -1190,7 +1190,7 @@ svg {
     observe("name")
   ], Icon.prototype, "handleNameChange", 1);
   Icon = __decorateClass([
-    e4("nord-icon")
+    e4("kabal-icon")
   ], Icon);
 
   // src/badge/Badge.scss
@@ -1270,7 +1270,7 @@ svg {
       const icon = this.progress ? iconMap[this.progress] : "";
       return y`
       <span class="n-badge">
-        <nord-icon name=${icon} size="xxs" ?hidden=${!icon}></nord-icon>
+        <kabal-icon name=${icon} size="xxs" ?hidden=${!icon}></kabal-icon>
         <slot></slot>
       </span>
     `;
@@ -1284,7 +1284,7 @@ svg {
     e5()
   ], Badge.prototype, "progress", 2);
   Badge = __decorateClass([
-    e4("nord-badge")
+    e4("kabal-badge")
   ], Badge);
 
   // ../../node_modules/@nordhealth/icons/lib/assets/interface-help-2.js
@@ -1352,7 +1352,7 @@ svg {
   inline-size: calc(100% - var(--n-space-xl));
 }
 
-nord-icon {
+kabal-icon {
   transform: translateY(2px);
   color: var(--n-color-icon-hover);
 }
@@ -1399,12 +1399,12 @@ nord-icon {
       const icon = iconMap2[this.variant] || iconMap2.info;
       return y`
       <div class="n-banner" role="alert">
-        <nord-stack align-items="start" direction="horizontal">
-          <nord-icon name=${icon} size="m"></nord-icon>
+        <kabal-stack align-items="start" direction="horizontal">
+          <kabal-icon name=${icon} size="m"></kabal-icon>
           <div class="n-banner-content">
             <slot></slot>
           </div>
-        </nord-stack>
+        </kabal-stack>
       </div>
     `;
     }
@@ -1414,7 +1414,7 @@ nord-icon {
     e5({ reflect: true })
   ], Banner.prototype, "variant", 2);
   Banner = __decorateClass([
-    e4("nord-banner")
+    e4("kabal-banner")
   ], Banner);
 
   // ../../node_modules/lit-html/directive-helpers.js
@@ -1703,7 +1703,7 @@ nord-icon {
     e5({ reflect: true })
   ], Spinner.prototype, "label", 2);
   Spinner = __decorateClass([
-    e4("nord-spinner")
+    e4("kabal-spinner")
   ], Spinner);
 
   // src/common/mixins/FocusableMixin.ts
@@ -1957,7 +1957,7 @@ nord-icon {
   --_n-button-box-shadow: inset 0 0 0 1px var(--_n-button-border-color) ;
 }
 
-:host([variant=switch]) slot[name=end] nord-icon {
+:host([variant=switch]) slot[name=end] kabal-icon {
   color: var(--n-color-icon);
   margin-inline-end: var(--n-space-s);
 }
@@ -2027,22 +2027,22 @@ nord-icon {
   display: none;
 }
 
-:host(:not([variant=primary], [variant=danger])) ::slotted(nord-icon),
-:host(:not([variant=primary], [variant=danger])) nord-icon {
+:host(:not([variant=primary], [variant=danger])) ::slotted(kabal-icon),
+:host(:not([variant=primary], [variant=danger])) kabal-icon {
   color: var(--n-color-icon);
 }
 
-slot:not([name])::slotted(nord-icon) {
+slot:not([name])::slotted(kabal-icon) {
   transform: translateY(1px);
 }
 
-:host([size=s]) slot:not([name])::slotted(nord-icon:not([size])),
-slot:not([name])::slotted(nord-icon[size=xs]) {
+:host([size=s]) slot:not([name])::slotted(kabal-icon:not([size])),
+slot:not([name])::slotted(kabal-icon[size=xs]) {
   transform: translateY(0);
 }
 
-::slotted(nord-icon:not([size])),
-nord-icon {
+::slotted(kabal-icon:not([size])),
+kabal-icon {
   --_n-icon-size: var(--_n-button-icon-size) ;
 }`;
   var Button_default = styles8;
@@ -2116,20 +2116,20 @@ nord-icon {
       var _a;
       const isSwitch = this.variant === "switch";
       const isDropdownToggle = ((_a = this.assignedSlot) == null ? void 0 : _a.name) === "toggle";
-      const isIconButton = this.defaultSlot.assigned.some((node) => node.localName === "nord-icon");
+      const isIconButton = this.defaultSlot.assigned.some((node) => node.localName === "kabal-icon");
       const shouldShowDropdownIcon = (isSwitch || isDropdownToggle && !isIconButton) && !this.href;
       const innards = y`
       <slot name="start"></slot>
       <div class="n-content">
         <slot></slot>
       </div>
-      <nord-spinner
+      <kabal-spinner
         class="n-button-spinner"
         color="currentColor"
         ?hidden=${!this.loading || Boolean(this.href)}
-      ></nord-spinner>
+      ></kabal-spinner>
       <slot name="end">
-        ${shouldShowDropdownIcon ? y`<nord-icon name="interface-dropdown-small"></nord-icon>` : b}
+        ${shouldShowDropdownIcon ? y`<kabal-icon name="interface-dropdown-small"></kabal-icon>` : b}
       </slot>
     `;
       return this.href ? this.renderLink(innards) : this.renderButton(innards);
@@ -2229,7 +2229,7 @@ nord-icon {
     e5({ reflect: true, type: Boolean })
   ], Button.prototype, "loading", 2);
   Button = __decorateClass([
-    e4("nord-button")
+    e4("kabal-button")
   ], Button);
 
   // src/common/mixins/DraftComponentMixin.ts
@@ -2305,12 +2305,12 @@ nord-icon {
   --n-button-border-radius: 0 0 var(--_n-button-group-border-radius) var(--_n-button-group-border-radius) ;
 }
 
-::slotted(nord-button[variant=primary]) {
+::slotted(kabal-button[variant=primary]) {
   position: relative;
 }
 
-::slotted(nord-button[variant=primary]:not(:is(:focus, :first-child)))::before,
-::slotted(nord-button[variant=primary]:not(:is(:focus, :last-child)))::after {
+::slotted(kabal-button[variant=primary]:not(:is(:focus, :first-child)))::before,
+::slotted(kabal-button[variant=primary]:not(:is(:focus, :last-child)))::after {
   content: "";
   position: absolute;
   z-index: var(--n-index-mask);
@@ -2318,23 +2318,23 @@ nord-icon {
   opacity: 0.25;
 }
 
-:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::after,
-:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::before {
+:host([direction=horizontal]) ::slotted(kabal-button[variant=primary])::after,
+:host([direction=horizontal]) ::slotted(kabal-button[variant=primary])::before {
   inline-size: 1px;
   inset-block: 0;
 }
 
-:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::after {
+:host([direction=horizontal]) ::slotted(kabal-button[variant=primary])::after {
   inset-inline-end: 0;
 }
 
-:host([direction=vertical]) ::slotted(nord-button[variant=primary])::after,
-:host([direction=vertical]) ::slotted(nord-button[variant=primary])::before {
+:host([direction=vertical]) ::slotted(kabal-button[variant=primary])::after,
+:host([direction=vertical]) ::slotted(kabal-button[variant=primary])::before {
   block-size: 1px;
   inset-inline: 0;
 }
 
-:host([direction=vertical]) ::slotted(nord-button[variant=primary])::after {
+:host([direction=vertical]) ::slotted(kabal-button[variant=primary])::after {
   inset-block-end: 0;
 }`;
   var ButtonGroup_default = styles9;
@@ -2362,7 +2362,7 @@ nord-icon {
     e5({ reflect: true })
   ], ButtonGroup.prototype, "role", 2);
   ButtonGroup = __decorateClass([
-    e4("nord-button-group")
+    e4("kabal-button-group")
   ], ButtonGroup);
 
   // ../../node_modules/lit-html/directives/class-map.js
@@ -2674,12 +2674,12 @@ nord-icon {
     $lang: "en-US",
     $name: "English",
     $dir: "ltr",
-    "nord-command-menu": localization_default,
-    "nord-calendar": localization_default3,
-    "nord-date-picker": localization_default2,
-    "nord-modal": localization_default4,
-    "nord-nav-toggle": localization_default5,
-    "nord-textarea": localization_default6
+    "kabal-command-menu": localization_default,
+    "kabal-calendar": localization_default3,
+    "kabal-date-picker": localization_default2,
+    "kabal-modal": localization_default4,
+    "kabal-nav-toggle": localization_default5,
+    "kabal-textarea": localization_default6
   };
   var en_us_default = en;
 
@@ -3129,7 +3129,7 @@ nord-icon {
   white-space: nowrap;
 }
 
-.n-calendar-nav nord-button {
+.n-calendar-nav kabal-button {
   --_n-button-padding-inline: 11px;
   margin-inline-start: calc(var(--n-space-s) / 2);
 }
@@ -3277,11 +3277,11 @@ nord-icon {
       <div class="n-calendar">
         <div class="n-calendar-header">
           <div>
-            <nord-visually-hidden>
+            <kabal-visually-hidden>
               <h2 id=${dialogLabelId} aria-live="polite" aria-atomic="true">
                 ${this.monthNames[focusedMonth]}, ${this.focusedDay.getFullYear()}
               </h2>
-            </nord-visually-hidden>
+            </kabal-visually-hidden>
 
             <div class="n-calendar-select">
               <select
@@ -3303,7 +3303,7 @@ nord-icon {
               </select>
               <div class="n-calendar-select-label" aria-hidden="true">
                 <span>${this.monthNamesShort[focusedMonth]}</span>
-                <nord-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></nord-icon>
+                <kabal-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></kabal-icon>
               </div>
             </div>
 
@@ -3321,31 +3321,31 @@ nord-icon {
               </select>
               <div class="n-calendar-select-label" aria-hidden="true">
                 <span>${this.focusedDay.getFullYear()}</span>
-                <nord-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></nord-icon>
+                <kabal-icon color="var(--n-color-icon)" name="arrow-down-small" size="xxs"></kabal-icon>
               </div>
             </div>
           </div>
 
           <div class="n-calendar-nav">
-            <nord-button
+            <kabal-button
               class="n-calendar-prev"
               @click=${this.handlePreviousMonthClick}
               ?disabled=${isEqualMonth(minDate, this.focusedDay)}
               type="button"
             >
-              <nord-visually-hidden>${this.localize.term("prevMonthLabel")}</nord-visually-hidden>
-              <nord-icon name=${this.direction.isLTR ? "arrow-left-small" : "arrow-right-small"} size="s"></nord-icon>
-            </nord-button>
+              <kabal-visually-hidden>${this.localize.term("prevMonthLabel")}</kabal-visually-hidden>
+              <kabal-icon name=${this.direction.isLTR ? "arrow-left-small" : "arrow-right-small"} size="s"></kabal-icon>
+            </kabal-button>
 
-            <nord-button
+            <kabal-button
               class="n-calendar-next"
               @click=${this.handleNextMonthClick}
               ?disabled=${isEqualMonth(maxDate, this.focusedDay)}
               type="button"
             >
-              <nord-visually-hidden>${this.localize.term("nextMonthLabel")}</nord-visually-hidden>
-              <nord-icon name=${this.direction.isLTR ? "arrow-right-small" : "arrow-left-small"} size="s"></nord-icon>
-            </nord-button>
+              <kabal-visually-hidden>${this.localize.term("nextMonthLabel")}</kabal-visually-hidden>
+              <kabal-icon name=${this.direction.isLTR ? "arrow-right-small" : "arrow-left-small"} size="s"></kabal-icon>
+            </kabal-button>
           </div>
         </div>
 
@@ -3363,7 +3363,7 @@ nord-icon {
         (dayName, i10) => y`
                     <th class="n-calendar-table-header" scope="col">
                       <span aria-hidden="true">${this.dayNamesShort[i10]}</span>
-                      <nord-visually-hidden>${dayName}</nord-visually-hidden>
+                      <kabal-visually-hidden>${dayName}</kabal-visually-hidden>
                     </th>
                   `
       )}
@@ -3459,7 +3459,7 @@ nord-icon {
     }
     setFocusedDay(day) {
       this.focusedDay = clamp2(day, parseISODate(this.min), parseISODate(this.max));
-      this.dispatchEvent(new DateSelectEvent("nord-focus-date", this.focusedDay));
+      this.dispatchEvent(new DateSelectEvent("kabal-focus-date", this.focusedDay));
     }
   };
   Calendar.styles = [Component_default, Calendar_default];
@@ -3503,7 +3503,7 @@ nord-icon {
     observe("focusedDay", "updated")
   ], Calendar.prototype, "handleFocusedDayChange", 1);
   Calendar = __decorateClass([
-    e4("nord-calendar")
+    e4("kabal-calendar")
   ], Calendar);
 
   // src/card/Card.scss
@@ -3611,7 +3611,7 @@ slot[name=footer] {
     e5({ reflect: true })
   ], Card.prototype, "padding", 2);
   Card = __decorateClass([
-    e4("nord-card")
+    e4("kabal-card")
   ], Card);
 
   // ../../node_modules/@nordhealth/icons/lib/assets/interface-checked-small.js
@@ -3703,7 +3703,7 @@ slot[name=footer] {
           <slot name="hint">${this.hint}</slot>
         </div>
       `;
-        return this.hideLabel ? y`<nord-visually-hidden>${label}</nord-visually-hidden>` : y`<div class="n-label-container">${label}</div>`;
+        return this.hideLabel ? y`<kabal-visually-hidden>${label}</kabal-visually-hidden>` : y`<div class="n-label-container">${label}</div>`;
       }
       renderError() {
         return y`
@@ -3883,7 +3883,7 @@ input:active {
   opacity: 1;
 }
 
-nord-icon {
+kabal-icon {
   --_n-icon-size: var(--_n-checkbox-icon-size);
   display: none;
   position: absolute;
@@ -3925,7 +3925,7 @@ label {
   --_n-checkbox-icon-size: var(--n-size-icon-xs) ;
 }
 
-:host([size=s]) nord-icon {
+:host([size=s]) kabal-icon {
   inset: calc(var(--n-space-s) / 2.6);
 }
 
@@ -3970,8 +3970,8 @@ label {
             aria-invalid=${l5(this.getInvalid())}
             @change=${this.handleChange}
           />
-          <nord-icon class="icon-checked" name="interface-checked-small"></nord-icon>
-          <nord-icon class="icon-indeterminate" name="interface-remove-small"></nord-icon>
+          <kabal-icon class="icon-checked" name="interface-checked-small"></kabal-icon>
+          <kabal-icon class="icon-indeterminate" name="interface-remove-small"></kabal-icon>
         </div>
         <div class="n-expand">${this.renderLabel()} ${this.renderError()}</div>
       </div>
@@ -3991,7 +3991,7 @@ label {
     e5({ type: Boolean })
   ], Checkbox.prototype, "checked", 2);
   Checkbox = __decorateClass([
-    e4("nord-checkbox")
+    e4("kabal-checkbox")
   ], Checkbox);
 
   // ../../node_modules/@nordhealth/icons/lib/assets/keyboard-arrow-up-down.js
@@ -4206,7 +4206,7 @@ label {
   border-inline-start-color: var(--n-color-accent);
 }
 
-nord-icon {
+kabal-icon {
   color: var(--n-color-icon);
 }
 
@@ -4216,7 +4216,7 @@ nord-icon {
   line-height: var(--n-line-height-tight);
 }
 
-.n-selected .n-command-icon nord-icon {
+.n-selected .n-command-icon kabal-icon {
   color: var(--n-color-icon-hover);
 }
 
@@ -4273,7 +4273,7 @@ nord-icon {
       })}
       >
         <div aria-hidden="true" class="n-command-icon">
-          <nord-icon size="s" name=${this.getIconName()}></nord-icon>
+          <kabal-icon size="s" name=${this.getIconName()}></kabal-icon>
         </div>
         <div class="n-title">${this.command.title}</div>
         ${this.renderShortcut()}
@@ -4297,12 +4297,12 @@ nord-icon {
       }
       const keys = this.command.shortcut.replace(KEY_REGEX, "$1");
       return y`
-      <nord-visually-hidden>, ${keys}</nord-visually-hidden>
+      <kabal-visually-hidden>, ${keys}</kabal-visually-hidden>
 
       <div aria-hidden="true" class="n-shortcuts">
         ${keys.split("+").map(
         (key) => y`<div class="n-shortcut">
-                ${key.toLowerCase() === "alt" && isMacintosh() ? y`<nord-icon name=${title19} size="s"></nord-icon>` : key}
+                ${key.toLowerCase() === "alt" && isMacintosh() ? y`<kabal-icon name=${title19} size="s"></kabal-icon>` : key}
               </div>`
       )}
       </div>
@@ -4320,7 +4320,7 @@ nord-icon {
     observe("selected")
   ], CommandMenuAction.prototype, "ensureInView", 1);
   CommandMenuAction = __decorateClass([
-    e4("nord-command-menu-action")
+    e4("kabal-command-menu-action")
   ], CommandMenuAction);
 
   // src/command-menu/SelectEvent.ts
@@ -4331,7 +4331,7 @@ nord-icon {
     }
   };
   var SelectEvent = _SelectEvent;
-  SelectEvent.eventName = "nord-select";
+  SelectEvent.eventName = "kabal-select";
 
   // src/command-menu/CommandMenu.scss
   var styles15 = i`:host {
@@ -4404,13 +4404,13 @@ nord-icon {
   border-inline-start: 1px solid var(--n-color-border-strong);
 }
 
-.n-help nord-icon {
+.n-help kabal-icon {
   --_n-icon-size: 10px;
   color: currentColor;
   margin: 3px 4px;
 }
 
-.n-help.n-backspace nord-icon {
+.n-help.n-backspace kabal-icon {
   --_n-icon-size: 12px ;
 }
 
@@ -4578,7 +4578,7 @@ nord-icon {
       })}
         >
           <div class="n-search-wrapper">
-            <nord-visually-hidden id="instructions"> ${this.localize.term("instructions")} </nord-visually-hidden>
+            <kabal-visually-hidden id="instructions"> ${this.localize.term("instructions")} </kabal-visually-hidden>
             <input
               type="text"
               id="search"
@@ -4609,16 +4609,16 @@ nord-icon {
           <slot name="footer">
             <div class="n-modal-footer">
               <span class="n-help">
-                <nord-icon label="Arrow keys" name=${title14}></nord-icon>
+                <kabal-icon label="Arrow keys" name=${title14}></kabal-icon>
                 ${this.localize.term("footerArrowKeys")}
               </span>
               <span class="n-help">
-                <nord-icon label="Enter key" name=${title15}></nord-icon>
+                <kabal-icon label="Enter key" name=${title15}></kabal-icon>
                 ${this.localize.term("footerEnterKey")}
               </span>
               <span class="n-help">${this.localize.term("footerEscapeKey")}</span>
               <span class="n-help n-backspace">
-                <nord-icon label="Backspace key" name=${title16}></nord-icon>
+                <kabal-icon label="Backspace key" name=${title16}></kabal-icon>
                 ${this.localize.term("footerBackspaceKey")}
               </span>
             </div>
@@ -4646,14 +4646,14 @@ nord-icon {
         (command) => {
           var _a, _b;
           return y`
-            <nord-command-menu-action
+            <kabal-command-menu-action
               id=${command.id}
               .command=${command}
               ?selected=${this.open && command.id === ((_a = this.selected) == null ? void 0 : _a.id)}
               @click=${() => this.select(command)}
               role="option"
               aria-selected=${cond(command.id === ((_b = this.selected) == null ? void 0 : _b.id), "true")}
-            ></nord-command-menu-action>
+            ></kabal-command-menu-action>
           `;
         }
       )}
@@ -4785,7 +4785,7 @@ nord-icon {
     observe("commands")
   ], CommandMenu.prototype, "filterCommands", 1);
   CommandMenu = __decorateClass([
-    e4("nord-command-menu")
+    e4("kabal-command-menu")
   ], CommandMenu);
 
   // ../../node_modules/@nordhealth/icons/lib/assets/interface-calendar.js
@@ -4985,20 +4985,20 @@ slot[name=end] {
   --n-button-border-radius: 0 var(--n-border-radius-s) var(--n-border-radius-s) 0 ;
 }
 
-:is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
-nord-icon {
+:is([name=start], [name=end])::slotted(:not(kabal-button, kabal-dropdown)),
+kabal-icon {
   margin-inline-start: var(--n-space-m);
   margin-inline-end: var(--n-space-m);
 }
 
-:host([size=s]) :is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
-:host([size=s]) nord-icon {
+:host([size=s]) :is([name=start], [name=end])::slotted(:not(kabal-button, kabal-dropdown)),
+:host([size=s]) kabal-icon {
   margin-inline-start: var(--n-space-s);
   margin-inline-end: var(--n-space-s);
 }
 
-:host([size=l]) :is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
-:host([size=l]) nord-icon {
+:host([size=l]) :is([name=start], [name=end])::slotted(:not(kabal-button, kabal-dropdown)),
+:host([size=l]) kabal-icon {
   margin-inline-start: var(--n-space-m);
   margin-inline-end: var(--n-space-m);
 }
@@ -5029,32 +5029,32 @@ nord-icon {
   padding-inline-end: calc(var(--n-space-xl) * 1.1);
 }
 
-::slotted(nord-button:not([disabled])),
-::slotted(nord-dropdown) {
+::slotted(kabal-button:not([disabled])),
+::slotted(kabal-dropdown) {
   pointer-events: auto;
   position: relative;
   --n-button-box-shadow: none ;
 }
 
-::slotted(nord-button:active),
-::slotted(nord-dropdown:active:not([open])) {
+::slotted(kabal-button:active),
+::slotted(kabal-dropdown:active:not([open])) {
   inset-block-start: -1px;
 }
 
-::slotted(nord-button[disabled]) {
+::slotted(kabal-button[disabled]) {
   --n-button-background-color: transparent ;
 }
 
-.n-input-container:hover:not(:focus-within) ::slotted(:is(nord-button, nord-dropdown)),
-.n-label-container:hover ~ .n-input-container:not(:focus-within) ::slotted(:is(nord-button, nord-dropdown)) {
+.n-input-container:hover:not(:focus-within) ::slotted(:is(kabal-button, kabal-dropdown)),
+.n-label-container:hover ~ .n-input-container:not(:focus-within) ::slotted(:is(kabal-button, kabal-dropdown)) {
   --n-button-border-color: var(--n-input-border-color, var(--n-color-border-hover)) ;
 }
 
-.n-input-container:focus-within ::slotted(:is(nord-button, nord-dropdown:not([open]))) {
+.n-input-container:focus-within ::slotted(:is(kabal-button, kabal-dropdown:not([open]))) {
   --n-button-border-color: var(--n-input-border-color, var(--n-color-accent)) ;
 }
 
-:host([error]) .n-input-container ::slotted(:is(nord-button:not(:focus), nord-dropdown:not(:focus-within), nord-dropdown[open])) {
+:host([error]) .n-input-container ::slotted(:is(kabal-button:not(:focus), kabal-dropdown:not(:focus-within), kabal-dropdown[open])) {
   --n-button-border-color: var(--n-input-border-color, var(--n-color-status-danger)) ;
 }
 
@@ -5082,7 +5082,7 @@ nord-icon {
   padding-inline-end: calc(var(--n-space-l) * 2.5);
 }
 
-:host([size=s]) ::slotted(nord-button) {
+:host([size=s]) ::slotted(kabal-button) {
   --_n-button-padding-inline: calc(var(--n-space-s) * 1.4) ;
 }
 
@@ -5098,8 +5098,8 @@ nord-icon {
   --_n-input-icon-size: var(--n-size-icon-m) ;
 }
 
-::slotted(nord-icon:not([size])),
-nord-icon {
+::slotted(kabal-icon:not([size])),
+kabal-icon {
   --_n-icon-size: var(--_n-input-icon-size) ;
 }`;
   var Input_default = styles17;
@@ -5135,7 +5135,7 @@ nord-icon {
   var isButtonOrDropdown = (el) => {
     if (el === null)
       return false;
-    return el.localName === "nord-button" || el.localName === "nord-dropdown";
+    return el.localName === "kabal-button" || el.localName === "kabal-dropdown";
   };
   var Input = class extends SizeMixin(
     FormAssociatedMixin(AutocompleteMixin(ReadonlyMixin(InputMixin(FocusableMixin(s4)))))
@@ -5174,7 +5174,7 @@ nord-icon {
       })}
       >
         <slot name=${this.startSlot.slotName} ?hidden=${!startSlotHasContent}>
-          ${this.type === "search" ? y`<nord-icon name="navigation-search"></nord-icon>` : b}
+          ${this.type === "search" ? y`<kabal-icon name="navigation-search"></kabal-icon>` : b}
         </slot>
         <input
           ${n7(this.focusableRef)}
@@ -5222,7 +5222,7 @@ nord-icon {
     e5({ reflect: true, attribute: "disallow-pattern" })
   ], Input.prototype, "disallowPattern", 2);
   Input = __decorateClass([
-    e4("nord-input")
+    e4("kabal-input")
   ], Input);
 
   // ../../node_modules/@floating-ui/core/dist/floating-ui.core.browser.min.mjs
@@ -5974,7 +5974,7 @@ nord-icon {
     observe("open")
   ], Popout.prototype, "handleOpenChange", 1);
   Popout = __decorateClass([
-    e4("nord-popout")
+    e4("kabal-popout")
   ], Popout);
 
   // src/stack/Stack.scss
@@ -6104,7 +6104,7 @@ nord-icon {
     e5({ reflect: true, attribute: "justify-content" })
   ], Stack.prototype, "justifyContent", 2);
   Stack = __decorateClass([
-    e4("nord-stack")
+    e4("kabal-stack")
   ], Stack);
 
   // src/date-picker/DatePicker.scss
@@ -6230,7 +6230,7 @@ nord-icon {
       const { valueAsDate } = this;
       const formattedDate = valueAsDate ? this.dateAdapter.format(valueAsDate) : "";
       return y`
-      <nord-input
+      <kabal-input
         class="n-date-picker-input"
         value=${formattedDate}
         label=${l5(this.label)}
@@ -6254,7 +6254,7 @@ nord-icon {
       >
         ${!this.hintSlot.isEmpty ? y`<slot name="hint" slot="hint"></slot>` : b}
         ${!this.labelSlot.isEmpty ? y`<slot name="label" slot="label"></slot>` : b}
-        <nord-button
+        <kabal-button
           size=${this.size}
           ?disabled=${this.disabled || this.readonly}
           slot="end"
@@ -6262,18 +6262,18 @@ nord-icon {
           aria-controls="popout"
           type="button"
         >
-          <nord-icon name="interface-calendar"></nord-icon>
-          <nord-visually-hidden>
+          <kabal-icon name="interface-calendar"></kabal-icon>
+          <kabal-visually-hidden>
             ${this.localize.term("buttonLabel")}
             ${valueAsDate ? y`
                   <span>
                     , ${this.localize.term("selectedDateMessage")} ${this.dateFormatLong.format(valueAsDate)}
                   </span>
                 ` : b}
-          </nord-visually-hidden>
-        </nord-button>
-      </nord-input>
-      <nord-popout
+          </kabal-visually-hidden>
+        </kabal-button>
+      </kabal-input>
+      <kabal-popout
         id="popout"
         anchor=${this.inputId}
         align="end"
@@ -6287,21 +6287,21 @@ nord-icon {
       >
         <div aria-hidden="true" tabindex="0" @focus=${this.focusLast}></div>
 
-        <nord-stack class="n-date-picker-header" direction="horizontal" justify-content="space-between">
+        <kabal-stack class="n-date-picker-header" direction="horizontal" justify-content="space-between">
           <div class="n-date-picker-heading" id="header">${this.localize.term("modalHeading")}</div>
-          <nord-button
+          <kabal-button
             class="n-date-picker-close-button"
             type="button"
             size="s"
             variant="plain"
             @click=${this.handleClose}
           >
-            <nord-visually-hidden>${this.localize.term("closeLabel")}</nord-visually-hidden>
-            <nord-icon name="interface-close-small"></nord-icon>
-          </nord-button>
-        </nord-stack>
+            <kabal-visually-hidden>${this.localize.term("closeLabel")}</kabal-visually-hidden>
+            <kabal-icon name="interface-close-small"></kabal-icon>
+          </kabal-button>
+        </kabal-stack>
 
-        <nord-calendar
+        <kabal-calendar
           class="n-date-picker-calendar"
           expand
           value=${this.value}
@@ -6311,10 +6311,10 @@ nord-icon {
           .isDateDisabled=${this.isDateDisabled}
           .isDateHighlighted=${this.isDateHighlighted}
           @change=${this.handleDaySelect}
-        ></nord-calendar>
+        ></kabal-calendar>
 
         <div aria-hidden="true" tabindex="0" @focus=${this.focusFirst}></div>
-      </nord-popout>
+      </kabal-popout>
     `;
     }
     createDateFormatters() {
@@ -6356,7 +6356,7 @@ nord-icon {
     i4(`.n-date-picker-close-button`, true)
   ], DatePicker.prototype, "closeButton", 2);
   __decorateClass([
-    i4(`nord-calendar`, true)
+    i4(`kabal-calendar`, true)
   ], DatePicker.prototype, "calendar", 2);
   __decorateClass([
     i4(`[role="dialog"]`, true)
@@ -6392,7 +6392,7 @@ nord-icon {
     e5({ reflect: true, type: Boolean })
   ], DatePicker.prototype, "expand", 2);
   DatePicker = __decorateClass([
-    e4("nord-date-picker")
+    e4("kabal-date-picker")
   ], DatePicker);
 
   // src/divider/Divider.scss
@@ -6434,12 +6434,12 @@ nord-icon {
     observe("direction")
   ], Divider.prototype, "handleDirectionChange", 1);
   Divider = __decorateClass([
-    e4("nord-divider")
+    e4("kabal-divider")
   ], Divider);
 
   // src/drawer/Drawer.scss
   var styles22 = i`:host {
-  --_n-drawer-padding:var(--n-drawer-padding, var(--n-space-l));
+  --_n-drawer-padding: var(--n-drawer-padding, var(--n-space-l)) ;
 }
 
 .n-drawer {
@@ -6460,11 +6460,11 @@ nord-icon {
 }
 
 :host([padding=none]) {
-  --_n-drawer-padding:var(--n-drawer-padding, 0);
+  --_n-drawer-padding: var(--n-drawer-padding, 0) ;
 }
 
-::slotted(nord-header) {
-  --_n-header-box-shadow:none;
+::slotted(kabal-header) {
+  --_n-header-box-shadow: none ;
 }
 
 slot[name=footer] {
@@ -6482,10 +6482,20 @@ slot[name=footer] {
       super(...arguments);
       this.footerSlot = new SlotController(this, "footer");
       this.padding = "m";
+      this.open = false;
+    }
+    show() {
+      this.open = true;
+    }
+    close() {
+      this.open = false;
+    }
+    handleOpenUpdated() {
+      console.log("drawer changed");
     }
     render() {
       return y`
-      <div class="n-drawer">
+      <div class="n-drawer ${this.open ? "open" : "closed"}">
         <slot name="header"></slot>
 
         <div class="n-drawer-main">
@@ -6503,8 +6513,14 @@ slot[name=footer] {
   __decorateClass([
     e5({ reflect: true })
   ], Drawer.prototype, "padding", 2);
+  __decorateClass([
+    e5({ type: Boolean, reflect: true })
+  ], Drawer.prototype, "open", 2);
+  __decorateClass([
+    observe("open")
+  ], Drawer.prototype, "handleOpenUpdated", 1);
   Drawer = __decorateClass([
-    e4("nord-drawer")
+    e4("kabal-drawer")
   ], Drawer);
 
   // src/dropdown/Dropdown.scss
@@ -6525,18 +6541,18 @@ slot[name=footer] {
     overflow-y: auto;
   }
 }
-::slotted(nord-dropdown-group), ::slotted(nord-dropdown-item) {
+::slotted(kabal-dropdown-group), ::slotted(kabal-dropdown-item) {
   padding-inline-start: var(--n-space-s);
   padding-inline-end: var(--n-space-s);
 }
 
-::slotted(nord-dropdown-group) {
+::slotted(kabal-dropdown-group) {
   padding-block-end: var(--n-space-s);
   border-block-end: 1px solid var(--n-color-border);
   margin-block-end: var(--n-space-s);
 }
 
-::slotted(nord-dropdown-group:last-child) {
+::slotted(kabal-dropdown-group:last-child) {
   padding-block-end: 0;
   border-block-end: 0;
   margin-block-end: 0;
@@ -6575,7 +6591,7 @@ slot[name=toggle] {
       return y`
       <div class="n-dropdown" @focusout=${this.handleBlur}>
         <slot name="toggle" aria-controls="popout"></slot>
-        <nord-popout
+        <kabal-popout
           id="popout"
           align=${l5(this.align)}
           position=${l5(this.position)}
@@ -6586,7 +6602,7 @@ slot[name=toggle] {
           <div class="n-dropdown-content">
             <slot></slot>
           </div>
-        </nord-popout>
+        </kabal-popout>
       </div>
     `;
     }
@@ -6599,7 +6615,7 @@ slot[name=toggle] {
     handleOpen() {
       var _a;
       this.open = true;
-      (_a = this.querySelector("nord-dropdown-item")) == null ? void 0 : _a.focus();
+      (_a = this.querySelector("kabal-dropdown-item")) == null ? void 0 : _a.focus();
     }
     handleClose() {
       this.open = false;
@@ -6614,7 +6630,7 @@ slot[name=toggle] {
   Dropdown.styles = [Component_default, Dropdown_default];
   Dropdown.shadowRootOptions = __spreadProps(__spreadValues({}, s4.shadowRootOptions), { delegatesFocus: true });
   __decorateClass([
-    i4("nord-popout", true)
+    i4("kabal-popout", true)
   ], Dropdown.prototype, "popout", 2);
   __decorateClass([
     e5({ reflect: true, type: Boolean })
@@ -6623,7 +6639,7 @@ slot[name=toggle] {
     e5({ reflect: true })
   ], Dropdown.prototype, "size", 2);
   Dropdown = __decorateClass([
-    e4("nord-dropdown")
+    e4("kabal-dropdown")
   ], Dropdown);
 
   // src/dropdown-group/DropdownGroup.scss
@@ -6666,7 +6682,7 @@ slot[name=toggle] {
     e5()
   ], DropdownGroup.prototype, "heading", 2);
   DropdownGroup = __decorateClass([
-    e4("nord-dropdown-group")
+    e4("kabal-dropdown-group")
   ], DropdownGroup);
 
   // src/dropdown-item/DropdownItem.scss
@@ -6705,11 +6721,11 @@ slot[name=toggle] {
   color: var(--n-color-text-on-accent) !important;
 }
 
-.n-dropdown-item ::slotted(nord-icon) {
+.n-dropdown-item ::slotted(kabal-icon) {
   color: var(--n-color-icon);
 }
 
-.n-dropdown-item:hover ::slotted(nord-icon) {
+.n-dropdown-item:hover ::slotted(kabal-icon) {
   color: currentColor;
 }
 
@@ -6737,7 +6753,7 @@ slot[name=toggle] {
     gap: var(--n-space-m);
     padding: calc(var(--n-space-m) / 1.5) var(--n-space-m);
   }
-  .n-dropdown-item ::slotted(nord-icon) {
+  .n-dropdown-item ::slotted(kabal-icon) {
     block-size: var(--n-size-icon-m);
     inline-size: var(--n-size-icon-m);
   }
@@ -6758,7 +6774,7 @@ slot[name=end] {
   text-overflow: ellipsis;
 }
 
-::slotted(nord-icon:not([size])) {
+::slotted(kabal-icon:not([size])) {
   --_n-icon-size: var(--n-size-icon-s) ;
 }`;
   var DropdownItem_default = styles25;
@@ -6781,7 +6797,7 @@ slot[name=end] {
     e5({ reflect: true })
   ], DropdownItem.prototype, "href", 2);
   DropdownItem = __decorateClass([
-    e4("nord-dropdown-item")
+    e4("kabal-dropdown-item")
   ], DropdownItem);
 
   // src/empty-state/EmptyState.scss
@@ -6831,7 +6847,7 @@ slot[name=end] {
   };
   EmptyState.styles = [Component_default, EmptyState_default];
   EmptyState = __decorateClass([
-    e4("nord-empty-state")
+    e4("kabal-empty-state")
   ], EmptyState);
 
   // src/fieldset/Fieldset.scss
@@ -6905,7 +6921,7 @@ slot[name=end] {
     e5({ type: Boolean, attribute: "hide-required" })
   ], Fieldset.prototype, "hideRequired", 2);
   Fieldset = __decorateClass([
-    e4("nord-fieldset")
+    e4("kabal-fieldset")
   ], Fieldset);
 
   // src/header/Header.scss
@@ -6970,7 +6986,7 @@ slot[name=end] {
   };
   Header.styles = [Component_default, Header_default];
   Header = __decorateClass([
-    e4("nord-header")
+    e4("kabal-header")
   ], Header);
 
   // ../../node_modules/lit-html/directives/style-map.js
@@ -7052,23 +7068,23 @@ slot[name=end] {
   display: inline-flex;
 }
 
-nord-icon {
+kabal-icon {
   display: block;
 }
 
-nord-icon[name=navigation-toggle-lock] {
+kabal-icon[name=navigation-toggle-lock] {
   display: none;
 }
 
-.is-rtl nord-icon[name=navigation-toggle-lock] {
+.is-rtl kabal-icon[name=navigation-toggle-lock] {
   transform: rotate(180deg);
 }
 
 @media (min-width: 768px) {
-  :host(:is(:hover, :focus-within)) nord-icon[name=navigation-toggle-lock] {
+  :host(:is(:hover, :focus-within)) kabal-icon[name=navigation-toggle-lock] {
     display: block;
   }
-  :host(:is(:hover, :focus-within)) nord-icon[name=navigation-toggle] {
+  :host(:is(:hover, :focus-within)) kabal-icon[name=navigation-toggle] {
     display: none;
   }
 }`;
@@ -7085,22 +7101,22 @@ nord-icon[name=navigation-toggle-lock] {
     }
     render() {
       return y`
-      <nord-button
+      <kabal-button
         variant="plain"
         size="s"
         ${n7(this.focusableRef)}
         class=${o9({ "is-rtl": this.direction.isRTL })}
       >
-        <nord-visually-hidden>${this.localization.term("label")}</nord-visually-hidden>
-        <nord-icon size="m" color="var(--n-color-icon)" name=${title23} class="nav-unlock"></nord-icon>
-        <nord-icon size="m" color="var(--n-color-text)" name=${title24} class="nav-lock"></nord-icon>
-      </nord-button>
+        <kabal-visually-hidden>${this.localization.term("label")}</kabal-visually-hidden>
+        <kabal-icon size="m" color="var(--n-color-icon)" name=${title23} class="nav-unlock"></kabal-icon>
+        <kabal-icon size="m" color="var(--n-color-text)" name=${title24} class="nav-lock"></kabal-icon>
+      </kabal-button>
     `;
     }
   };
   NavToggle.styles = [Component_default, NavToggle_default];
   NavToggle = __decorateClass([
-    e4("nord-nav-toggle")
+    e4("kabal-nav-toggle")
   ], NavToggle);
 
   // src/common/styles/Sticky.scss
@@ -7124,15 +7140,16 @@ nord-icon[name=navigation-toggle-lock] {
 
   // src/layout/Layout.scss
   var styles31 = i`:host {
-  --_n-layout-padding:var(--n-layout-padding, var(--n-space-l));
-  --_n-layout-drawer-inline-size:var(--n-layout-drawer-inline-size, 320px);
-  --_n-layout-background-color:var(--n-layout-background-color, var(--n-color-background));
-  --_n-layout-nav-transition-duration:var(--n-transition-mobile);
+  --_n-layout-padding: var(--n-layout-padding, var(--n-space-l));
+  --_n-layout-drawer-inline-size: var(--n-layout-drawer-inline-size, 320px);
+  --_n-layout-background-color: var(--n-layout-background-color, var(--n-color-background));
+  --_n-layout-nav-transition-duration: var(--n-transition-mobile);
   background: var(--_n-layout-background-color);
   color: var(--n-color-text);
 }
 
-.n-layout-main, .n-layout-nav {
+.n-layout-main,
+.n-layout-nav {
   background: var(--_n-layout-background-color);
   min-block-size: 100%;
 }
@@ -7260,7 +7277,9 @@ slot[name=drawer]::slotted(*) {
   outline: 0;
 }
 
-.n-dragging .n-resize::after, .n-resize:focus::after, [data-nav=opened] .n-resize:hover::after {
+.n-dragging .n-resize::after,
+.n-resize:focus::after,
+[data-nav=opened] .n-resize:hover::after {
   opacity: 1;
   transition-delay: 0.15s;
 }
@@ -7280,7 +7299,7 @@ slot[name=drawer]::slotted(*) {
 }
 
 :host([padding=none]) {
-  --_n-layout-padding:var(--n-layout-padding, 0);
+  --_n-layout-padding: var(--n-layout-padding, 0) ;
 }
 
 .n-nav-toggle-container {
@@ -7295,8 +7314,8 @@ slot[name=drawer]::slotted(*) {
   display: none;
 }
 
-:is([data-screen=wide]:not([data-nav=opened]), [data-screen=narrow]) .n-has-own-nav-toggle slot[name=header]::slotted(nord-header) {
-  --_n-header-gutter:calc(var(--n-space-l) * 3);
+:is([data-screen=wide]:not([data-nav=opened]), [data-screen=narrow]) .n-has-own-nav-toggle slot[name=header]::slotted(kabal-header) {
+  --_n-header-gutter: calc(var(--n-space-l) * 3) ;
 }`;
   var Layout_default = styles31;
 
@@ -7308,7 +7327,7 @@ slot[name=drawer]::slotted(*) {
   var NAV_RESIZE_STEP = 30;
   var NAV_PEEK_DELAY = 300;
   var mediaQuery2 = matchMedia("(min-width: 768px)");
-  var store = storage("nord-layout.navWidth", NAV_DEFAULT_WIDTH);
+  var store = storage("kabal-layout.navWidth", NAV_DEFAULT_WIDTH);
   var navMachine = fsm({
     opened: {
       toggle: "closed",
@@ -7490,7 +7509,7 @@ slot[name=drawer]::slotted(*) {
           @mouseover=${this.handleMouseEnter}
           @mouseout=${this.handleMouseLeave}
         >
-          <nord-nav-toggle></nord-nav-toggle>
+          <kabal-nav-toggle></kabal-nav-toggle>
         </slot>
       </div>
     `;
@@ -7544,13 +7563,13 @@ slot[name=drawer]::slotted(*) {
     }
     handleDropdownOpen(e13) {
       const target = e13.target;
-      if (target.localName === "nord-dropdown") {
+      if (target.localName === "kabal-dropdown") {
         this.navTransition("dropdownOpen");
       }
     }
     handleDropdownClose(e13) {
       const target = e13.target;
-      if (target.localName === "nord-dropdown") {
+      if (target.localName === "kabal-dropdown") {
         this.navTransition("dropdownClose");
       }
     }
@@ -7649,7 +7668,7 @@ slot[name=drawer]::slotted(*) {
     observe("navOpen", "updated")
   ], Layout.prototype, "handleOpenChange", 1);
   Layout = __decorateClass([
-    e4("nord-layout")
+    e4("kabal-layout")
   ], Layout);
 
   // src/modal/Modal.scss
@@ -8040,7 +8059,7 @@ slot[name=feature]::slotted(*) {
           <div class="n-modal-header n-rounded-top" ?hidden=${this.headerSlot.isEmpty}>
             <slot class="n-padded" name=${this.headerSlot.slotName}></slot>
             <button class="n-close" @click=${this.handleDismiss}>
-              <nord-icon name="interface-close-small" size="s" label=${this.localize.term("closeLabel")}></nord-icon>
+              <kabal-icon name="interface-close-small" size="s" label=${this.localize.term("closeLabel")}></kabal-icon>
             </button>
           </div>
 
@@ -8098,7 +8117,7 @@ slot[name=feature]::slotted(*) {
     observe("open", "updated")
   ], Modal.prototype, "handleOpenUpdated", 1);
   Modal = __decorateClass([
-    e4("nord-modal")
+    e4("kabal-modal")
   ], Modal);
 
   // src/nav-group/NavGroup.scss
@@ -8159,7 +8178,7 @@ slot[name=feature]::slotted(*) {
     e5()
   ], NavGroup.prototype, "heading", 2);
   NavGroup = __decorateClass([
-    e4("nord-nav-group")
+    e4("kabal-nav-group")
   ], NavGroup);
 
   // src/nav-item/NavItem.scss
@@ -8252,7 +8271,7 @@ slot[name=feature]::slotted(*) {
   --_n-nav-item-box-shadow:0 0 0 1px var(--n-color-nav-surface),0 0 0 3px var(--n-color-accent);
 }
 
-:host([active]) nord-icon {
+:host([active]) kabal-icon {
   color: currentColor;
 }
 
@@ -8275,7 +8294,7 @@ slot[name=feature]::slotted(*) {
   flex-shrink: 0;
 }
 
-::slotted(nord-nav-group) {
+::slotted(kabal-nav-group) {
   margin-inline-start: calc(var(--n-space-m) + var(--n-space-s) * 1.3);
 }
 
@@ -8307,13 +8326,13 @@ slot[name=feature]::slotted(*) {
     }
     connectedCallback() {
       super.connectedCallback();
-      if (this.querySelector(`nord-nav-item[active]`)) {
+      if (this.querySelector(`kabal-nav-item[active]`)) {
         this.open = true;
       }
     }
     render() {
       const innards = y`
-      ${this.icon ? y`<nord-icon class="n-nav-icon" name=${this.icon} size="m"></nord-icon>` : b}
+      ${this.icon ? y`<kabal-icon class="n-nav-icon" name=${this.icon} size="m"></kabal-icon>` : b}
       <div class="n-nav-content">
         <span class="n-nav-label"><slot></slot></span>
         ${this.badge ? y`<span class="n-nav-badge">${this.badge}</span>` : b}
@@ -8351,11 +8370,11 @@ slot[name=feature]::slotted(*) {
       >
         ${innards}
 
-        <nord-icon
+        <kabal-icon
           size="xxs"
           class=${o9({ "n-toggle-icon": true, "n-rtl": this.direction.isRTL })}
           name="arrow-expand-right-small"
-        ></nord-icon>
+        ></kabal-icon>
       </button>
     `;
     }
@@ -8384,7 +8403,7 @@ slot[name=feature]::slotted(*) {
     e5({ type: Boolean })
   ], NavItem.prototype, "open", 2);
   NavItem = __decorateClass([
-    e4("nord-nav-item")
+    e4("kabal-nav-item")
   ], NavItem);
 
   // src/navigation/Navigation.scss
@@ -8439,7 +8458,7 @@ slot[name=footer] {
   };
   Navigation.styles = Navigation_default;
   Navigation = __decorateClass([
-    e4("nord-navigation")
+    e4("kabal-navigation")
   ], Navigation);
 
   // src/progress-bar/ProgressBar.scss
@@ -8520,7 +8539,7 @@ progress:focus {
     }
     render() {
       return y`<label>
-      <nord-visually-hidden>${this.label}</nord-visually-hidden>
+      <kabal-visually-hidden>${this.label}</kabal-visually-hidden>
       <progress
         ${n7(this.focusableRef)}
         aria-valuenow=${l5(this.value)}
@@ -8544,7 +8563,7 @@ progress:focus {
     e5({ reflect: true })
   ], ProgressBar.prototype, "label", 2);
   ProgressBar = __decorateClass([
-    e4("nord-progress-bar")
+    e4("kabal-progress-bar")
   ], ProgressBar);
 
   // src/common/controllers/LightSlotController.ts
@@ -8692,7 +8711,7 @@ progress:focus {
 
   // src/radio/Radio.ts
   var id = 0;
-  var createId = (suffix) => `nord-radio-${suffix}-${id++}`;
+  var createId = (suffix) => `kabal-radio-${suffix}-${id++}`;
   function isLabel(element) {
     return element.localName === "label";
   }
@@ -8776,7 +8795,7 @@ progress:focus {
                 <slot name="label"></slot>
                 <slot name="label-internal"></slot>
               `,
-        (content) => y`<nord-visually-hidden>${content}</nord-visually-hidden>`
+        (content) => y`<kabal-visually-hidden>${content}</kabal-visually-hidden>`
       )}
             <div class="n-caption n-hint" ?hidden=${!this.hasHint}>
               <slot name="hint"></slot>
@@ -8798,7 +8817,7 @@ progress:focus {
     }
     uncheckSiblings() {
       const root = this.getRootNode();
-      root.querySelectorAll(`nord-radio[name="${this.name}"]`).forEach((radio) => {
+      root.querySelectorAll(`kabal-radio[name="${this.name}"]`).forEach((radio) => {
         if (radio !== this) {
           radio.checked = false;
         }
@@ -8819,7 +8838,7 @@ progress:focus {
     observe("checked")
   ], Radio.prototype, "handleCheckedChange", 1);
   Radio = __decorateClass([
-    e4("nord-radio")
+    e4("kabal-radio")
   ], Radio);
 
   // src/range/Range.scss
@@ -9004,7 +9023,7 @@ label {
     e5({ reflect: true, type: Boolean })
   ], Range.prototype, "expand", 2);
   Range = __decorateClass([
-    e4("nord-range")
+    e4("kabal-range")
   ], Range);
 
   // ../../node_modules/@nordhealth/icons/lib/assets/interface-dropdown-small.js
@@ -9054,24 +9073,24 @@ option {
   color: initial;
 }
 
-nord-button {
+kabal-button {
   --n-button-text-align:start;
 }
 
-nord-icon {
+kabal-icon {
   color: var(--n-color-icon);
 }
 
-.n-label-container:hover + .n-select-container nord-button, select:hover + nord-button {
+.n-label-container:hover + .n-select-container kabal-button, select:hover + kabal-button {
   --n-button-border-color:var(--n-color-border-hover);
   --_n-button-background-color:var(--n-color-button-hover);
 }
 
-.n-label-container:hover + .n-select-container nord-button nord-icon, select:hover + nord-button nord-icon {
+.n-label-container:hover + .n-select-container kabal-button kabal-icon, select:hover + kabal-button kabal-icon {
   color: var(--n-color-icon-hover);
 }
 
-select:focus + nord-button {
+select:focus + kabal-button {
   --n-button-border-color:var(--n-color-accent);
   --_n-button-box-shadow:0 0 0 1px var(--n-button-border-color);
 }
@@ -9081,14 +9100,14 @@ select:focus + nord-button {
   pointer-events: none;
 }
 
-:host([disabled]) nord-button {
+:host([disabled]) kabal-button {
   --n-input-border-color:var(--n-color-active);
   --_n-button-color:var(--n-color-text-weakest);
   --_n-button-background-color:var(--n-color-active);
   --_n-button-opacity:1;
 }
 
-:host([disabled]) nord-icon {
+:host([disabled]) kabal-icon {
   color: var(--n-color-text-weakest);
 }
 
@@ -9096,7 +9115,7 @@ select:focus + nord-button {
   display: none;
 }
 
-select[aria-invalid=true] + nord-button {
+select[aria-invalid=true] + kabal-button {
   --n-button-border-color:var(--n-color-status-danger);
 }`;
   var Select_default = styles39;
@@ -9139,7 +9158,7 @@ select[aria-invalid=true] + nord-button {
           ${slottedOptions.map((option) => this.renderOption(option))}
         </select>
 
-        <nord-button
+        <kabal-button
           size=${this.size}
           tabindex="-1"
           ?disabled=${this.disabled}
@@ -9149,8 +9168,8 @@ select[aria-invalid=true] + nord-button {
         >
           <slot slot="start" name="icon"></slot>
           ${buttonText}
-          <nord-icon slot="end" name="interface-dropdown-small"></nord-icon>
-        </nord-button>
+          <kabal-icon slot="end" name="interface-dropdown-small"></kabal-icon>
+        </kabal-button>
       </div>
 
       ${this.renderError()}
@@ -9189,7 +9208,7 @@ select[aria-invalid=true] + nord-button {
     e5({ reflect: true, type: Boolean })
   ], Select.prototype, "expand", 2);
   Select = __decorateClass([
-    e4("nord-select")
+    e4("kabal-select")
   ], Select);
 
   // src/skeleton/Skeleton.scss
@@ -9234,7 +9253,7 @@ select[aria-invalid=true] + nord-button {
     e5()
   ], Skeleton.prototype, "effect", 2);
   Skeleton = __decorateClass([
-    e4("nord-skeleton")
+    e4("kabal-skeleton")
   ], Skeleton);
 
   // src/tab/Tab.scss
@@ -9341,7 +9360,7 @@ select[aria-invalid=true] + nord-button {
     observe("selected")
   ], Tab.prototype, "handleSelectionChange", 1);
   Tab = __decorateClass([
-    e4("nord-tab")
+    e4("kabal-tab")
   ], Tab);
 
   // src/tab-group/TabGroup.scss
@@ -9397,16 +9416,16 @@ select[aria-invalid=true] + nord-button {
   box-shadow: inset calc(-1 * var(--n-space-l)) 0 var(--n-space-s) calc(-1 * var(--n-space-s)) var(--_n-tab-group-list-background);
 }
 
-::slotted(nord-tab-panel) {
+::slotted(kabal-tab-panel) {
   display: none;
   padding: var(--_n-tab-group-padding);
 }
 
-::slotted(nord-tab-panel[aria-hidden=false]) {
+::slotted(kabal-tab-panel[aria-hidden=false]) {
   display: block;
 }
 
-::slotted(nord-tab) {
+::slotted(kabal-tab) {
   z-index: var(--n-index-default);
 }
 
@@ -9431,7 +9450,7 @@ select[aria-invalid=true] + nord-button {
     constructor() {
       super(...arguments);
       this.direction = new DirectionController(this);
-      this.tabGroupId = `nord-tab-group-${tabGroupCount++}`;
+      this.tabGroupId = `kabal-tab-group-${tabGroupCount++}`;
       this.label = "";
       this.padding = "m";
       this.sticky = false;
@@ -9478,10 +9497,10 @@ select[aria-invalid=true] + nord-button {
       (_a = this.observer) == null ? void 0 : _a.observe(this, TabGroup.observerOptions);
     }
     get initialSelectedTab() {
-      return this.querySelector("nord-tab[selected]") || this.querySelector("nord-tab");
+      return this.querySelector("kabal-tab[selected]") || this.querySelector("kabal-tab");
     }
     setupTabs() {
-      const tabs = this.querySelectorAll("nord-tab");
+      const tabs = this.querySelectorAll("kabal-tab");
       tabs.forEach((tab, index) => {
         tab.setAttribute("id", `${this.tabGroupId}-tab-${index + 1}`);
         tab.setAttribute("aria-controls", `${this.tabGroupId}-panel-${index + 1}`);
@@ -9490,7 +9509,7 @@ select[aria-invalid=true] + nord-button {
     }
     setupPanels() {
       var _a;
-      const panels = this.querySelectorAll("nord-tab-panel");
+      const panels = this.querySelectorAll("kabal-tab-panel");
       const selectedPanelId = (_a = this.selectedTab) == null ? void 0 : _a.getAttribute("aria-controls");
       panels.forEach((panel, index) => {
         panel.setAttribute("id", `${this.tabGroupId}-panel-${index + 1}`);
@@ -9505,15 +9524,15 @@ select[aria-invalid=true] + nord-button {
       this.updateSelectedTab(event.target);
     }
     previousTab(tab) {
-      const tabs = [...this.querySelectorAll("nord-tab")];
+      const tabs = [...this.querySelectorAll("kabal-tab")];
       const selectedTabIndex = tabs.indexOf(tab);
       return tabs[selectedTabIndex - 1];
     }
     handleKeydown(event) {
       const tab = event.target;
-      const firstTab = this.querySelector("nord-tab:first-of-type");
-      const lastTab = this.querySelector("nord-tab:last-of-type");
-      const nextTab = this.querySelector(`#${tab.getAttribute("id")} ~ nord-tab`) || firstTab;
+      const firstTab = this.querySelector("kabal-tab:first-of-type");
+      const lastTab = this.querySelector("kabal-tab:last-of-type");
+      const nextTab = this.querySelector(`#${tab.getAttribute("id")} ~ kabal-tab`) || firstTab;
       const previousTab = this.previousTab(tab) || lastTab;
       const updateTab = (selectedTab, keyEvent) => {
         keyEvent.preventDefault();
@@ -9543,7 +9562,7 @@ select[aria-invalid=true] + nord-button {
       const selectedPanel = this.querySelector(`#${selectedTab.getAttribute("aria-controls")}`);
       if (selectedTab === this.selectedTab)
         return;
-      this.querySelectorAll("nord-tab").forEach((tab) => {
+      this.querySelectorAll("kabal-tab").forEach((tab) => {
         tab.removeAttribute("selected");
         if (tab === selectedTab) {
           tab.setAttribute("selected", "");
@@ -9552,7 +9571,7 @@ select[aria-invalid=true] + nord-button {
           this.selectedTab = tab;
         }
       });
-      this.querySelectorAll("nord-tab-panel").forEach((panel) => {
+      this.querySelectorAll("kabal-tab-panel").forEach((panel) => {
         panel.setAttribute("aria-hidden", `${panel !== selectedPanel}`);
       });
     }
@@ -9577,7 +9596,7 @@ select[aria-invalid=true] + nord-button {
     t3()
   ], TabGroup.prototype, "selectedTab", 2);
   TabGroup = __decorateClass([
-    e4("nord-tab-group")
+    e4("kabal-tab-group")
   ], TabGroup);
 
   // src/tab-panel/TabPanel.scss
@@ -9604,11 +9623,11 @@ select[aria-invalid=true] + nord-button {
   };
   TabPanel.styles = [Component_default, TabPanel_default];
   TabPanel = __decorateClass([
-    e4("nord-tab-panel")
+    e4("kabal-tab-panel")
   ], TabPanel);
 
   // src/table/Table.scss
-  var styles44 = i`nord-table {
+  var styles44 = i`kabal-table {
   --_n-table-td-padding:var(--n-table-td-padding, calc(var(--n-space-m) * 0.8));
   --_n-table-border-radius:var(--n-table-border-radius, var(--n-border-radius));
   all: unset;
@@ -9620,7 +9639,7 @@ select[aria-invalid=true] + nord-button {
   overflow-x: auto;
 }
 
-nord-table table {
+kabal-table table {
   inline-size: 100%;
   font-size: var(--n-font-size-m);
   font-family: var(--n-font-family);
@@ -9633,7 +9652,7 @@ nord-table table {
   font-variant-numeric: tabular-nums;
 }
 
-nord-table th {
+kabal-table th {
   border-block-end: 1px solid var(--n-color-border);
   font-weight: var(--n-font-weight-active);
   font-size: var(--n-font-size-s);
@@ -9642,92 +9661,92 @@ nord-table th {
   background: var(--n-color-surface-raised);
 }
 
-nord-table td {
+kabal-table td {
   border-block-end: 1px solid var(--n-color-border);
   white-space: nowrap;
 }
 
-nord-table :is(td, th) {
+kabal-table :is(td, th) {
   padding: var(--_n-table-td-padding) var(--n-space-s);
 }
 
-nord-table :is(td, th):first-child {
+kabal-table :is(td, th):first-child {
   padding-inline-start: var(--n-space-m);
 }
 
-nord-table :is(td, th):last-child {
+kabal-table :is(td, th):last-child {
   padding-inline-end: var(--n-space-m);
 }
 
-nord-table tbody tr:hover {
+kabal-table tbody tr:hover {
   background: var(--n-color-active);
 }
 
-nord-table tbody :is(.n-row-selected, .n-row-selected:hover) {
+kabal-table tbody :is(.n-row-selected, .n-row-selected:hover) {
   background: var(--n-color-active);
   color: var(--n-color-text);
   opacity: 1;
   cursor: default;
 }
 
-nord-table tbody :is(tr:hover, .n-row-selected) td {
+kabal-table tbody :is(tr:hover, .n-row-selected) td {
   color: var(--n-color-text);
 }
 
-nord-table th[aria-sort] {
+kabal-table th[aria-sort] {
   cursor: pointer;
 }
 
-nord-table th[aria-sort]:not([aria-sort=none]) {
+kabal-table th[aria-sort]:not([aria-sort=none]) {
   color: var(--n-color-text);
 }
 
-nord-table[density=condensed] {
+kabal-table[density=condensed] {
   --_n-table-td-padding:var(--n-table-td-padding, calc(var(--n-space-m) * 0.5));
 }
 
-nord-table[density=relaxed] {
+kabal-table[density=relaxed] {
   --_n-table-td-padding:var(--n-table-td-padding, calc(var(--n-space-m) * 1.1));
 }
 
-nord-card nord-table tbody tr:last-child td {
+kabal-card kabal-table tbody tr:last-child td {
   border-block-end-color: transparent;
 }
 
-nord-card nord-table th:first-child {
+kabal-card kabal-table th:first-child {
   border-start-start-radius: var(--_n-table-border-radius);
 }
 
-nord-card nord-table th:last-child {
+kabal-card kabal-table th:last-child {
   border-start-end-radius: var(--_n-table-border-radius);
 }
 
-nord-card [slot=header] ~ nord-table th:is(:first-child, :last-child) {
+kabal-card [slot=header] ~ kabal-table th:is(:first-child, :last-child) {
   border-radius: 0;
 }
 
-nord-card nord-table tbody tr:last-child td:first-child {
+kabal-card kabal-table tbody tr:last-child td:first-child {
   border-end-start-radius: var(--_n-table-border-radius);
 }
 
-nord-card nord-table tbody tr:last-child td:last-child {
+kabal-card kabal-table tbody tr:last-child td:last-child {
   border-end-end-radius: var(--_n-table-border-radius);
 }
 
-nord-table[scroll-snap] {
+kabal-table[scroll-snap] {
   scroll-snap-type: inline mandatory;
   scroll-behavior: smooth;
 }
 
-nord-table[scroll-snap] :is(th, td) {
+kabal-table[scroll-snap] :is(th, td) {
   scroll-snap-align: start;
 }
 
-nord-table:where([striped]) tbody tr:where(:nth-child(even)) {
+kabal-table:where([striped]) tbody tr:where(:nth-child(even)) {
   background: var(--n-color-surface-raised);
 }
 
-nord-table .n-table-ellipsis {
+kabal-table .n-table-ellipsis {
   max-inline-size: 0;
   inline-size: 90%;
   overflow: hidden;
@@ -9735,16 +9754,16 @@ nord-table .n-table-ellipsis {
   white-space: nowrap;
 }
 
-nord-table .n-table-align-right {
+kabal-table .n-table-align-right {
   text-align: end;
 }
 
-nord-table .n-table-actions {
+kabal-table .n-table-actions {
   display: flex;
   justify-content: center;
 }
 
-nord-table .n-table-actions nord-button {
+kabal-table .n-table-actions kabal-button {
   margin-block: -10px;
 }`;
   var Table_default = styles44;
@@ -9797,7 +9816,7 @@ nord-table .n-table-actions nord-button {
     e5({ type: Boolean, reflect: true })
   ], Table.prototype, "striped", 2);
   Table = __decorateClass([
-    e4("nord-table")
+    e4("kabal-table")
   ], Table);
 
   // src/textarea/Textarea.scss
@@ -9920,9 +9939,9 @@ nord-table .n-table-actions nord-button {
       const remainder = maxLength ? maxLength - length : void 0;
       const counter = maxLength ? `${length}/${maxLength}` : length;
       return y`
-      <nord-visually-hidden aria-live="polite" aria-atomic="true">
+      <kabal-visually-hidden aria-live="polite" aria-atomic="true">
         ${remainder != null && remainder <= 10 ? this.localize.term("remainingCharacters", remainder) : ""}
-      </nord-visually-hidden>
+      </kabal-visually-hidden>
       <div class="n-character-counter">${counter}</div>
     `;
     }
@@ -9961,7 +9980,7 @@ nord-table .n-table-actions nord-button {
     observe("value", "updated")
   ], Textarea.prototype, "resizeToFitContent", 1);
   Textarea = __decorateClass([
-    e4("nord-textarea")
+    e4("kabal-textarea")
   ], Textarea);
 
   // ../../node_modules/@nordhealth/icons/lib/assets/interface-close.js
@@ -10069,13 +10088,13 @@ nord-table .n-table-actions nord-button {
     box-shadow: var(--_n-toast-focus-ring);
   }
 }
-.n-dismiss nord-icon {
+.n-dismiss kabal-icon {
   opacity: 0.53;
   transition: opacity var(--n-transition-quickly);
   color: var(--_n-toast-color);
 }
 
-.n-dismiss:is(:hover, :focus) nord-icon {
+.n-dismiss:is(:hover, :focus) kabal-icon {
   opacity: 1;
 }
 
@@ -10122,7 +10141,7 @@ nord-table .n-table-actions nord-button {
         </div>
 
         <button class="n-dismiss" @click=${this.dismiss} aria-hidden="true">
-          <nord-icon name="interface-close" size="s"></nord-icon>
+          <kabal-icon name="interface-close" size="s"></kabal-icon>
         </button>
       </div>
     `;
@@ -10151,7 +10170,7 @@ nord-table .n-table-actions nord-button {
     observe("autoDismiss")
   ], Toast.prototype, "handleAutoDismissChange", 1);
   Toast = __decorateClass([
-    e4("nord-toast")
+    e4("kabal-toast")
   ], Toast);
 
   // src/toast-group/ToastGroup.scss
@@ -10168,7 +10187,7 @@ nord-table .n-table-actions nord-button {
   pointer-events: none;
 }
 
-::slotted(nord-toast) {
+::slotted(kabal-toast) {
   max-inline-size: calc(var(--n-space-xxl) * 5);
   inline-size: 100%;
   margin-inline: auto;
@@ -10187,7 +10206,7 @@ nord-table .n-table-actions nord-button {
     }
     addToast(text, options = {}) {
       const { variant, autoDismiss } = options;
-      const toast = document.createElement("nord-toast");
+      const toast = document.createElement("kabal-toast");
       if (variant) {
         toast.variant = variant;
       }
@@ -10201,7 +10220,7 @@ nord-table .n-table-actions nord-button {
   };
   ToastGroup.styles = [Component_default, ToastGroup_default];
   ToastGroup = __decorateClass([
-    e4("nord-toast-group")
+    e4("kabal-toast-group")
   ], ToastGroup);
 
   // src/common/attribute.ts
@@ -10284,7 +10303,7 @@ nord-table .n-table-actions nord-button {
   background-color: var(--_n-tooltip-key-background);
 }
 
-[slot=shortcut]::slotted(nord-icon:not([size])) {
+[slot=shortcut]::slotted(kabal-icon:not([size])) {
   --_n-icon-size: var(--n-size-icon-s) ;
 }`;
   var Tooltip_default = styles48;
@@ -10481,7 +10500,7 @@ nord-table .n-table-actions nord-button {
     observe("state")
   ], Tooltip.prototype, "handleStateChange", 1);
   Tooltip = __decorateClass([
-    e4("nord-tooltip")
+    e4("kabal-tooltip")
   ], Tooltip);
 })();
 /**

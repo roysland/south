@@ -16,7 +16,7 @@ import style from "./Skeleton.scss"
  * @cssprop [--n-skeleton-color=var(--n-color-border)] - Controls the main color of the skeleton, using our [color tokens](/tokens/#color).
  * @cssprop [--n-skeleton-sheen-color=var(--n-color-border-strong)] - Controls the sheen color of the skeleton, using our [color tokens](/tokens/#color).
  */
-@customElement("nord-skeleton")
+@customElement("kabal-skeleton")
 export default class Skeleton extends LitElement {
   static styles = [componentStyle, style]
 
@@ -36,6 +36,6 @@ export default class Skeleton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-skeleton": Skeleton
+    "kabal-skeleton": Skeleton
   }
 }

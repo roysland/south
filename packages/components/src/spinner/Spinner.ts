@@ -13,7 +13,7 @@ import style from "./Spinner.scss"
  * @status ready
  * @category feedback
  */
-@customElement("nord-spinner")
+@customElement("kabal-spinner")
 export default class Spinner extends LitElement {
   static styles = [componentStyle, style]
 
@@ -50,6 +50,6 @@ export default class Spinner extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-spinner": Spinner
+    "kabal-spinner": Spinner
   }
 }

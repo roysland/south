@@ -67,7 +67,7 @@ input:active {
     opacity: 1
 }
 
-nord-icon {
+kabal-icon {
     --_n-icon-size: var(--_n-checkbox-icon-size);
     display: none;
     position: absolute;
@@ -109,7 +109,7 @@ label {
     --_n-checkbox-icon-size: var(--n-size-icon-xs)
 }
 
-:host([size="s"]) nord-icon {
+:host([size="s"]) kabal-icon {
     inset: calc(var(--n-space-s)/ 2.6)
 }
 

@@ -23,7 +23,7 @@ import style from "./Toggle.scss"
  * @slot hint - Optional slot that holds hint text for the input.
  * @slot error - Optional slot that holds error text for the input.
  */
-@customElement("nord-toggle")
+@customElement("kabal-toggle")
 export default class Toggle extends FormAssociatedMixin(InputMixin(FocusableMixin(LitElement))) {
   static styles = [componentStyle, formFieldStyle, style]
 
@@ -79,6 +79,6 @@ export default class Toggle extends FormAssociatedMixin(InputMixin(FocusableMixi
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-toggle": Toggle
+    "kabal-toggle": Toggle
   }
 }

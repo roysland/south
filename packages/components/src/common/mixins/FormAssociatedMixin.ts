@@ -133,7 +133,7 @@ export function FormAssociatedMixin<T extends Constructor<InputMixinInterface & 
       `
 
       return this.hideLabel
-        ? html`<nord-visually-hidden>${label}</nord-visually-hidden>`
+        ? html`<kabal-visually-hidden>${label}</kabal-visually-hidden>`
         : html`<div class="n-label-container">${label}</div>`
     }
 

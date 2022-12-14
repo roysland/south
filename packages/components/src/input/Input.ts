@@ -30,7 +30,7 @@ Icon.registerIcon(searchIcon)
 
 const isButtonOrDropdown = (el: Element | null): el is Button | Dropdown => {
   if (el === null) return false
-  return el.localName === "nord-button" || el.localName === "nord-dropdown"
+  return el.localName === "kabal-button" || el.localName === "kabal-dropdown"
 }
 
 /**
@@ -51,7 +51,7 @@ const isButtonOrDropdown = (el: Element | null): el is Button | Dropdown => {
  * @cssprop [--n-input-border-color=var(--n-color-border-strong)] - Controls the border color of the input, using our [color tokens](/tokens/#color).
  * @cssprop [--n-input-border-radius=var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens](/tokens/#border-radius).
  */
-@customElement("nord-input")
+@customElement("kabal-input")
 export default class Input extends SizeMixin(
   FormAssociatedMixin(AutocompleteMixin(ReadonlyMixin(InputMixin(FocusableMixin(LitElement)))))
 ) {
@@ -94,7 +94,7 @@ export default class Input extends SizeMixin(
         })}
       >
         <slot name=${this.startSlot.slotName} ?hidden=${!startSlotHasContent}>
-          ${this.type === "search" ? html`<nord-icon name="navigation-search"></nord-icon>` : nothing}
+          ${this.type === "search" ? html`<kabal-icon name="navigation-search"></kabal-icon>` : nothing}
         </slot>
         <input
           ${ref(this.focusableRef)}
@@ -146,6 +146,6 @@ export default class Input extends SizeMixin(
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-input": Input
+    "kabal-input": Input
   }
 }

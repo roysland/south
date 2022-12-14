@@ -25,7 +25,7 @@ const mediaQuery = matchMedia("(max-width: 35.9375em)")
  * @category overlay
  * @slot - The popout content.
  */
-@customElement("nord-popout")
+@customElement("kabal-popout")
 export default class Popout extends FloatingMixin(LitElement) {
   static styles = [componentStyle, style]
 
@@ -264,6 +264,6 @@ export default class Popout extends FloatingMixin(LitElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-popout": Popout
+    "kabal-popout": Popout
   }
 }

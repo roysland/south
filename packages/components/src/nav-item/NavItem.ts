@@ -20,7 +20,7 @@ import style from "./NavItem.scss"
  * @slot subnav - Used for nesting navigation. When used the nav-item becomes a button to collapse the subnav, rather than a link.
  * @fires toggle - Dispatched whenever a nav item's state changes between open and closed.
  */
-@customElement("nord-nav-item")
+@customElement("kabal-nav-item")
 export default class NavItem extends FocusableMixin(LitElement) {
   static styles = style
 
@@ -60,14 +60,14 @@ export default class NavItem extends FocusableMixin(LitElement) {
 
     // in cases where there is nested nav, and one of the items is active
     // we should auto-open the nav item for developer convenience
-    if (this.querySelector(`nord-nav-item[active]`)) {
+    if (this.querySelector(`kabal-nav-item[active]`)) {
       this.open = true
     }
   }
 
   render() {
     const innards = html`
-      ${this.icon ? html`<nord-icon class="n-nav-icon" name=${this.icon} size="m"></nord-icon>` : nothing}
+      ${this.icon ? html`<kabal-icon class="n-nav-icon" name=${this.icon} size="m"></kabal-icon>` : nothing}
       <div class="n-nav-content">
         <span class="n-nav-label"><slot></slot></span>
         ${this.badge ? html`<span class="n-nav-badge">${this.badge}</span>` : nothing}
@@ -109,11 +109,11 @@ export default class NavItem extends FocusableMixin(LitElement) {
       >
         ${innards}
 
-        <nord-icon
+        <kabal-icon
           size="xxs"
           class=${classMap({ "n-toggle-icon": true, "n-rtl": this.direction.isRTL })}
           name="arrow-expand-right-small"
-        ></nord-icon>
+        ></kabal-icon>
       </button>
     `
   }
@@ -130,6 +130,6 @@ export default class NavItem extends FocusableMixin(LitElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-nav-item": NavItem
+    "kabal-nav-item": NavItem
   }
 }

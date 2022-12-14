@@ -28,7 +28,7 @@ Icon.registerIcon(indeterminateIcon)
  * @slot hint - Optional slot that holds hint text for the input.
  * @slot error - Optional slot that holds error text for the input.
  */
-@customElement("nord-checkbox")
+@customElement("kabal-checkbox")
 export default class Checkbox extends SizeMixin(FormAssociatedMixin(InputMixin(FocusableMixin(LitElement)))) {
   static styles = [componentStyle, formFieldStyle, style]
 
@@ -65,8 +65,8 @@ export default class Checkbox extends SizeMixin(FormAssociatedMixin(InputMixin(F
             aria-invalid=${ifDefined(this.getInvalid())}
             @change=${this.handleChange}
           />
-          <nord-icon class="icon-checked" name="interface-checked-small"></nord-icon>
-          <nord-icon class="icon-indeterminate" name="interface-remove-small"></nord-icon>
+          <kabal-icon class="icon-checked" name="interface-checked-small"></kabal-icon>
+          <kabal-icon class="icon-indeterminate" name="interface-remove-small"></kabal-icon>
         </div>
         <div class="n-expand">${this.renderLabel()} ${this.renderError()}</div>
       </div>
@@ -82,6 +82,6 @@ export default class Checkbox extends SizeMixin(FormAssociatedMixin(InputMixin(F
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-checkbox": Checkbox
+    "kabal-checkbox": Checkbox
   }
 }

@@ -32,7 +32,7 @@ const loadIconCdn: IconResolver = (name: string) =>
  * @category image
  * @slot - The default slot used for placing a custom SVG icon.
  */
-@customElement("nord-icon")
+@customElement("kabal-icon")
 export default class Icon extends LitElement {
   static styles = [componentStyle, style]
 
@@ -157,6 +157,6 @@ export default class Icon extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-icon": Icon
+    "kabal-icon": Icon
   }
 }

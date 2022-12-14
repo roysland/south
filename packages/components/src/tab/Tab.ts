@@ -16,7 +16,7 @@ import style from "./Tab.scss"
  * @cssprop [--n-tab-color=var(--n-color-text-weak)] - Controls the text color of the tab, using our [color tokens](/tokens/#color).
  * @cssprop [--n-tab-font-weight=var(--n-font-weight)] - Controls the font weight of the tab, using our [font tokens](/tokens/#font).
  */
-@customElement("nord-tab")
+@customElement("kabal-tab")
 export default class Tab extends LitElement {
   static styles = [componentStyle, style]
 
@@ -51,6 +51,6 @@ export default class Tab extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-tab": Tab
+    "kabal-tab": Tab
   }
 }

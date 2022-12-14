@@ -1,4 +1,4 @@
-# nord-avatar
+# kabal-avatar
 
 Avatar is used for showing a thumbnail representation of a user or entity.
 Default avatar illustration is displayed when no src is specified.
@@ -20,7 +20,7 @@ Default avatar illustration is displayed when no src is specified.
 | `--n-avatar-size`  | "var(--n-size-icon-l)] - Controls the size of the avatar, using [icon sizing tokens" | (/tokens/#size).  |
 
 
-# nord-badge
+# kabal-badge
 
 Badges are used to inform users of the status of an object
 or of an action that’s been taken. Commonly used in tabular
@@ -40,7 +40,7 @@ data to indicate status.
 |      | The badge content. |
 
 
-# nord-banner
+# kabal-banner
 
 Banner informs users about important changes or conditions in the
 interface. Use this component if you need to communicate to users
@@ -66,7 +66,7 @@ in a prominent way.
 | `--n-banner-box-shadow`    | "var(--n-box-shadow-card)] - Controls the surrounding shadow, using [box shadow tokens" | (/tokens/#box-shadow).    |
 
 
-# nord-button-group
+# kabal-button-group
 
 Button groups are designed to bring together button controls that are of a similar nature. For example text formatting controls.
 
@@ -93,7 +93,7 @@ Button groups are designed to bring together button controls that are of a simil
 | `--n-button-group-box-shadow`    | "var(--n-box-shadow)] - Controls the surrounding shadow, using [box shadow tokens" | (/tokens/#box-shadow).    |
 
 
-# nord-button
+# kabal-button
 
 Buttons are used for interface actions. Primary style should be
 used only once per section for main call-to-action, while other
@@ -147,7 +147,7 @@ styles can appear more frequently.
 | `--n-button-text-align`       | "center"                                         | Controls the text alignment for the text in the button. |
 
 
-# nord-calendar
+# kabal-calendar
 
 Calendar allows user to pick a date. It comes with built-in
 functionality that allows you to set a minimum and a maximum allowed date.
@@ -173,10 +173,10 @@ Please note that the date must be passed in ISO-8601 format.
 
 ## Events
 
-| Event             | Type              | Description                                      |
-|-------------------|-------------------|--------------------------------------------------|
-| `change`          | `DateSelectEvent` | Dispatched when a date is selected and the value changes. |
-| `nord-focus-date` | `DateSelectEvent` | Dispatched when the calendar's focused date changes. |
+| Event              | Type              | Description                                      |
+|--------------------|-------------------|--------------------------------------------------|
+| `change`           | `DateSelectEvent` | Dispatched when a date is selected and the value changes. |
+| `kabal-focus-date` | `DateSelectEvent` | Dispatched when the calendar's focused date changes. |
 
 ## CSS Custom Properties
 
@@ -186,7 +186,7 @@ Please note that the date must be passed in ISO-8601 format.
 | `--n-calendar-box-shadow`    | "var(--n-box-shadow-popout)] - Controls the surrounding shadow, using [box shadow tokens" | (/tokens/#box-shadow).    |
 
 
-# nord-card
+# kabal-card
 
 Cards are shadowed surfaces that display content and actions on a
 single topic. They should be easy to scan for relevant and
@@ -217,7 +217,7 @@ actionable information.
 | `--n-card-slot-padding`  | "var(--n-space-m)"                               | Controls the padding of items slotted within the card. This does not affect the block padding of items slotted into the header. |
 
 
-# nord-checkbox
+# kabal-checkbox
 
 Checkboxes allow user to choose one or more options from a limited set of options.
 If you have more than 10 options, please use Select component instead.
@@ -260,7 +260,7 @@ If you have more than 10 options, please use Select component instead.
 | `label` | Use when a label requires more than plain text.  |
 
 
-# nord-command-menu
+# kabal-command-menu
 
 Command Menu allows users to navigate and use an app without
 touching the mouse and helps them transform into “power users”
@@ -285,11 +285,11 @@ who can harness more advanced features far faster.
 
 ## Events
 
-| Event         | Type          | Description                            |
-|---------------|---------------|----------------------------------------|
-| `close`       |               | The command menu was closed.           |
-| `nord-select` | `SelectEvent` | User selected a command from the menu. |
-| `open`        |               | The command menu was opened.           |
+| Event          | Type          | Description                            |
+|----------------|---------------|----------------------------------------|
+| `close`        |               | The command menu was closed.           |
+| `kabal-select` | `SelectEvent` | User selected a command from the menu. |
+| `open`         |               | The command menu was opened.           |
 
 ## Slots
 
@@ -306,7 +306,7 @@ who can harness more advanced features far faster.
 | `--n-command-menu-inline-size` | "640px" | Controls the max inline size, or width, of the command menu. |
 
 
-# nord-command-menu-action
+# kabal-command-menu-action
 
 Command Menu Action displays a single action that can be executed by the user. For usage examples, please see Command Menu component.
 
@@ -318,7 +318,7 @@ Command Menu Action displays a single action that can be executed by the user. F
 | `selected` | `selected` | `boolean` | false   |
 
 
-# nord-date-picker
+# kabal-date-picker
 
 
 Date Picker allows user to enter a date either through text input,
@@ -375,7 +375,7 @@ must be passed in ISO-8601 format: YYYY-MM-DD.
 | `label` | Use when a label requires more than plain text.  |
 
 
-# nord-divider
+# kabal-divider
 
 Divider components are used to separate and distinguish sections of
 content or groups of menu items. Visually, they look like
@@ -395,7 +395,7 @@ horizontal or vertical lines.
 | `--n-divider-size`  | "1px"                                            | Controls the size, or thickness, of the divider. |
 
 
-# nord-drawer
+# kabal-drawer
 
 Drawer is used to display context-sensitive actions and  information.
 Drawer doesn’t block users from completing their task, like a modal would.
@@ -423,7 +423,7 @@ Drawer doesn’t block users from completing their task, like a modal would.
 | `--n-drawer-padding` | "var(--n-space-l)] - Controls the padding around the main area (the default slot), using our [spacing tokens" | (/tokens/#space). |
 
 
-# nord-dropdown-group
+# kabal-dropdown-group
 
 Dropdown group includes all the actions or items in a single dropdown
 group and is used for grouping items into related categories.
@@ -441,7 +441,7 @@ group and is used for grouping items into related categories.
 |      | The dropdown group content. |
 
 
-# nord-dropdown-item
+# kabal-dropdown-item
 
 Dropdown item populates dropdown with actions. Items can be
 placed either inside a dropdown group or directly inside a
@@ -472,7 +472,7 @@ dropdown component.
 | `start` | Used to place content before dropdown item text. Typically used for icons. |
 
 
-# nord-dropdown
+# kabal-dropdown
 
 Dropdown menu displays a list of actions or selectable options for
 a user. Dropdown uses popout component internally to create
@@ -511,7 +511,7 @@ the overlay functionality.
 | `--n-dropdown-size` | "250px" | Controls the inline size, or width, of the dropdown. Will resize up to 1.5 times to account for larger content. |
 
 
-# nord-empty-state
+# kabal-empty-state
 
 Empty state can be used when there is no data to display to
 describe what the user can do next. Empty state provides
@@ -524,7 +524,7 @@ explanation and guidance to help user progress.
 |      | default slot |
 
 
-# nord-fieldset
+# kabal-fieldset
 
 Fieldset is used for grouping sets of input components.
 It is necessary to use a fieldset with radio and checkbox components.
@@ -549,7 +549,7 @@ It can also be useful for logically grouping other types of inputs.
 | `label` | Use when a label requires more than plain text.  |
 
 
-# nord-header
+# kabal-header
 
 The header is a block of designated space for labelling the currently
 viewed context as well as providing primary actions.
@@ -562,7 +562,7 @@ viewed context as well as providing primary actions.
 | `end` | Optional slot for buttons, toggles, etc. |
 
 
-# nord-icon
+# kabal-icon
 
 Icons are used to provide additional meaning or in places where text label doesn’t fit.
 Icon component allows you to display an icon from the Nordicons library.
@@ -583,7 +583,7 @@ Icon component allows you to display an icon from the Nordicons library.
 |      | The default slot used for placing a custom SVG icon. |
 
 
-# nord-input
+# kabal-input
 
 Inputs are used to allow users to provide text input when the expected input is short.
 As well as plain text, Input supports various types of text, including passwords and numbers.
@@ -641,7 +641,7 @@ As well as plain text, Input supports various types of text, including passwords
 | `--n-input-inline-size`   | "240px"                                          | Controls the inline size, or width, of the input. |
 
 
-# nord-layout
+# kabal-layout
 
 Layout component is used to create the main layout of an app. Layout
 currently comes with one main configuration: two-column.
@@ -674,7 +674,7 @@ currently comes with one main configuration: two-column.
 | `--n-layout-padding`            | "var(--n-space-l)] - Controls the padding around the main layout area (the main slot), using our [spacing tokens" | (/tokens/#space).                                |
 
 
-# nord-modal
+# kabal-modal
 
 Modal component is used to display content that temporarily blocks interactions
 with the main view of an application. Modal should be used sparingly and
@@ -721,7 +721,7 @@ only when necessary.
 | `--n-modal-padding-inline`  | "var(--n-space-m)] - Controls the padding on the sides of the modal, using our [spacing tokens" | (/tokens/#space).                |
 
 
-# nord-nav-group
+# kabal-nav-group
 
 Navigation group includes all the actions or items in a single
 group and is used for grouping items into related categories.
@@ -739,7 +739,7 @@ group and is used for grouping items into related categories.
 |      | The default slot used for the nav items. |
 
 
-# nord-nav-item
+# kabal-nav-item
 
 Navigation item populates sidebar navigation with links.
 Every item should be placed inside a navigation group.
@@ -778,7 +778,7 @@ Every item should be placed inside a navigation group.
 | `subnav` | Used for nesting navigation. When used the nav-item becomes a button to collapse the subnav, rather than a link. |
 
 
-# nord-nav-toggle
+# kabal-nav-toggle
 
 Nav toggle is meant for hiding and showing the primary navigation.
 This component is used internally in the Layout component, but can also be
@@ -795,7 +795,7 @@ used separate to further customize the behaviour.
 | `focus` | `(options?: FocusOptions \| undefined): void` | Programmatically move focus to the component.<br /><br />**options**: An object which controls aspects of the focusing process. |
 
 
-# nord-navigation
+# kabal-navigation
 
 Navigation is used to display the primary navigation in the sidebar
 of an application. Navigation includes a list of links that users
@@ -810,7 +810,7 @@ use to move between sections of the application.
 | `header` | The top section of the sidebar.                  |
 
 
-# nord-popout
+# kabal-popout
 
 Popouts are small overlays that open on demand. They let users access additional content and actions without cluttering the page.
 
@@ -840,7 +840,7 @@ Popouts are small overlays that open on demand. They let users access additional
 |      | The popout content. |
 
 
-# nord-progress-bar
+# kabal-progress-bar
 
 Progress Bar is used to visually represent the completion
 of a task or process. It shows how much of the task has
@@ -873,7 +873,7 @@ been completed and how much is still left.
 | `--n-progress-size`          | "var(--n-space-s)] - Controls the thickness of the progress bar, using our [spacing tokens" | (/tokens/#space).         |
 
 
-# nord-qrcode
+# kabal-qrcode
 
 QR Code component is used for providing information or links
 to users which they can quickly scan with their smartphone.
@@ -890,7 +890,7 @@ to users which they can quickly scan with their smartphone.
 | `value`      | `value`      | `string`                   | ""                       | The value of the QR Code, most commonly an URL.  |
 
 
-# nord-radio
+# kabal-radio
 
 Radio buttons are graphical user interface elements that allow user to choose only one option from
 a predefined set of mutually exclusive options.
@@ -938,7 +938,7 @@ a predefined set of mutually exclusive options.
 | `label` | Use when a label requires more than plain text.  |
 
 
-# nord-range
+# kabal-range
 
 Range input lets user specify a numeric value using a slider which
 must be no less than a given value, and no more than another given value.
@@ -993,7 +993,7 @@ must be no less than a given value, and no more than another given value.
 | `--n-range-track-size`           | "3px"                          | Controls the height of the track.                |
 
 
-# nord-select
+# kabal-select
 
 Select lets users choose one option from an options menu.
 Consider using select when you have 5 or more options to choose from.
@@ -1037,7 +1037,7 @@ Consider using select when you have 5 or more options to choose from.
 | `label` | Use when a label requires more than plain text.  |
 
 
-# nord-skeleton
+# kabal-skeleton
 
 Skeletons are used to provide a low fidelity representation of content
 before it appears in a view. This improves the perceived loading time
@@ -1058,7 +1058,7 @@ for our users.
 | `--n-skeleton-sheen-color`   | "var(--n-color-border-strong)] - Controls the sheen color of the skeleton, using our [color tokens" | (/tokens/#color).         |
 
 
-# nord-spinner
+# kabal-spinner
 
 Spinner component is used to indicate users that their action is being
 processed. You can customize the size and color of the spinner with the
@@ -1073,7 +1073,7 @@ provided properties.
 | `size`   | `size`    | `"s" \| "m" \| "l" \| "xl" \| "xxl" \| "xs"` | "m"     | The size of the spinner.                         |
 
 
-# nord-stack
+# kabal-stack
 
 Stack component manages layout of immediate children along the
 vertical or horizontal axis with optional spacing between each child.
@@ -1102,7 +1102,7 @@ vertical or horizontal axis with optional spacing between each child.
 | `--n-stack-gap` | "var(--n-space-m)] - Controls the spacing between items, using our [spacing tokens" | (/tokens/#space). |
 
 
-# nord-tab-group
+# kabal-tab-group
 
 Tab Group allows multiple panels to be contained within a single window,
 using tabs as a navigational element.
@@ -1129,7 +1129,7 @@ using tabs as a navigational element.
 | `--n-tab-group-padding` | "0] - Controls the padding around the tab group (including the tab list), using our [spacing tokens" | (/tokens/#space). |
 
 
-# nord-tab-panel
+# kabal-tab-panel
 
 The panel which contains content that can be revealed using a tab
 in the tab group component.
@@ -1141,7 +1141,7 @@ in the tab group component.
 |      | The tab panel content. |
 
 
-# nord-tab
+# kabal-tab
 
 The interactive tab button for use within the tab group component.
 
@@ -1165,7 +1165,7 @@ The interactive tab button for use within the tab group component.
 | `--n-tab-font-weight` | "var(--n-font-weight)] - Controls the font weight of the tab, using our [font tokens" | (/tokens/#font).  |
 
 
-# nord-table
+# kabal-table
 
 Table is used to organize and display information from a data set.
 Provides table styles in addition to features like sticky
@@ -1193,7 +1193,7 @@ headers and support for narrow viewports.
 | `--n-table-td-padding`    | "calc(var(--n-space-m) * 0.95)"                  | Controls the padding around the table cells. |
 
 
-# nord-textarea
+# kabal-textarea
 
 Textarea is a component that allows user to write text over
 multiple rows. Used when the expected user input is long.
@@ -1252,7 +1252,7 @@ For shorter input, use the Input component.
 | `--n-textarea-inline-size`   | "240px"                                          | Controls the inline size, or width, of the textarea. |
 
 
-# nord-toast-group
+# kabal-toast-group
 
 Toast group is used to position and style a group of toasts, whilst ensuring they are announced by screen readers.
 
@@ -1269,7 +1269,7 @@ Toast group is used to position and style a group of toasts, whilst ensuring the
 |      | Default slot in which to place toasts. |
 
 
-# nord-toast
+# kabal-toast
 
 Toasts are non-disruptive messages that appear in the interface
 to provide quick, at-a-glance feedback on the outcome of an action.
@@ -1300,7 +1300,7 @@ to provide quick, at-a-glance feedback on the outcome of an action.
 |      | Default slot used for the toast text/message. |
 
 
-# nord-toggle
+# kabal-toggle
 
 Toggle switch gives control over a feature or option that can be
 turned on or off. If a physical switch would work for the action, a
@@ -1344,7 +1344,7 @@ toggle is probably the best component to use.
 | `label` | Use when a label requires more than plain text.  |
 
 
-# nord-tooltip
+# kabal-tooltip
 
 Tooltips are floating containers for displaying additional information
 for the currently focused element. A tooltip can be useful when you want
@@ -1373,7 +1373,7 @@ to e.g. give a hint about an existing Command Menu shortcut.
 | `--n-tooltip-max-size` | "50ch"  | Controls the maximum inline size, or width, of the tooltip. |
 
 
-# nord-visually-hidden
+# kabal-visually-hidden
 
 Visually hidden is used when an element needs to be available
 to assistive technologies like screen readers, but be otherwise
