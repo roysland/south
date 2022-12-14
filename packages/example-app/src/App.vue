@@ -76,10 +76,16 @@ export default {
 
       <kabal-nav-group>
         <kabal-nav-item icon="navigation-search">Search</kabal-nav-item>
-        <kabal-nav-item icon="navigation-notifications">Notifications</kabal-nav-item>
+        <kabal-nav-item icon="navigation-notifications" active>Notifications</kabal-nav-item>
       </kabal-nav-group>
       <kabal-nav-group heading="Workspace">
-        <kabal-nav-item icon="navigation-dashboard" active>Dashboard</kabal-nav-item>
+        <kabal-nav-item icon="navigation-dashboard">
+          Reports
+          <kabal-nav-group slot="subnav">
+            <kabal-nav-item>KPI</kabal-nav-item>
+            <kabal-nav-item>Fuel consumption</kabal-nav-item>
+          </kabal-nav-group>
+        </kabal-nav-item>
         <kabal-nav-item icon="navigation-dashboard">Dashboard</kabal-nav-item>
       </kabal-nav-group>
 
@@ -105,10 +111,7 @@ export default {
       </kabal-dropdown>
     </kabal-navigation>
     <kabal-header slot="header">
-    <kabal-tab-group label="Tabs">
-      <kabal-tab slot="tab">Profile</kabal-tab>
-      <kabal-tab slot="tab" selected>Settings</kabal-tab>
-    </kabal-tab-group>
+      Workspace
   </kabal-header>
     <kabal-banner variant="danger">
       We’re experiencing an incident. Please see our <a href="#">status page</a> for more details.
