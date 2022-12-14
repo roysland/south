@@ -1,0 +1,4210 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "nord-avatar",
+      "path": "./src\\avatar\\Avatar.ts",
+      "description": "Avatar is used for showing a thumbnail representation of a user or entity.\r\nDefault avatar illustration is displayed when no src is specified.",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "The size of the avatar.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "src",
+          "description": "The URL of the avatar image uploaded by the user.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "name",
+          "description": "The name of the person.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "variant",
+          "description": "The style variant of the avatar.",
+          "type": "\"default\" | \"square\"",
+          "default": "\"default\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the avatar.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "src",
+          "attribute": "src",
+          "description": "The URL of the avatar image uploaded by the user.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the person.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "description": "The style variant of the avatar.",
+          "type": "\"default\" | \"square\"",
+          "default": "\"default\""
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-avatar-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-status-highlight)] - Controls the color of the avatar fallback, using [color tokens\""
+        },
+        {
+          "name": "--n-avatar-size",
+          "description": "(/tokens/#size).",
+          "default": "\"var(--n-size-icon-l)] - Controls the size of the avatar, using [icon sizing tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-badge",
+      "path": "./src\\badge\\Badge.ts",
+      "description": "Badges are used to inform users of the status of an object\r\nor of an action that’s been taken. Commonly used in tabular\r\ndata to indicate status.",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "The type of badge.\r\nDetermines the background color of the badge.",
+          "type": "\"warning\" | \"success\" | \"danger\" | \"highlight\" | \"info\" | \"neutral\" | \"progress\" | undefined",
+          "default": "\"neutral\""
+        },
+        {
+          "name": "progress",
+          "description": "The progress of the badge. Displays a progress\r\nindicator next to the label.",
+          "type": "\"cancelled\" | \"complete\" | \"incomplete\" | \"partially-complete\" | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "The type of badge.\r\nDetermines the background color of the badge.",
+          "type": "\"warning\" | \"success\" | \"danger\" | \"highlight\" | \"info\" | \"neutral\" | \"progress\" | undefined",
+          "default": "\"neutral\""
+        },
+        {
+          "name": "progress",
+          "attribute": "progress",
+          "description": "The progress of the badge. Displays a progress\r\nindicator next to the label.",
+          "type": "\"cancelled\" | \"complete\" | \"incomplete\" | \"partially-complete\" | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The badge content."
+        }
+      ]
+    },
+    {
+      "name": "nord-banner",
+      "path": "./src\\banner\\Banner.ts",
+      "description": "Banner informs users about important changes or conditions in the\r\ninterface. Use this component if you need to communicate to users\r\nin a prominent way.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The style variant of the banner.",
+          "type": "\"warning\" | \"success\" | \"danger\" | \"info\"",
+          "default": "\"info\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "description": "The style variant of the banner.",
+          "type": "\"warning\" | \"success\" | \"danger\" | \"info\"",
+          "default": "\"info\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "default slot"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-banner-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius)] - Controls how rounded the corners are, using [border radius tokens\""
+        },
+        {
+          "name": "--n-banner-box-shadow",
+          "description": "(/tokens/#box-shadow).",
+          "default": "\"var(--n-box-shadow-card)] - Controls the surrounding shadow, using [box shadow tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-button-group",
+      "path": "./src\\button-group\\ButtonGroup.ts",
+      "description": "Button groups are designed to bring together button controls that are of a similar nature. For example text formatting controls.",
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "The direction of the button group.",
+          "type": "\"vertical\" | \"horizontal\"",
+          "default": "\"horizontal\""
+        },
+        {
+          "name": "role",
+          "description": "The appropriate role for the containing element.",
+          "type": "string",
+          "default": "\"group\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "direction",
+          "attribute": "direction",
+          "description": "The direction of the button group.",
+          "type": "\"vertical\" | \"horizontal\"",
+          "default": "\"horizontal\""
+        },
+        {
+          "name": "role",
+          "attribute": "role",
+          "description": "The appropriate role for the containing element.",
+          "type": "string",
+          "default": "\"group\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The button group content"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-button-group-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius-s)] - Controls the rounded corners of the button, using [border radius tokens\""
+        },
+        {
+          "name": "--n-button-group-box-shadow",
+          "description": "(/tokens/#box-shadow).",
+          "default": "\"var(--n-box-shadow)] - Controls the surrounding shadow, using [box shadow tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-button",
+      "path": "./src\\button\\Button.ts",
+      "description": "Buttons are used for interface actions. Primary style should be\r\nused only once per section for main call-to-action, while other\r\nstyles can appear more frequently.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The style variant of the button.",
+          "type": "\"default\" | \"danger\" | \"primary\" | \"dashed\" | \"plain\" | \"switch\"",
+          "default": "\"default\""
+        },
+        {
+          "name": "type",
+          "description": "The type of the button.",
+          "type": "\"button\" | \"submit\" | \"reset\"",
+          "default": "\"submit\""
+        },
+        {
+          "name": "size",
+          "description": "The size of the button.\r\nThis affects font-size and padding.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "href",
+          "description": "When provided, renders the button as a link,\r\nwith its href attribute set to the given value.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "download",
+          "description": "When provided together with a href property, the button will\r\ntrigger a file download instead of a page visit.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "target",
+          "description": "When provided together with a href property, determines where\r\nto open the linked URL. The keywords have special meanings for\r\nwhere to load the URL: “_self” means the current browsing context,\r\n“_blank” usually a new tab but users can configure browsers this to\r\nopen a new window instead, “_parent” means the parent browsing\r\ncontext of the current one, but if no parent exists, behaves as\r\n_self, and finally “top” means the topmost browsing context.",
+          "type": "\"_self\" | \"_blank\" | \"_parent\" | \"_top\"",
+          "default": "\"_self\""
+        },
+        {
+          "name": "expand",
+          "description": "Controls whether the button expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "description": "Controls whether the button is in loading state. Please note that the spinner\r\nis hidden from assistive technologies, so you need to make sure to announce\r\nthe loading state to e.g. screen reader users. We also recommend disabling\r\nall user interactions on the button itself while in loading state.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "description": "The style variant of the button.",
+          "type": "\"default\" | \"danger\" | \"primary\" | \"dashed\" | \"plain\" | \"switch\"",
+          "default": "\"default\""
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "The type of the button.",
+          "type": "\"button\" | \"submit\" | \"reset\"",
+          "default": "\"submit\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the button.\r\nThis affects font-size and padding.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "When provided, renders the button as a link,\r\nwith its href attribute set to the given value.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "download",
+          "attribute": "download",
+          "description": "When provided together with a href property, the button will\r\ntrigger a file download instead of a page visit.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "target",
+          "attribute": "target",
+          "description": "When provided together with a href property, determines where\r\nto open the linked URL. The keywords have special meanings for\r\nwhere to load the URL: “_self” means the current browsing context,\r\n“_blank” usually a new tab but users can configure browsers this to\r\nopen a new window instead, “_parent” means the parent browsing\r\ncontext of the current one, but if no parent exists, behaves as\r\n_self, and finally “top” means the topmost browsing context.",
+          "type": "\"_self\" | \"_blank\" | \"_parent\" | \"_top\"",
+          "default": "\"_self\""
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the button expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "attribute": "loading",
+          "description": "Controls whether the button is in loading state. Please note that the spinner\r\nis hidden from assistive technologies, so you need to make sure to announce\r\nthe loading state to e.g. screen reader users. We also recommend disabling\r\nall user interactions on the button itself while in loading state.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The button content"
+        },
+        {
+          "name": "start",
+          "description": "Used to place content at the start of button text. Typically used for icons."
+        },
+        {
+          "name": "end",
+          "description": "Used to place content at the end of button text. Typically used for icons."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-button-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius-s)] - Controls the rounded corners of the button, using [border radius tokens\""
+        },
+        {
+          "name": "--n-button-gap",
+          "description": "(/tokens/#space).",
+          "default": "\"var(--n-space-s)] - Controls the spacing between items within the button, using our [spacing tokens\""
+        },
+        {
+          "name": "--n-button-gradient",
+          "description": "Controls the overlayed gradient background on the button.",
+          "default": "\"linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.013) 100%))\""
+        },
+        {
+          "name": "--n-button-background-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-button)] - Controls the background color of the button, using [color tokens\""
+        },
+        {
+          "name": "--n-button-border-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-border-strong)] - Controls the border color of the button, using [color tokens\""
+        },
+        {
+          "name": "--n-button-text-align",
+          "description": "Controls the text alignment for the text in the button.",
+          "default": "\"center\""
+        },
+        {
+          "name": "--n-button-box-shadow",
+          "description": "(/tokens/#box-shadow).",
+          "default": "\"var(--n-box-shadow)] - Controls the surrounding shadow, using [box shadow tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-calendar",
+      "path": "./src\\calendar\\Calendar.ts",
+      "description": "Calendar allows user to pick a date. It comes with built-in\r\nfunctionality that allows you to set a minimum and a maximum allowed date.\r\nPlease note that the date must be passed in ISO-8601 format.",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The selected date on the calendar. Must be in IS0-8601 format: YYYY-MM-DD.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "firstDayOfWeek",
+          "description": "Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.",
+          "type": "DaysOfWeek",
+          "default": "1"
+        },
+        {
+          "name": "min",
+          "description": "Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "description": "Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "expand",
+          "description": "Controls whether the calendar expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The selected date on the calendar. Must be in IS0-8601 format: YYYY-MM-DD.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "firstDayOfWeek",
+          "attribute": "firstDayOfWeek",
+          "description": "Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.",
+          "type": "DaysOfWeek",
+          "default": "1"
+        },
+        {
+          "name": "min",
+          "attribute": "min",
+          "description": "Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "description": "Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the calendar expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "isDateDisabled",
+          "description": "Controls which days are disabled and therefore disallowed.\r\nFor example, this can be used to disallow selection of weekends.",
+          "type": "DatePredicate",
+          "default": "\"isDateDisabled\""
+        },
+        {
+          "name": "isDateHighlighted",
+          "description": "Controls which days are highlighted with a small indicator.\r\nReturning a \"falsy\" value will not show an indicator.\r\nReturning \"truthy\" value will show the indicator, but without an accessible label.\r\nReturning a string will show the indicator, and use the string as accessible label.\r\nIt is recommended to return a string rather than a truthy value whenever possible.",
+          "type": "(date: Date) => string | boolean",
+          "default": "\"isDateHighlighted\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "Dispatched when a date is selected and the value changes."
+        },
+        {
+          "name": "nord-focus-date",
+          "description": "Dispatched when the calendar's focused date changes."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-calendar-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius)] - Controls how rounded the corners are, using [border radius tokens\""
+        },
+        {
+          "name": "--n-calendar-box-shadow",
+          "description": "(/tokens/#box-shadow).",
+          "default": "\"var(--n-box-shadow-popout)] - Controls the surrounding shadow, using [box shadow tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-card",
+      "path": "./src\\card\\Card.ts",
+      "description": "Cards are shadowed surfaces that display content and actions on a\r\nsingle topic. They should be easy to scan for relevant and\r\nactionable information.",
+      "attributes": [
+        {
+          "name": "padding",
+          "description": "Controls the padding of the card component. When set to “none”,\r\nthe header and footer slots will still have padding.",
+          "type": "\"m\" | \"l\" | \"none\"",
+          "default": "\"m\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "padding",
+          "attribute": "padding",
+          "description": "Controls the padding of the card component. When set to “none”,\r\nthe header and footer slots will still have padding.",
+          "type": "\"m\" | \"l\" | \"none\"",
+          "default": "\"m\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The card content."
+        },
+        {
+          "name": "header",
+          "description": "Optional slot that holds a header for the card."
+        },
+        {
+          "name": "header-end",
+          "description": "Optional slot that positions content at the end of the header. Useful for actions or additional info."
+        },
+        {
+          "name": "footer",
+          "description": "Optional slot that holds footer content for the card."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-card-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius)] - Controls how rounded the corners are, using [border radius tokens\""
+        },
+        {
+          "name": "--n-card-box-shadow",
+          "description": "(/tokens/#box-shadow).",
+          "default": "\"var(--n-box-shadow-popout)] - Controls the surrounding shadow, using [box shadow tokens\""
+        },
+        {
+          "name": "--n-card-padding",
+          "description": "Controls the padding on all sides of the card.",
+          "default": "\"var(--n-space-m)\""
+        },
+        {
+          "name": "--n-card-slot-padding",
+          "description": "Controls the padding of items slotted within the card. This does not affect the block padding of items slotted into the header.",
+          "default": "\"var(--n-space-m)\""
+        }
+      ]
+    },
+    {
+      "name": "nord-checkbox",
+      "path": "./src\\checkbox\\Checkbox.ts",
+      "description": "Checkboxes allow user to choose one or more options from a limited set of options.\r\nIf you have more than 10 options, please use Select component instead.",
+      "attributes": [
+        {
+          "name": "indeterminate",
+          "description": "Controls whether the checkbox is in an indeterminate state.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checked",
+          "description": "Controls whether the checkbox is checked or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "indeterminate",
+          "attribute": "indeterminate",
+          "description": "Controls whether the checkbox is in an indeterminate state.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "Controls whether the checkbox is checked or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Optional slot that holds hint text for the input."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the input."
+        }
+      ]
+    },
+    {
+      "name": "nord-command-menu",
+      "path": "./src\\command-menu\\CommandMenu.ts",
+      "description": "Command Menu allows users to navigate and use an app without\r\ntouching the mouse and helps them transform into “power users”\r\nwho can harness more advanced features far faster.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Show or hide the command menu.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Hint text to display in the Command Menu search field.",
+          "type": "string",
+          "default": "\"Type a command or search...\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Show or hide the command menu.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Hint text to display in the Command Menu search field.",
+          "type": "string",
+          "default": "\"Type a command or search...\""
+        },
+        {
+          "name": "commands",
+          "description": "Array of commands to be included in the menu.\r\nPlease see “Commands data” section for more documentation.",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "open",
+          "description": "The command menu was opened."
+        },
+        {
+          "name": "close",
+          "description": "The command menu was closed."
+        },
+        {
+          "name": "nord-select",
+          "description": "User selected a command from the menu."
+        }
+      ],
+      "slots": [
+        {
+          "name": "footer",
+          "description": "Used to replace the default footer contents."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-command-menu-inline-size",
+          "description": "Controls the max inline size, or width, of the command menu.",
+          "default": "\"640px\""
+        },
+        {
+          "name": "--n-command-menu-block-size",
+          "description": "Controls the max block size, or height, of the command menu.",
+          "default": "\"290px\""
+        },
+        {
+          "name": "--n-command-menu-block-start",
+          "description": "Controls the command menu offset from the block start, or top, of the screen.",
+          "default": "\"16%\""
+        }
+      ]
+    },
+    {
+      "name": "nord-command-menu-action",
+      "path": "./src\\command-menu\\CommandMenuAction.ts",
+      "description": "Command Menu Action displays a single action that can be executed by the user. For usage examples, please see Command Menu component.",
+      "attributes": [
+        {
+          "name": "command"
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "default": "\"style\""
+        },
+        {
+          "name": "command",
+          "attribute": "command"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "nord-date-picker",
+      "path": "./src\\date-picker\\DatePicker.ts",
+      "description": "\r\nDate Picker allows user to enter a date either through text input,\r\nor by choosing a date from the calendar. Please note that the date\r\nmust be passed in ISO-8601 format: YYYY-MM-DD.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Controls whether date picker dialog is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "min",
+          "description": "Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "description": "Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "direction",
+          "description": "This is deprecated, the popout will now adjust automatically based on available space.\r\nForces the opening direction of the calendar modal to be always left or right.",
+          "type": "\"left\" | \"right\"",
+          "default": "\"right\"",
+          "deprecated": true
+        },
+        {
+          "name": "first-day-of-week",
+          "description": "Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.",
+          "type": "DaysOfWeek",
+          "default": "1"
+        },
+        {
+          "name": "expand",
+          "description": "Controls whether the date picker expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "Date value. Must be in IS0-8601 format: YYYY-MM-DD.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"textFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "valueAsDate",
+          "description": "Get/set the value of the picker as a Date object.",
+          "type": "Date | undefined"
+        },
+        {
+          "name": "valueAsNumber",
+          "description": "Get/set the value of the picker as the number of milliseconds elapsed since the UNIX epoch.",
+          "type": "number"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Controls whether date picker dialog is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "min",
+          "attribute": "min",
+          "description": "Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "description": "Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "direction",
+          "attribute": "direction",
+          "description": "This is deprecated, the popout will now adjust automatically based on available space.\r\nForces the opening direction of the calendar modal to be always left or right.",
+          "type": "\"left\" | \"right\"",
+          "default": "\"right\"",
+          "deprecated": true
+        },
+        {
+          "name": "firstDayOfWeek",
+          "attribute": "first-day-of-week",
+          "description": "Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.",
+          "type": "DaysOfWeek",
+          "default": "1"
+        },
+        {
+          "name": "dateAdapter",
+          "description": "Date adapter, for custom parsing/formatting.\r\nMust be object with a `parse` function which accepts a `string` and returns a `Date`,\r\nand a `format` function which accepts a `Date` and returns a `string`.\r\nDefault is IS0-8601 parsing and formatting.",
+          "type": "DateAdapter",
+          "default": "{\"parse\":\"undefined\",\"format\":\"printISODate\"}"
+        },
+        {
+          "name": "isDateDisabled",
+          "description": "Controls which days are disabled and therefore disallowed.\r\nFor example, this can be used to disallow selection of weekends.",
+          "type": "DatePredicate",
+          "default": "\"isDateDisabled\""
+        },
+        {
+          "name": "isDateHighlighted",
+          "description": "Controls which days are highlighted with a small indicator.\r\nReturning `false` will not show an indicator.\r\nReturning `true` will show the indicator, but without an accessible label. Therefore\r\nReturning a string will show the indicator, and use the string as accessible label.\r\nIt is recommended to return a string rather than `true` whenever possible.",
+          "type": "(date: Date) => string | boolean",
+          "default": "\"isDateHighlighted\""
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the date picker expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "readonly",
+          "attribute": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "Date value. Must be in IS0-8601 format: YYYY-MM-DD.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Use when a hint requires more than plain text."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the input."
+        }
+      ]
+    },
+    {
+      "name": "nord-divider",
+      "path": "./src\\divider\\Divider.ts",
+      "description": "Divider components are used to separate and distinguish sections of\r\ncontent or groups of menu items. Visually, they look like\r\nhorizontal or vertical lines.",
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "The direction of the divider.",
+          "type": "\"vertical\" | \"horizontal\"",
+          "default": "\"horizontal\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "direction",
+          "attribute": "direction",
+          "description": "The direction of the divider.",
+          "type": "\"vertical\" | \"horizontal\"",
+          "default": "\"horizontal\""
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-divider-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-border)] - Controls the color of the divider, using our [color tokens\""
+        },
+        {
+          "name": "--n-divider-size",
+          "description": "Controls the size, or thickness, of the divider.",
+          "default": "\"1px\""
+        }
+      ]
+    },
+    {
+      "name": "nord-drawer",
+      "path": "./src\\drawer\\Drawer.ts",
+      "description": "Drawer is used to display context-sensitive actions and  information.\r\nDrawer doesn’t block users from completing their task, like a modal would.",
+      "attributes": [
+        {
+          "name": "padding",
+          "description": "Controls the padding of the drawer component.",
+          "type": "\"m\" | \"none\"",
+          "default": "\"m\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "padding",
+          "attribute": "padding",
+          "description": "Controls the padding of the drawer component.",
+          "type": "\"m\" | \"none\"",
+          "default": "\"m\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "header",
+          "description": "Optional slot that holds a header for the drawer."
+        },
+        {
+          "name": "",
+          "description": "Default slot."
+        },
+        {
+          "name": "footer",
+          "description": "Optional slot that holds footer content for the drawer."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-drawer-padding",
+          "description": "(/tokens/#space).",
+          "default": "\"var(--n-space-l)] - Controls the padding around the main area (the default slot), using our [spacing tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-dropdown-group",
+      "path": "./src\\dropdown-group\\DropdownGroup.ts",
+      "description": "Dropdown group includes all the actions or items in a single dropdown\r\ngroup and is used for grouping items into related categories.",
+      "attributes": [
+        {
+          "name": "heading",
+          "description": "Heading and accessible label for the dropdown group.",
+          "type": "string | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "heading",
+          "attribute": "heading",
+          "description": "Heading and accessible label for the dropdown group.",
+          "type": "string | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The dropdown group content."
+        }
+      ]
+    },
+    {
+      "name": "nord-dropdown-item",
+      "path": "./src\\dropdown-item\\DropdownItem.ts",
+      "description": "Dropdown item populates dropdown with actions. Items can be\r\nplaced either inside a dropdown group or directly inside a\r\ndropdown component.",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "The url the dropdown item should link to.",
+          "type": "string | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "The url the dropdown item should link to.",
+          "type": "string | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The dropdown item content."
+        },
+        {
+          "name": "start",
+          "description": "Used to place content before dropdown item text. Typically used for icons."
+        },
+        {
+          "name": "end",
+          "description": "Used to place content after dropdown item text. Typically used for icons."
+        }
+      ]
+    },
+    {
+      "name": "nord-dropdown",
+      "path": "./src\\dropdown\\Dropdown.ts",
+      "description": "Dropdown menu displays a list of actions or selectable options for\r\na user. Dropdown uses popout component internally to create\r\nthe overlay functionality.",
+      "attributes": [
+        {
+          "name": "expand",
+          "description": "Controls whether the toggle slot expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "The size of the dropdown. This affects the minimum and maximum inline-size\r\nof the dropdown.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "open",
+          "description": "Controls whether the component is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "align",
+          "description": "Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.",
+          "type": "\"start\" | \"end\"",
+          "default": "\"start\""
+        },
+        {
+          "name": "position",
+          "description": "Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.",
+          "type": "\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"",
+          "default": "\"block-end\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "shadowRootOptions",
+          "description": "we delegate focus, to ensure focus does not move to body if you click\r\nsome whitespace or a dropdown-group heading, as this would close the dropdown",
+          "type": "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }",
+          "default": "{\"delegatesFocus\":true}"
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the toggle slot expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the dropdown. This affects the minimum and maximum inline-size\r\nof the dropdown.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Controls whether the component is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "align",
+          "attribute": "align",
+          "description": "Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.",
+          "type": "\"start\" | \"end\"",
+          "default": "\"start\""
+        },
+        {
+          "name": "position",
+          "attribute": "position",
+          "description": "Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.",
+          "type": "\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"",
+          "default": "\"block-end\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The dropdown content."
+        },
+        {
+          "name": "toggle",
+          "description": "Used to place the toggle for dropdown."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-dropdown-size",
+          "description": "Controls the inline size, or width, of the dropdown. Will resize up to 1.5 times to account for larger content.",
+          "default": "\"250px\""
+        }
+      ]
+    },
+    {
+      "name": "nord-empty-state",
+      "path": "./src\\empty-state\\EmptyState.ts",
+      "description": "Empty state can be used when there is no data to display to\r\ndescribe what the user can do next. Empty state provides\r\nexplanation and guidance to help user progress.",
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "default slot"
+        }
+      ]
+    },
+    {
+      "name": "nord-fieldset",
+      "path": "./src\\fieldset\\Fieldset.ts",
+      "description": "Fieldset is used for grouping sets of input components.\r\nIt is necessary to use a fieldset with radio and checkbox components.\r\nIt can also be useful for logically grouping other types of inputs.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Label for the fieldset.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the fieldset. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the fieldset is required or not.\r\nA fieldset marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the fieldset.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the fieldset. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the fieldset is required or not.\r\nA fieldset marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Optional slot that holds hint text for the fieldset."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the fieldset."
+        }
+      ]
+    },
+    {
+      "name": "nord-header",
+      "path": "./src\\header\\Header.ts",
+      "description": "The header is a block of designated space for labelling the currently\r\nviewed context as well as providing primary actions.",
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The header content."
+        },
+        {
+          "name": "end",
+          "description": "Optional slot for buttons, toggles, etc."
+        }
+      ]
+    },
+    {
+      "name": "nord-icon",
+      "path": "./src\\icon\\Icon.ts",
+      "description": "Icons are used to provide additional meaning or in places where text label doesn’t fit.\r\nIcon component allows you to display an icon from the Nordicons library.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the icon to display, as defined by [nordicons](/nordicons/).",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "description": "The size of the icon.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xxs\" | \"xs\" | undefined"
+        },
+        {
+          "name": "color",
+          "description": "The color of the icon.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "description": "An accessible label for the icon.\r\nIf no label is supplied, the icon is hidden from assistive technology.",
+          "type": "string | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the icon to display, as defined by [nordicons](/nordicons/).",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the icon.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xxs\" | \"xs\" | undefined"
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "The color of the icon.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "An accessible label for the icon.\r\nIf no label is supplied, the icon is hidden from assistive technology.",
+          "type": "string | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The default slot used for placing a custom SVG icon."
+        }
+      ]
+    },
+    {
+      "name": "nord-input",
+      "path": "./src\\input\\Input.ts",
+      "description": "Inputs are used to allow users to provide text input when the expected input is short.\r\nAs well as plain text, Input supports various types of text, including passwords and numbers.",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "The type of the input.",
+          "type": "\"number\" | \"text\" | \"email\" | \"password\" | \"tel\" | \"url\" | \"search\"",
+          "default": "\"text\""
+        },
+        {
+          "name": "expand",
+          "description": "Controls whether the input expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disallow-pattern",
+          "description": "Optionally disallow certain characters from being used inside the input, using a regex pattern.",
+          "type": "string | undefined",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"textFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "The type of the input.",
+          "type": "\"number\" | \"text\" | \"email\" | \"password\" | \"tel\" | \"url\" | \"search\"",
+          "default": "\"text\""
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the input expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disallowPattern",
+          "attribute": "disallow-pattern",
+          "description": "Optionally disallow certain characters from being used inside the input, using a regex pattern.",
+          "type": "string | undefined",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "attribute": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "readonly",
+          "attribute": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Optional slot that holds hint text for the input."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the input."
+        },
+        {
+          "name": "start",
+          "description": "Optional slot used to place an icon or prefix at the start of the input."
+        },
+        {
+          "name": "end",
+          "description": "Optional slot used to place an icon or suffix at the end of the input."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-input-inline-size",
+          "description": "Controls the inline size, or width, of the input.",
+          "default": "\"240px\""
+        },
+        {
+          "name": "--n-input-background",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-active)] - Controls the background of the input, using our [color tokens\""
+        },
+        {
+          "name": "--n-input-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-text)] - Controls the text color of the input, using our [color tokens\""
+        },
+        {
+          "name": "--n-input-border-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-border-strong)] - Controls the border color of the input, using our [color tokens\""
+        },
+        {
+          "name": "--n-input-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-layout",
+      "path": "./src\\layout\\Layout.ts",
+      "description": "Layout component is used to create the main layout of an app. Layout\r\ncurrently comes with one main configuration: two-column.",
+      "attributes": [
+        {
+          "name": "nav-open",
+          "description": "Controls whether the navigation is hidden off-screen or not.\r\nDefaults to `true` for wide viewports, and `false` otherwise.",
+          "type": "boolean",
+          "default": "\"this.navState === \\\"opened\\\"\""
+        },
+        {
+          "name": "nav-toggle",
+          "description": "ID reference of element used to toggle the navigation.\r\nThis is deprecated, the layout component will now render its own nav toggle to simplify usage.",
+          "type": "string | undefined",
+          "deprecated": true
+        },
+        {
+          "name": "padding",
+          "description": "Controls the padding of the default main section slot. When set to “none”,\r\nthe nav and header slots will still have padding.",
+          "type": "\"m\" | \"none\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "sticky",
+          "description": "Controls whether the layout's header has sticky positioning.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"stickyStyle\",\"style\"]"
+        },
+        {
+          "name": "navOpen",
+          "attribute": "nav-open",
+          "description": "Controls whether the navigation is hidden off-screen or not.\r\nDefaults to `true` for wide viewports, and `false` otherwise.",
+          "type": "boolean",
+          "default": "\"this.navState === \\\"opened\\\"\""
+        },
+        {
+          "name": "navToggle",
+          "attribute": "nav-toggle",
+          "description": "ID reference of element used to toggle the navigation.\r\nThis is deprecated, the layout component will now render its own nav toggle to simplify usage.",
+          "type": "string | undefined",
+          "deprecated": true
+        },
+        {
+          "name": "padding",
+          "attribute": "padding",
+          "description": "Controls the padding of the default main section slot. When set to “none”,\r\nthe nav and header slots will still have padding.",
+          "type": "\"m\" | \"none\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "sticky",
+          "attribute": "sticky",
+          "description": "Controls whether the layout's header has sticky positioning.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The default main section content."
+        },
+        {
+          "name": "nav",
+          "description": "Used to place content inside the navigation sidebar."
+        },
+        {
+          "name": "header",
+          "description": "Used to place content inside the header section."
+        },
+        {
+          "name": "drawer",
+          "description": "Used to place additional content/details relating to a selected item."
+        },
+        {
+          "name": "nav-toggle",
+          "description": "Used to place a own nav-toggle component, for cases where you might need to add a tooltip."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-layout-padding",
+          "description": "(/tokens/#space).",
+          "default": "\"var(--n-space-l)] - Controls the padding around the main layout area (the main slot), using our [spacing tokens\""
+        },
+        {
+          "name": "--n-layout-drawer-inline-size",
+          "description": "Controls the width of the drawer area, when used.",
+          "default": "\"320px\""
+        },
+        {
+          "name": "--n-layout-background-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-background)] - Controls the background color of the layout, using [color tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-modal",
+      "path": "./src\\modal\\Modal.ts",
+      "description": "Modal component is used to display content that temporarily blocks interactions\r\nwith the main view of an application. Modal should be used sparingly and\r\nonly when necessary.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Controls whether the modal is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Controls the max-width of the modal when open.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "scrollable",
+          "description": "By default if a modal is too big for the browser window,\r\nthe entire modal will scroll. This setting changes that behavior\r\nso that the body of the modal scrolls instead, with the modal\r\nitself remaining fixed.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "shadowRootOptions",
+          "type": "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }",
+          "default": "{\"delegatesFocus\":true}"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Controls whether the modal is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Controls the max-width of the modal when open.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "returnValue",
+          "description": "The reason why the modal was closed. This typically indicates\r\nwhich button the user pressed to close the modal, though any value\r\ncan be supplied if the modal is programmatically closed.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "scrollable",
+          "attribute": "scrollable",
+          "description": "By default if a modal is too big for the browser window,\r\nthe entire modal will scroll. This setting changes that behavior\r\nso that the body of the modal scrolls instead, with the modal\r\nitself remaining fixed.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "cancel",
+          "description": "Dispatched before the modal has closed when a user attempts to dismiss a modal. Call `preventDefault()` on the event to prevent the modal closing."
+        },
+        {
+          "name": "close",
+          "description": "Dispatched when a modal is closed for any reason."
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot"
+        },
+        {
+          "name": "header",
+          "description": "Slot which holds the header of the modal, positioned next to the close button."
+        },
+        {
+          "name": "footer",
+          "description": "Slot which is typically used to hold call to action buttons, but can also be used to build custom footers."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-modal-padding-inline",
+          "description": "(/tokens/#space).",
+          "default": "\"var(--n-space-m)] - Controls the padding on the sides of the modal, using our [spacing tokens\""
+        },
+        {
+          "name": "--n-modal-padding-block",
+          "description": "(/tokens/#space).",
+          "default": "\"var(--n-space-m)] - Controls the padding above and below the modal, using our [spacing tokens\""
+        },
+        {
+          "name": "--n-modal-max-inline-size",
+          "description": "Controls the width of the modal.",
+          "default": "\"620px\""
+        }
+      ]
+    },
+    {
+      "name": "nord-nav-group",
+      "path": "./src\\nav-group\\NavGroup.ts",
+      "description": "Navigation group includes all the actions or items in a single\r\ngroup and is used for grouping items into related categories.",
+      "attributes": [
+        {
+          "name": "heading",
+          "description": "Heading and accessible label for the nav group",
+          "type": "string | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "default": "\"style\""
+        },
+        {
+          "name": "heading",
+          "attribute": "heading",
+          "description": "Heading and accessible label for the nav group",
+          "type": "string | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The default slot used for the nav items."
+        }
+      ]
+    },
+    {
+      "name": "nord-nav-item",
+      "path": "./src\\nav-item\\NavItem.ts",
+      "description": "Navigation item populates sidebar navigation with links.\r\nEvery item should be placed inside a navigation group.",
+      "attributes": [
+        {
+          "name": "active",
+          "description": "Used for indicating the current page. This gives a prominent background to the nav item,\r\nand marks the item as the current page for assistive technology.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "description": "The name of an icon from Nordicons to display for the nav item.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "href",
+          "description": "The url the nav item should link to.\r\nNote: this is not used if you have nested navigation using the \"subnav\" slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "badge",
+          "description": "Allows you to add a notification badge with a number next to the nav item.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "open",
+          "description": "When the nav items contains a subnav, controls whether the section is expanded or not.\r\nNote: this is only used if you have nested navigation using the \"subnav\" slot.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "default": "\"style\""
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "Used for indicating the current page. This gives a prominent background to the nav item,\r\nand marks the item as the current page for assistive technology.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "The name of an icon from Nordicons to display for the nav item.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "The url the nav item should link to.\r\nNote: this is not used if you have nested navigation using the \"subnav\" slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "badge",
+          "attribute": "badge",
+          "description": "Allows you to add a notification badge with a number next to the nav item.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "When the nav items contains a subnav, controls whether the section is expanded or not.\r\nNote: this is only used if you have nested navigation using the \"subnav\" slot.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "toggle",
+          "description": "Dispatched whenever a nav item's state changes between open and closed."
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The default slot used for the nav item's text."
+        },
+        {
+          "name": "subnav",
+          "description": "Used for nesting navigation. When used the nav-item becomes a button to collapse the subnav, rather than a link."
+        }
+      ]
+    },
+    {
+      "name": "nord-nav-toggle",
+      "path": "./src\\nav-toggle\\NavToggle.ts",
+      "description": "Nav toggle is meant for hiding and showing the primary navigation.\r\nThis component is used internally in the Layout component, but can also be\r\nused separate to further customize the behaviour.",
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        }
+      ]
+    },
+    {
+      "name": "nord-navigation",
+      "path": "./src\\navigation\\Navigation.ts",
+      "description": "Navigation is used to display the primary navigation in the sidebar\r\nof an application. Navigation includes a list of links that users\r\nuse to move between sections of the application.",
+      "properties": [
+        {
+          "name": "styles",
+          "default": "\"style\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The main section of the sidebar, for holding nav components."
+        },
+        {
+          "name": "header",
+          "description": "The top section of the sidebar."
+        },
+        {
+          "name": "footer",
+          "description": "The bottom section of the sidebar."
+        }
+      ]
+    },
+    {
+      "name": "nord-popout",
+      "path": "./src\\popout\\Popout.ts",
+      "description": "Popouts are small overlays that open on demand. They let users access additional content and actions without cluttering the page.",
+      "attributes": [
+        {
+          "name": "id",
+          "description": "The id for the active element to reference via aria-controls.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "anchor",
+          "description": "Set an optional anchor element to align against, replacing the triggering element.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "open",
+          "description": "Controls whether the component is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "align",
+          "description": "Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.",
+          "type": "\"start\" | \"end\"",
+          "default": "\"start\""
+        },
+        {
+          "name": "position",
+          "description": "Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.",
+          "type": "\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"",
+          "default": "\"block-end\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "id",
+          "attribute": "id",
+          "description": "The id for the active element to reference via aria-controls.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "anchor",
+          "attribute": "anchor",
+          "description": "Set an optional anchor element to align against, replacing the triggering element.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "description": "Controls whether the component is open or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "align",
+          "attribute": "align",
+          "description": "Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.",
+          "type": "\"start\" | \"end\"",
+          "default": "\"start\""
+        },
+        {
+          "name": "position",
+          "attribute": "position",
+          "description": "Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.",
+          "type": "\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"",
+          "default": "\"block-end\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The popout content."
+        }
+      ]
+    },
+    {
+      "name": "nord-progress-bar",
+      "path": "./src\\progress-bar\\ProgressBar.ts",
+      "description": "Progress Bar is used to visually represent the completion\r\nof a task or process. It shows how much of the task has\r\nbeen completed and how much is still left.",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "Specifies how much of the task has been completed. Must be a valid floating\r\npoint number between 0 and max, or between 0 and 100 if max is omitted. If\r\nthere is no value, the progress bar is indeterminate; this indicates that\r\nan activity is ongoing with no indication of how long it’s expected to take.",
+          "type": "number | undefined"
+        },
+        {
+          "name": "max",
+          "description": "Describes how much work the task indicated by the progress element requires.\r\nThe max attribute, if present, must have a value greater than 0 and be a\r\nvalid floating point number.",
+          "type": "number",
+          "default": "100"
+        },
+        {
+          "name": "label",
+          "description": "Accessible label for the progress indicator. Visually hidden, but shown\r\nfor assistive technology.",
+          "type": "string",
+          "default": "\"Current progress\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "Specifies how much of the task has been completed. Must be a valid floating\r\npoint number between 0 and max, or between 0 and 100 if max is omitted. If\r\nthere is no value, the progress bar is indeterminate; this indicates that\r\nan activity is ongoing with no indication of how long it’s expected to take.",
+          "type": "number | undefined"
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "description": "Describes how much work the task indicated by the progress element requires.\r\nThe max attribute, if present, must have a value greater than 0 and be a\r\nvalid floating point number.",
+          "type": "number",
+          "default": "100"
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Accessible label for the progress indicator. Visually hidden, but shown\r\nfor assistive technology.",
+          "type": "string",
+          "default": "\"Current progress\""
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-progress-size",
+          "description": "(/tokens/#space).",
+          "default": "\"var(--n-space-s)] - Controls the thickness of the progress bar, using our [spacing tokens\""
+        },
+        {
+          "name": "--n-progress-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens\""
+        },
+        {
+          "name": "--n-progress-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-accent)] - Controls the color of the progress bar, using [color tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-qrcode",
+      "path": "./src\\qrcode\\Qrcode.ts",
+      "description": "QR Code component is used for providing information or links\r\nto users which they can quickly scan with their smartphone.",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The value of the QR Code, most commonly an URL.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "description": "Label used by assistive technology. If unspecified, the value will\r\nbe used instead.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "description": "The size of the rendered QR Code in pixels.",
+          "type": "number",
+          "default": "128"
+        },
+        {
+          "name": "color",
+          "description": "The fill color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string",
+          "default": "\"var(--n-color-text)\""
+        },
+        {
+          "name": "background",
+          "description": "The background color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string",
+          "default": "\"var(--n-color-surface)\""
+        },
+        {
+          "name": "correction",
+          "description": "Error correction level makes the QR Code bigger and helps users to\r\nscan it without issues. L, M, Q and H values will use 7%, 15%, 25%\r\nand 30% of the QR code for error correction respectively.",
+          "type": "\"L\" | \"M\" | \"Q\" | \"H\"",
+          "default": "\"H\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the QR Code, most commonly an URL.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label used by assistive technology. If unspecified, the value will\r\nbe used instead.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the rendered QR Code in pixels.",
+          "type": "number",
+          "default": "128"
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "The fill color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string",
+          "default": "\"var(--n-color-text)\""
+        },
+        {
+          "name": "background",
+          "attribute": "background",
+          "description": "The background color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string",
+          "default": "\"var(--n-color-surface)\""
+        },
+        {
+          "name": "correction",
+          "attribute": "correction",
+          "description": "Error correction level makes the QR Code bigger and helps users to\r\nscan it without issues. L, M, Q and H values will use 7%, 15%, 25%\r\nand 30% of the QR code for error correction respectively.",
+          "type": "\"L\" | \"M\" | \"Q\" | \"H\"",
+          "default": "\"H\""
+        }
+      ]
+    },
+    {
+      "name": "nord-radio",
+      "path": "./src\\radio\\Radio.ts",
+      "description": "Radio buttons are graphical user interface elements that allow user to choose only one option from\r\na predefined set of mutually exclusive options.",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "Controls whether the checkbox is checked or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "Controls whether the checkbox is checked or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "events": [
+        {
+          "name": "blur"
+        },
+        {
+          "name": "focus"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Optional slot that holds hint text for the input."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the input."
+        }
+      ]
+    },
+    {
+      "name": "nord-range",
+      "path": "./src\\range\\Range.ts",
+      "description": "Range input lets user specify a numeric value using a slider which\r\nmust be no less than a given value, and no more than another given value.",
+      "attributes": [
+        {
+          "name": "min",
+          "description": "Minimum value for the range slider.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "max",
+          "description": "Maximum value for the range slider.",
+          "type": "number",
+          "default": "10"
+        },
+        {
+          "name": "step",
+          "description": "Step amount for the range slider.",
+          "type": "number",
+          "default": "1"
+        },
+        {
+          "name": "expand",
+          "description": "Controls whether the input expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"textFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "min",
+          "attribute": "min",
+          "description": "Minimum value for the range slider.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "description": "Maximum value for the range slider.",
+          "type": "number",
+          "default": "10"
+        },
+        {
+          "name": "step",
+          "attribute": "step",
+          "description": "Step amount for the range slider.",
+          "type": "number",
+          "default": "1"
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the input expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "attribute": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "readonly",
+          "attribute": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Optional slot that holds hint text for the input."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the input."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-range-thumb-size",
+          "description": "Controls the size of the thumb.",
+          "default": "\"20px\""
+        },
+        {
+          "name": "--n-range-track-color-active",
+          "description": "Controls the color of the portion of the track that represents the current value.",
+          "default": "\"var(--n-color-accent)\""
+        },
+        {
+          "name": "--n-range-track-color-inactive",
+          "description": "Controls the color of the portion of the track that represents the remaining value.",
+          "default": "\"var(--n-color-border-strong)\""
+        },
+        {
+          "name": "--n-range-track-size",
+          "description": "Controls the height of the track.",
+          "default": "\"3px\""
+        }
+      ]
+    },
+    {
+      "name": "nord-select",
+      "path": "./src\\select\\Select.ts",
+      "description": "Select lets users choose one option from an options menu.\r\nConsider using select when you have 5 or more options to choose from.",
+      "attributes": [
+        {
+          "name": "expand",
+          "description": "Controls whether the select expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the select expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "attribute": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot for holding <option> elements."
+        },
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Use when a hint requires more than plain text."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the input."
+        }
+      ]
+    },
+    {
+      "name": "nord-skeleton",
+      "path": "./src\\skeleton\\Skeleton.ts",
+      "description": "Skeletons are used to provide a low fidelity representation of content\r\nbefore it appears in a view. This improves the perceived loading time\r\nfor our users.",
+      "attributes": [
+        {
+          "name": "effect",
+          "description": "Determines which animation effect the skeleton will use.",
+          "type": "\"none\" | \"pulse\" | \"sheen\"",
+          "default": "\"none\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "effect",
+          "attribute": "effect",
+          "description": "Determines which animation effect the skeleton will use.",
+          "type": "\"none\" | \"pulse\" | \"sheen\"",
+          "default": "\"none\""
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-skeleton-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius)] - Controls how rounded the corners are, using [border radius tokens\""
+        },
+        {
+          "name": "--n-skeleton-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-border)] - Controls the main color of the skeleton, using our [color tokens\""
+        },
+        {
+          "name": "--n-skeleton-sheen-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-border-strong)] - Controls the sheen color of the skeleton, using our [color tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-spinner",
+      "path": "./src\\spinner\\Spinner.ts",
+      "description": "Spinner component is used to indicate users that their action is being\r\nprocessed. You can customize the size and color of the spinner with the\r\nprovided properties.",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "The size of the spinner.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xs\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "color",
+          "description": "The color of the spinner.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "description": "An accessible label for the spinner.\r\nIf no label is supplied, the spinner is hidden from assistive technology.",
+          "type": "string | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the spinner.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xs\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "The color of the spinner.\r\nCan accept any valid CSS color value, including custom properties.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "An accessible label for the spinner.\r\nIf no label is supplied, the spinner is hidden from assistive technology.",
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "nord-stack",
+      "path": "./src\\stack\\Stack.ts",
+      "description": "Stack component manages layout of immediate children along the\r\nvertical or horizontal axis with optional spacing between each child.",
+      "attributes": [
+        {
+          "name": "gap",
+          "description": "The space injected between components.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"none\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "direction",
+          "description": "The direction of the stack.",
+          "type": "\"vertical\" | \"horizontal\"",
+          "default": "\"vertical\""
+        },
+        {
+          "name": "align-items",
+          "description": "How to align the child items inside the stack.",
+          "type": "\"start\" | \"end\" | \"center\" | \"stretch\" | undefined",
+          "default": "\"stretch\""
+        },
+        {
+          "name": "responsive",
+          "description": "This property is deprecated and will be removed in a future version. We recommend using standard [CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) over this property. Please see the [updated usage example](/components/stack/?example=using+responsive+media+query).",
+          "type": "boolean",
+          "default": "false",
+          "deprecated": true
+        },
+        {
+          "name": "wrap",
+          "description": "Defines whether the Stack items are forced in a single line\r\nor can be flowed into multiple lines.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "justify-content",
+          "description": "How to justify the child items inside the stack.",
+          "type": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "gap",
+          "attribute": "gap",
+          "description": "The space injected between components.",
+          "type": "\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"none\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "direction",
+          "attribute": "direction",
+          "description": "The direction of the stack.",
+          "type": "\"vertical\" | \"horizontal\"",
+          "default": "\"vertical\""
+        },
+        {
+          "name": "alignItems",
+          "attribute": "align-items",
+          "description": "How to align the child items inside the stack.",
+          "type": "\"start\" | \"end\" | \"center\" | \"stretch\" | undefined",
+          "default": "\"stretch\""
+        },
+        {
+          "name": "responsive",
+          "attribute": "responsive",
+          "description": "This property is deprecated and will be removed in a future version. We recommend using standard [CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) over this property. Please see the [updated usage example](/components/stack/?example=using+responsive+media+query).",
+          "type": "boolean",
+          "default": "false",
+          "deprecated": true
+        },
+        {
+          "name": "wrap",
+          "attribute": "wrap",
+          "description": "Defines whether the Stack items are forced in a single line\r\nor can be flowed into multiple lines.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "justifyContent",
+          "attribute": "justify-content",
+          "description": "How to justify the child items inside the stack.",
+          "type": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The stack content."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-stack-gap",
+          "description": "(/tokens/#space).",
+          "default": "\"var(--n-space-m)] - Controls the spacing between items, using our [spacing tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-tab-group",
+      "path": "./src\\tab-group\\TabGroup.ts",
+      "description": "Tab Group allows multiple panels to be contained within a single window,\r\nusing tabs as a navigational element.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Adds an accessible label to the tab list container.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "padding",
+          "description": "Controls the padding of the tab group component.",
+          "type": "\"m\" | \"l\" | \"none\" | undefined",
+          "default": "\"m\""
+        },
+        {
+          "name": "sticky",
+          "description": "Whether the tab list sticks to the top of the tab group as you scroll.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"stickyStyle\",\"style\"]"
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Adds an accessible label to the tab list container.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "padding",
+          "attribute": "padding",
+          "description": "Controls the padding of the tab group component.",
+          "type": "\"m\" | \"l\" | \"none\" | undefined",
+          "default": "\"m\""
+        },
+        {
+          "name": "sticky",
+          "attribute": "sticky",
+          "description": "Whether the tab list sticks to the top of the tab group as you scroll.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The element which contains the content to be revealed."
+        },
+        {
+          "name": "tab",
+          "description": "The element which contains all tabs to reveal tabbed content."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-tab-group-padding",
+          "description": "(/tokens/#space).",
+          "default": "\"0] - Controls the padding around the tab group (including the tab list), using our [spacing tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-tab-panel",
+      "path": "./src\\tab-panel\\TabPanel.ts",
+      "description": "The panel which contains content that can be revealed using a tab\r\nin the tab group component.",
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The tab panel content."
+        }
+      ]
+    },
+    {
+      "name": "nord-tab",
+      "path": "./src\\tab\\Tab.ts",
+      "description": "The interactive tab button for use within the tab group component.",
+      "attributes": [
+        {
+          "name": "selected",
+          "description": "Whether the tab item is selected",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "description": "Whether the tab item is selected",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The tab button content."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-tab-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-text-weak)] - Controls the text color of the tab, using our [color tokens\""
+        },
+        {
+          "name": "--n-tab-font-weight",
+          "description": "(/tokens/#font).",
+          "default": "\"var(--n-font-weight)] - Controls the font weight of the tab, using our [font tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-table",
+      "path": "./src\\table\\Table.ts",
+      "description": "Table is used to organize and display information from a data set.\r\nProvides table styles in addition to features like sticky\r\nheaders and support for narrow viewports.",
+      "attributes": [
+        {
+          "name": "density",
+          "description": "Controls the density of the table's rows and headers.\r\nRelaxed increases space, condensed reduces space.",
+          "type": "\"default\" | \"condensed\" | \"relaxed\"",
+          "default": "\"default\""
+        },
+        {
+          "name": "scroll-snap",
+          "description": "Enables scroll-snapping, meaning the scroll position is always column-aligned.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "striped",
+          "description": "Controls whether to use zebra striping on tables, which can improve readability.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "density",
+          "attribute": "density",
+          "description": "Controls the density of the table's rows and headers.\r\nRelaxed increases space, condensed reduces space.",
+          "type": "\"default\" | \"condensed\" | \"relaxed\"",
+          "default": "\"default\""
+        },
+        {
+          "name": "scrollSnap",
+          "attribute": "scroll-snap",
+          "description": "Enables scroll-snapping, meaning the scroll position is always column-aligned.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "striped",
+          "attribute": "striped",
+          "description": "Controls whether to use zebra striping on tables, which can improve readability.",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot which holds the HTML `<table>` element."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-table-td-padding",
+          "description": "Controls the padding around the table cells.",
+          "default": "\"calc(var(--n-space-m) * 0.95)\""
+        },
+        {
+          "name": "--n-table-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-textarea",
+      "path": "./src\\textarea\\Textarea.ts",
+      "description": "Textarea is a component that allows user to write text over\r\nmultiple rows. Used when the expected user input is long.\r\nFor shorter input, use the Input component.",
+      "attributes": [
+        {
+          "name": "resize",
+          "description": "Controls whether the textarea is resizable.\r\nBy default is manually resizable vertically.\r\nSet to \"auto\" to enable auto-resizing as content grows.",
+          "type": "\"vertical\" | \"auto\"",
+          "default": "\"vertical\""
+        },
+        {
+          "name": "expand",
+          "description": "Controls whether the textarea expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "maxlength",
+          "description": "Controls the max allowed length for the textarea.",
+          "type": "number | undefined"
+        },
+        {
+          "name": "character-counter",
+          "description": "Controls whether to show a count of the number of characters in the textarea.\r\nWhen combined with `maxlength`, both the count and the max length are shown.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"textFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "resize",
+          "attribute": "resize",
+          "description": "Controls whether the textarea is resizable.\r\nBy default is manually resizable vertically.\r\nSet to \"auto\" to enable auto-resizing as content grows.",
+          "type": "\"vertical\" | \"auto\"",
+          "default": "\"vertical\""
+        },
+        {
+          "name": "expand",
+          "attribute": "expand",
+          "description": "Controls whether the textarea expands to fill the width of its container.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "maxLength",
+          "attribute": "maxlength",
+          "description": "Controls the max allowed length for the textarea.",
+          "type": "number | undefined"
+        },
+        {
+          "name": "characterCounter",
+          "attribute": "character-counter",
+          "description": "Controls whether to show a count of the number of characters in the textarea.\r\nWhen combined with `maxlength`, both the count and the max length are shown.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the component.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "attribute": "autocomplete",
+          "description": "Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.",
+          "type": "AutocompleteAttribute",
+          "default": "\"off\""
+        },
+        {
+          "name": "readonly",
+          "attribute": "readonly",
+          "description": "Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Optional slot that holds hint text for the textarea."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the textarea."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-textarea-inline-size",
+          "description": "Controls the inline size, or width, of the textarea.",
+          "default": "\"240px\""
+        },
+        {
+          "name": "--n-textarea-block-size",
+          "description": "Controls the block size, or height, or the textarea.",
+          "default": "\"76px\""
+        },
+        {
+          "name": "--n-textarea-background",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-active)] - Controls the background of the textarea, using our [color tokens\""
+        },
+        {
+          "name": "--n-textarea-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-text)] - Controls the text color of the textarea, using our [color tokens\""
+        },
+        {
+          "name": "--n-textarea-border-color",
+          "description": "(/tokens/#color).",
+          "default": "\"var(--n-color-border-strong)] - Controls the border color of the textarea, using our [color tokens\""
+        },
+        {
+          "name": "--n-textarea-border-radius",
+          "description": "(/tokens/#border-radius).",
+          "default": "\"var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens\""
+        }
+      ]
+    },
+    {
+      "name": "nord-toast-group",
+      "path": "./src\\toast-group\\ToastGroup.ts",
+      "description": "Toast group is used to position and style a group of toasts, whilst ensuring they are announced by screen readers.",
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot in which to place toasts."
+        }
+      ]
+    },
+    {
+      "name": "nord-toast",
+      "path": "./src\\toast\\Toast.ts",
+      "description": "Toasts are non-disruptive messages that appear in the interface\r\nto provide quick, at-a-glance feedback on the outcome of an action.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The style variant of the toast.",
+          "type": "\"default\" | \"danger\"",
+          "default": "\"default\""
+        },
+        {
+          "name": "auto-dismiss",
+          "description": "Timeout in milliseconds before the toast is automatically dismissed.",
+          "type": "number | undefined",
+          "default": "10000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "description": "The style variant of the toast.",
+          "type": "\"default\" | \"danger\"",
+          "default": "\"default\""
+        },
+        {
+          "name": "autoDismiss",
+          "attribute": "auto-dismiss",
+          "description": "Timeout in milliseconds before the toast is automatically dismissed.",
+          "type": "number | undefined",
+          "default": "10000"
+        }
+      ],
+      "events": [
+        {
+          "name": "dismiss",
+          "description": "Fired when the toast is dismissed (via user action or auto-dismiss), and its exit animation has completed. This event should be used to remove the dismissed toast from the DOM."
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Default slot used for the toast text/message."
+        }
+      ]
+    },
+    {
+      "name": "nord-toggle",
+      "path": "./src\\toggle\\Toggle.ts",
+      "description": "Toggle switch gives control over a feature or option that can be\r\nturned on or off. If a physical switch would work for the action, a\r\ntoggle is probably the best component to use.",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "Controls whether the toggle is checked or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "reverse",
+          "description": "Controls whether the contents are displayed in reverse order,\r\nputting the label before the toggle.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "The size of the toggle switch.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"formFieldStyle\",\"style\"]"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "Controls whether the toggle is checked or not.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "reverse",
+          "attribute": "reverse",
+          "description": "Controls whether the contents are displayed in reverse order,\r\nputting the label before the toggle.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "The size of the toggle switch.",
+          "type": "\"s\" | \"m\" | \"l\"",
+          "default": "\"m\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Label for the input.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hint",
+          "attribute": "hint",
+          "description": "Optional hint text to be displayed with the input. Alternatively use the hint slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "hideLabel",
+          "attribute": "hide-label",
+          "description": "Visually hide the label, but still show it to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "description": "Placeholder text to display within the input.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "error",
+          "attribute": "error",
+          "description": "Optional error to be shown with the input. Alternatively use the error slot.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "description": "Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideRequired",
+          "attribute": "hide-required",
+          "description": "Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "description": "The name of the form component.",
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "The value of the form component.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "form",
+          "description": "Gets the form, if any, associated with the form element.",
+          "type": "HTMLFormElement | null"
+        }
+      ],
+      "slots": [
+        {
+          "name": "label",
+          "description": "Use when a label requires more than plain text."
+        },
+        {
+          "name": "hint",
+          "description": "Optional slot that holds hint text for the input."
+        },
+        {
+          "name": "error",
+          "description": "Optional slot that holds error text for the input."
+        }
+      ]
+    },
+    {
+      "name": "nord-tooltip",
+      "path": "./src\\tooltip\\Tooltip.ts",
+      "description": "Tooltips are floating containers for displaying additional information\r\nfor the currently focused element. A tooltip can be useful when you want\r\nto e.g. give a hint about an existing Command Menu shortcut.",
+      "attributes": [
+        {
+          "name": "position",
+          "description": "Control the position of the tooltip component.\r\nWhen set to \"none\", the tooltip will be shown above\r\nbut accommodate for browser boundaries.",
+          "type": "\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"",
+          "default": "\"block-start\""
+        },
+        {
+          "name": "role",
+          "description": "The tooltip role, set on the component by default.",
+          "type": "string",
+          "default": "\"tooltip\""
+        },
+        {
+          "name": "id",
+          "description": "The id for the active element to reference via aria-describedby.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "delay",
+          "description": "The delay in milliseconds before the tooltip is opened.",
+          "type": "number",
+          "default": "500"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "array",
+          "default": "[\"componentStyle\",\"style\"]"
+        },
+        {
+          "name": "position",
+          "attribute": "position",
+          "description": "Control the position of the tooltip component.\r\nWhen set to \"none\", the tooltip will be shown above\r\nbut accommodate for browser boundaries.",
+          "type": "\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"",
+          "default": "\"block-start\""
+        },
+        {
+          "name": "role",
+          "attribute": "role",
+          "description": "The tooltip role, set on the component by default.",
+          "type": "string",
+          "default": "\"tooltip\""
+        },
+        {
+          "name": "id",
+          "attribute": "id",
+          "description": "The id for the active element to reference via aria-describedby.",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "delay",
+          "attribute": "delay",
+          "description": "The delay in milliseconds before the tooltip is opened.",
+          "type": "number",
+          "default": "500"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The tooltip content"
+        },
+        {
+          "name": "shortcut",
+          "description": "Optional slot that holds shortcut keys to access the subject"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--n-tooltip-max-size",
+          "description": "Controls the maximum inline size, or width, of the tooltip.",
+          "default": "\"50ch\""
+        }
+      ]
+    },
+    {
+      "name": "nord-visually-hidden",
+      "path": "./src\\visually-hidden\\VisuallyHidden.ts",
+      "description": "Visually hidden is used when an element needs to be available\r\nto assistive technologies like screen readers, but be otherwise\r\nhidden.",
+      "properties": [
+        {
+          "name": "styles",
+          "default": "\"style\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "The visually hidden content."
+        }
+      ]
+    }
+  ]
+}

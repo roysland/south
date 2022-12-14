@@ -1,0 +1,25 @@
+nord-table table {
+    inline-size: 100%;
+    font-size: var(--n-font-size-m);
+    font-family: var(--n-font-family);
+    font-feature-settings: var(--n-font-features);
+    line-height: var(--n-line-height-tight);
+    text-align: start;
+    border-spacing: 0;
+    border-collapse: separate;
+    color: var(--n-color-text);
+    font-variant-numeric: tabular-nums;
+}
+nord-table th {
+    border-block-end: 1px solid var(--n-color-border);
+    font-weight: var(--n-font-weight-active);
+    font-size: var(--n-font-size-s);
+    color: var(--n-color-text-weaker);
+    text-align: start;
+    background: var(--n-color-surface-raised);
+}
+
+nord-table td {
+    border-block-end: 1px solid var(--n-color-border);
+    white-space: nowrap;
+}

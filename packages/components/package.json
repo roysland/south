@@ -4,13 +4,16 @@
   "description": "",
   "main": "dist/bundle.js",
   "type": "module",
+  "module": "dist/index.js",
   "exports": {
     ".": "./dist/bundle.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node ./build.js",
-    "dev": "node ./serve.js"
+    "dev1": "node ./serve.js",
+    "mod": "tsc",
+    "analyze": "wca src --outFile custom-elements.json && wca src --format vscode --outFile ../../.vscode/html-custom-data.json && wca src --outFile custom-elements.md"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +21,9 @@
   "dependencies": {
     "@floating-ui/dom": "^1.0.10",
     "@nordhealth/icons": "^1.8.0",
+    "@pageup/styles": "*",
     "lit": "^2.5.0",
-    "@pageup/styles": "*"
+    "web-component-analyzer": "^2.0.0-next.4"
   },
   "devDependencies": {
     "typescript": "^4.9.4"

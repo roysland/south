@@ -1,0 +1,5 @@
+{
+    "html.customData": [
+      "./packages/components/html-custom-data.json"
+    ]
+  }
