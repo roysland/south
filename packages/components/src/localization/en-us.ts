@@ -9,12 +9,12 @@ const en = {
   $lang: "en-US",
   $name: "English",
   $dir: "ltr" as "ltr" | "rtl",
-  "nord-command-menu": commandMenuLocalization,
-  "nord-calendar": calendarLocalization,
-  "nord-date-picker": datePickerLocalization,
-  "nord-modal": modalLocalization,
-  "nord-nav-toggle": navToggleLocalization,
-  "nord-textarea": textareaLocalization,
+  "kabal-command-menu": commandMenuLocalization,
+  "kabal-calendar": calendarLocalization,
+  "kabal-date-picker": datePickerLocalization,
+  "kabal-modal": modalLocalization,
+  "kabal-nav-toggle": navToggleLocalization,
+  "kabal-textarea": textareaLocalization,
 }
 
 export default en

@@ -16,7 +16,7 @@ import style from "./Divider.scss"
  * @cssprop [--n-divider-color=var(--n-color-border)] - Controls the color of the divider, using our [color tokens](/tokens/#color).
  * @cssprop [--n-divider-size=1px] - Controls the size, or thickness, of the divider.
  */
-@customElement("nord-divider")
+@customElement("kabal-divider")
 export default class Divider extends LitElement {
   static styles = [componentStyle, style]
 
@@ -37,6 +37,6 @@ export default class Divider extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-divider": Divider
+    "kabal-divider": Divider
   }
 }

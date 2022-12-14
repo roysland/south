@@ -16,7 +16,7 @@ import formFieldStyle from "../common/styles/FormField.scss"
 import style from "./Radio.scss"
 
 let id = 0
-const createId = (suffix: string) => `nord-radio-${suffix}-${id++}`
+const createId = (suffix: string) => `kabal-radio-${suffix}-${id++}`
 
 function isLabel(element: Element): element is HTMLLabelElement {
   return element.localName === "label"
@@ -32,7 +32,7 @@ function isLabel(element: Element): element is HTMLLabelElement {
  * @slot hint - Optional slot that holds hint text for the input.
  * @slot error - Optional slot that holds error text for the input.
  */
-@customElement("nord-radio")
+@customElement("kabal-radio")
 export default class Radio extends FormAssociatedMixin(InputMixin(FocusableMixin(LitElement))) {
   static styles = [componentStyle, formFieldStyle, style]
 
@@ -121,7 +121,7 @@ export default class Radio extends FormAssociatedMixin(InputMixin(FocusableMixin
                 <slot name="label"></slot>
                 <slot name="label-internal"></slot>
               `,
-              content => html`<nord-visually-hidden>${content}</nord-visually-hidden>`
+              content => html`<kabal-visually-hidden>${content}</kabal-visually-hidden>`
             )}
             <div class="n-caption n-hint" ?hidden=${!this.hasHint}>
               <slot name="hint"></slot>
@@ -149,7 +149,7 @@ export default class Radio extends FormAssociatedMixin(InputMixin(FocusableMixin
   private uncheckSiblings() {
     const root = this.getRootNode() as Document | ShadowRoot
 
-    root.querySelectorAll<Radio>(`nord-radio[name="${this.name}"]`).forEach(radio => {
+    root.querySelectorAll<Radio>(`kabal-radio[name="${this.name}"]`).forEach(radio => {
       if (radio !== this) {
         radio.checked = false
       }
@@ -177,6 +177,6 @@ export default class Radio extends FormAssociatedMixin(InputMixin(FocusableMixin
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-radio": Radio
+    "kabal-radio": Radio
   }
 }

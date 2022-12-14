@@ -12,7 +12,7 @@ import style from "./NavGroup.scss"
  * @status ready
  * @slot - The default slot used for the nav items.
  */
-@customElement("nord-nav-group")
+@customElement("kabal-nav-group")
 export default class NavGroup extends LitElement {
   static styles = style
 
@@ -33,6 +33,6 @@ export default class NavGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-nav-group": NavGroup
+    "kabal-nav-group": NavGroup
   }
 }

@@ -67,7 +67,7 @@ type TooltipStates = States<typeof transition>
  * @slot shortcut - Optional slot that holds shortcut keys to access the subject
  * @cssprop [--n-tooltip-max-size=50ch] - Controls the maximum inline size, or width, of the tooltip.
  */
-@customElement("nord-tooltip")
+@customElement("kabal-tooltip")
 export default class Tooltip extends LitElement {
   static styles = [componentStyle, style]
 
@@ -290,6 +290,6 @@ export default class Tooltip extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-tooltip": Tooltip
+    "kabal-tooltip": Tooltip
   }
 }

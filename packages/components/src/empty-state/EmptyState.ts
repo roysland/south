@@ -13,7 +13,7 @@ import style from "./EmptyState.scss"
  * @category feedback
  * @slot - default slot
  */
-@customElement("nord-empty-state")
+@customElement("kabal-empty-state")
 export default class EmptyState extends LitElement {
   static styles = [componentStyle, style]
 
@@ -26,6 +26,6 @@ export default class EmptyState extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-empty-state": EmptyState
+    "kabal-empty-state": EmptyState
   }
 }

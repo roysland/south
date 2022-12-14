@@ -18,12 +18,12 @@ function isDocument(node: Node): node is Document {
  * @cssprop [--n-table-td-padding=calc(var(--n-space-m) * 0.95)] - Controls the padding around the table cells.
  * @cssprop [--n-table-border-radius=var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens](/tokens/#border-radius).
  *
- * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/nord-react-tanstack-table?embed=1&file=src/DataTable/DataTable.tsx&hideNavigation=1&view=preview - with react and tanstack table
- * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/nord-react-ag-grid?embed=1&file=src/DataTable/DataTable.tsx&hideNavigation=1&view=preview - with react and ag grid
- * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/nord-vue-tanstack-table?embed=1&file=src/components/DataTable/DataTable.vue&hideNavigation=1&view=preview - with vue and tanstack table
- * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/nord-vue-ag-grid?embed=1&file=src/components/DataTable/DataTable.vue&hideNavigation=1&view=preview - with vue and ag grid
+ * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/kabal-react-tanstack-table?embed=1&file=src/DataTable/DataTable.tsx&hideNavigation=1&view=preview - with react and tanstack table
+ * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/kabal-react-ag-grid?embed=1&file=src/DataTable/DataTable.tsx&hideNavigation=1&view=preview - with react and ag grid
+ * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/kabal-vue-tanstack-table?embed=1&file=src/components/DataTable/DataTable.vue&hideNavigation=1&view=preview - with vue and tanstack table
+ * @usage https://stackblitz.com/github/nordhealth/advanced-table-examples/tree/main/kabal-vue-ag-grid?embed=1&file=src/components/DataTable/DataTable.vue&hideNavigation=1&view=preview - with vue and ag grid
  */
-@customElement("nord-table")
+@customElement("kabal-table")
 export default class Table extends LitElement {
   /**
    * Controls the density of the table's rows and headers.
@@ -82,6 +82,6 @@ export default class Table extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-table": Table
+    "kabal-table": Table
   }
 }

@@ -13,7 +13,7 @@ import style from "./Stack.scss"
  *
  * @cssprop [--n-stack-gap=var(--n-space-m)] - Controls the spacing between items, using our [spacing tokens](/tokens/#space).
  */
-@customElement("nord-stack")
+@customElement("kabal-stack")
 export default class Stack extends LitElement {
   static styles = [componentStyle, style]
 
@@ -63,6 +63,6 @@ export default class Stack extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-stack": Stack
+    "kabal-stack": Stack
   }
 }

@@ -33,11 +33,11 @@
     color: var(--n-color-text-on-accent) !important
 }
 
-.n-dropdown-item ::slotted(nord-icon) {
+.n-dropdown-item ::slotted(kabal-icon) {
     color: var(--n-color-icon)
 }
 
-.n-dropdown-item:hover ::slotted(nord-icon) {
+.n-dropdown-item:hover ::slotted(kabal-icon) {
     color: currentColor
 }
 
@@ -68,7 +68,7 @@
         padding: calc(var(--n-space-m)/ 1.5) var(--n-space-m)
     }
 
-    .n-dropdown-item ::slotted(nord-icon) {
+    .n-dropdown-item ::slotted(kabal-icon) {
         block-size: var(--n-size-icon-m);
         inline-size: var(--n-size-icon-m)
     }
@@ -90,6 +90,6 @@ slot[name=end] {
     text-overflow: ellipsis
 }
 
-::slotted(nord-icon:not([size])) {
+::slotted(kabal-icon:not([size])) {
     --_n-icon-size: var(--n-size-icon-s)
 }

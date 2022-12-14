@@ -27,31 +27,31 @@ Icon.registerIcon(lockIcon)
  * @status new
  * @category action
  */
-@customElement("nord-nav-toggle")
+@customElement("kabal-nav-toggle")
 export default class NavToggle extends FocusableMixin(LitElement) {
   static styles = [componentStyle, style]
 
   private direction = new DirectionController(this)
-  private localization = new LocalizeController<"nord-nav-toggle">(this)
+  private localization = new LocalizeController<"kabal-nav-toggle">(this)
 
   render() {
     return html`
-      <nord-button
+      <kabal-button
         variant="plain"
         size="s"
         ${ref(this.focusableRef)}
         class=${classMap({ "is-rtl": this.direction.isRTL })}
       >
-        <nord-visually-hidden>${this.localization.term("label")}</nord-visually-hidden>
-        <nord-icon size="m" color="var(--n-color-icon)" name=${unlockIcon.title} class="nav-unlock"></nord-icon>
-        <nord-icon size="m" color="var(--n-color-text)" name=${lockIcon.title} class="nav-lock"></nord-icon>
-      </nord-button>
+        <kabal-visually-hidden>${this.localization.term("label")}</kabal-visually-hidden>
+        <kabal-icon size="m" color="var(--n-color-icon)" name=${unlockIcon.title} class="nav-unlock"></kabal-icon>
+        <kabal-icon size="m" color="var(--n-color-text)" name=${lockIcon.title} class="nav-lock"></kabal-icon>
+      </kabal-button>
     `
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-nav-toggle": NavToggle
+    "kabal-nav-toggle": NavToggle
   }
 }

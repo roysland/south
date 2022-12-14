@@ -33,7 +33,7 @@ const { transition } = fsm({
  * @cssprop [--n-avatar-size=var(--n-size-icon-l)] - Controls the size of the avatar, using [icon sizing tokens](/tokens/#size).
  */
 
-@customElement("nord-avatar")
+@customElement("kabal-avatar")
 export default class Avatar extends LitElement {
   static styles = [componentStyle, style]
 
@@ -91,7 +91,7 @@ export default class Avatar extends LitElement {
 
   protected renderFallback() {
     return html`
-      <nord-visually-hidden>${this.name}</nord-visually-hidden>
+      <kabal-visually-hidden>${this.name}</kabal-visually-hidden>
       <div class="n-avatar-inner" aria-hidden="true">
         <slot></slot>
       </div>
@@ -116,6 +116,6 @@ export default class Avatar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-avatar": Avatar
+    "kabal-avatar": Avatar
   }
 }

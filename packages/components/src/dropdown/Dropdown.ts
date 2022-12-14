@@ -21,7 +21,7 @@ import style from "./Dropdown.scss"
  *
  * @cssprop [--n-dropdown-size=250px] - Controls the inline size, or width, of the dropdown. Will resize up to 1.5 times to account for larger content.
  */
-@customElement("nord-dropdown")
+@customElement("kabal-dropdown")
 export default class Dropdown extends FloatingMixin(LitElement) {
   static styles = [componentStyle, style]
 
@@ -32,7 +32,7 @@ export default class Dropdown extends FloatingMixin(LitElement) {
    */
   static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true }
 
-  @query("nord-popout", true) private popout!: Popout
+  @query("kabal-popout", true) private popout!: Popout
 
   /**
    * Controls whether the toggle slot expands to fill the width of its container.
@@ -56,7 +56,7 @@ export default class Dropdown extends FloatingMixin(LitElement) {
     return html`
       <div class="n-dropdown" @focusout=${this.handleBlur}>
         <slot name="toggle" aria-controls="popout"></slot>
-        <nord-popout
+        <kabal-popout
           id="popout"
           align=${ifDefined(this.align)}
           position=${ifDefined(this.position)}
@@ -67,7 +67,7 @@ export default class Dropdown extends FloatingMixin(LitElement) {
           <div class="n-dropdown-content">
             <slot></slot>
           </div>
-        </nord-popout>
+        </kabal-popout>
       </div>
     `
   }
@@ -86,7 +86,7 @@ export default class Dropdown extends FloatingMixin(LitElement) {
 
   private handleOpen() {
     this.open = true
-    this.querySelector("nord-dropdown-item")?.focus()
+    this.querySelector("kabal-dropdown-item")?.focus()
   }
 
   private handleClose() {
@@ -111,6 +111,6 @@ export default class Dropdown extends FloatingMixin(LitElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-dropdown": Dropdown
+    "kabal-dropdown": Dropdown
   }
 }

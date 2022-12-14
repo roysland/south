@@ -13,7 +13,7 @@ import style from "./Header.scss"
  * @slot - The header content.
  * @slot end - Optional slot for buttons, toggles, etc.
  */
-@customElement("nord-header")
+@customElement("kabal-header")
 export default class Header extends LitElement {
   static styles = [componentStyle, style]
 
@@ -33,6 +33,6 @@ export default class Header extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-header": Header
+    "kabal-header": Header
   }
 }

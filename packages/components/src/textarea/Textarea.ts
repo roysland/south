@@ -44,7 +44,7 @@ function createLengthMeasurer(locale: string) {
  * @cssprop [--n-textarea-border-color=var(--n-color-border-strong)] - Controls the border color of the textarea, using our [color tokens](/tokens/#color).
  * @cssprop [--n-textarea-border-radius=var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens](/tokens/#border-radius).
  */
-@customElement("nord-textarea")
+@customElement("kabal-textarea")
 export default class Textarea extends SizeMixin(
   FormAssociatedMixin(AutocompleteMixin(ReadonlyMixin(InputMixin(FocusableMixin(LitElement)))))
 ) {
@@ -53,7 +53,7 @@ export default class Textarea extends SizeMixin(
   protected inputId = "textarea"
 
   private lengthMeasurer!: (value: string) => number
-  private localize = new LocalizeController<"nord-textarea">(this, {
+  private localize = new LocalizeController<"kabal-textarea">(this, {
     onLangChange: () => this.handleLangChange(),
   })
 
@@ -117,9 +117,9 @@ export default class Textarea extends SizeMixin(
     const counter = maxLength ? `${length}/${maxLength}` : length
 
     return html`
-      <nord-visually-hidden aria-live="polite" aria-atomic="true">
+      <kabal-visually-hidden aria-live="polite" aria-atomic="true">
         ${remainder != null && remainder <= 10 ? this.localize.term("remainingCharacters", remainder) : ""}
-      </nord-visually-hidden>
+      </kabal-visually-hidden>
       <div class="n-character-counter">${counter}</div>
     `
   }
@@ -149,6 +149,6 @@ export default class Textarea extends SizeMixin(
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-textarea": Textarea
+    "kabal-textarea": Textarea
   }
 }

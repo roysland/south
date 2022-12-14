@@ -11,7 +11,7 @@ import style from "./VisuallyHidden.scss"
  * @category text
  * @slot - The visually hidden content.
  */
-@customElement("nord-visually-hidden")
+@customElement("kabal-visually-hidden")
 export default class VisuallyHidden extends LitElement {
   static styles = style
 
@@ -22,6 +22,6 @@ export default class VisuallyHidden extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-visually-hidden": VisuallyHidden
+    "kabal-visually-hidden": VisuallyHidden
   }
 }

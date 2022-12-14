@@ -52,6 +52,6 @@
     background-color: var(--_n-tooltip-key-background)
 }
 
-[slot=shortcut]::slotted(nord-icon:not([size])) {
+[slot=shortcut]::slotted(kabal-icon:not([size])) {
     --_n-icon-size: var(--n-size-icon-s)
 }

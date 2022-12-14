@@ -27,7 +27,7 @@ const NAV_RESIZE_STEP = 30
 const NAV_PEEK_DELAY = 300
 
 const mediaQuery = matchMedia("(min-width: 768px)")
-const store = storage("nord-layout.navWidth", NAV_DEFAULT_WIDTH)
+const store = storage("kabal-layout.navWidth", NAV_DEFAULT_WIDTH)
 
 const navMachine = fsm({
   opened: {
@@ -89,7 +89,7 @@ function isElement(el: any): el is Element {
  * @cssprop [--n-layout-drawer-inline-size=320px] - Controls the width of the drawer area, when used.
  * @cssprop [--n-layout-background-color=var(--n-color-background)] - Controls the background color of the layout, using [color tokens](/tokens/#color).
  */
-@customElement("nord-layout")
+@customElement("kabal-layout")
 export default class Layout extends LitElement {
   static styles = [componentStyle, stickyStyle, style]
 
@@ -242,7 +242,7 @@ export default class Layout extends LitElement {
           @mouseover=${this.handleMouseEnter}
           @mouseout=${this.handleMouseLeave}
         >
-          <nord-nav-toggle></nord-nav-toggle>
+          <kabal-nav-toggle></kabal-nav-toggle>
         </slot>
       </div>
     `
@@ -317,7 +317,7 @@ export default class Layout extends LitElement {
   private handleDropdownOpen(e: Event) {
     const target = e.target as Element
 
-    if (target.localName === "nord-dropdown") {
+    if (target.localName === "kabal-dropdown") {
       this.navTransition("dropdownOpen")
     }
   }
@@ -325,7 +325,7 @@ export default class Layout extends LitElement {
   private handleDropdownClose(e: Event) {
     const target = e.target as Element
 
-    if (target.localName === "nord-dropdown") {
+    if (target.localName === "kabal-dropdown") {
       this.navTransition("dropdownClose")
     }
   }
@@ -424,6 +424,6 @@ export default class Layout extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-layout": Layout
+    "kabal-layout": Layout
   }
 }

@@ -21,7 +21,7 @@ let tabGroupCount = 1
  *
  * @cssprop [--n-tab-group-padding=0] - Controls the padding around the tab group (including the tab list), using our [spacing tokens](/tokens/#space).
  */
-@customElement("nord-tab-group")
+@customElement("kabal-tab-group")
 export default class TabGroup extends LitElement {
   static styles = [componentStyle, stickyStyle, style]
 
@@ -39,7 +39,7 @@ export default class TabGroup extends LitElement {
   /**
    * Unique ID for each tab group component present.
    */
-  private tabGroupId = `nord-tab-group-${tabGroupCount++}`
+  private tabGroupId = `kabal-tab-group-${tabGroupCount++}`
 
   /**
    * Adds an accessible label to the tab list container.
@@ -111,14 +111,14 @@ export default class TabGroup extends LitElement {
    * Get the selected tab button, or the first tab button.
    */
   private get initialSelectedTab() {
-    return this.querySelector("nord-tab[selected]") || this.querySelector("nord-tab")
+    return this.querySelector("kabal-tab[selected]") || this.querySelector("kabal-tab")
   }
 
   /**
    * Apply accessible attributes and values to the tab buttons.
    */
   private setupTabs() {
-    const tabs = this.querySelectorAll("nord-tab")
+    const tabs = this.querySelectorAll("kabal-tab")
 
     tabs.forEach((tab, index) => {
       tab.setAttribute("id", `${this.tabGroupId}-tab-${index + 1}`)
@@ -131,7 +131,7 @@ export default class TabGroup extends LitElement {
    * Apply accessible attributes and values to the tab panels.
    */
   private setupPanels() {
-    const panels = this.querySelectorAll("nord-tab-panel")
+    const panels = this.querySelectorAll("kabal-tab-panel")
     const selectedPanelId = this.selectedTab?.getAttribute("aria-controls")
 
     panels.forEach((panel, index) => {
@@ -157,7 +157,7 @@ export default class TabGroup extends LitElement {
    * Get the previous tab button in the tab group
    */
   private previousTab(tab: Tab) {
-    const tabs = [...this.querySelectorAll("nord-tab")]
+    const tabs = [...this.querySelectorAll("kabal-tab")]
     const selectedTabIndex = tabs.indexOf(tab)
     return tabs[selectedTabIndex - 1]
   }
@@ -168,9 +168,9 @@ export default class TabGroup extends LitElement {
   private handleKeydown(event: KeyboardEvent) {
     const tab = <Tab>event.target
 
-    const firstTab = <Tab>this.querySelector("nord-tab:first-of-type")
-    const lastTab = <Tab>this.querySelector("nord-tab:last-of-type")
-    const nextTab = <Tab>this.querySelector(`#${tab.getAttribute("id")} ~ nord-tab`) || firstTab
+    const firstTab = <Tab>this.querySelector("kabal-tab:first-of-type")
+    const lastTab = <Tab>this.querySelector("kabal-tab:last-of-type")
+    const nextTab = <Tab>this.querySelector(`#${tab.getAttribute("id")} ~ kabal-tab`) || firstTab
     const previousTab = <Tab>this.previousTab(tab) || lastTab
 
     const updateTab = (selectedTab: Tab, keyEvent: Event) => {
@@ -217,7 +217,7 @@ export default class TabGroup extends LitElement {
     /**
      * Reset all the selected state of the tabs, and select the clicked tab
      */
-    this.querySelectorAll("nord-tab").forEach(tab => {
+    this.querySelectorAll("kabal-tab").forEach(tab => {
       tab.removeAttribute("selected")
       if (tab === selectedTab) {
         tab.setAttribute("selected", "")
@@ -231,7 +231,7 @@ export default class TabGroup extends LitElement {
      * Reset all the visibility of the panels,
      * and show the panel related to the selected tab
      */
-    this.querySelectorAll("nord-tab-panel").forEach(panel => {
+    this.querySelectorAll("kabal-tab-panel").forEach(panel => {
       panel.setAttribute("aria-hidden", `${panel !== selectedPanel}`)
     })
   }
@@ -239,6 +239,6 @@ export default class TabGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-tab-group": TabGroup
+    "kabal-tab-group": TabGroup
   }
 }

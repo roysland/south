@@ -197,7 +197,7 @@
     --_n-button-box-shadow: inset 0 0 0 1px var(--_n-button-border-color)
 }
 
-:host([variant=switch]) slot[name=end] nord-icon {
+:host([variant=switch]) slot[name=end] kabal-icon {
     color: var(--n-color-icon);
     margin-inline-end: var(--n-space-s)
 }
@@ -267,21 +267,21 @@
     display: none
 }
 
-:host(:not([variant=primary], [variant=danger])) ::slotted(nord-icon),
-:host(:not([variant=primary], [variant=danger])) nord-icon {
+:host(:not([variant=primary], [variant=danger])) ::slotted(kabal-icon),
+:host(:not([variant=primary], [variant=danger])) kabal-icon {
     color: var(--n-color-icon)
 }
 
-slot:not([name])::slotted(nord-icon) {
+slot:not([name])::slotted(kabal-icon) {
     transform: translateY(1px)
 }
 
-:host([size="s"]) slot:not([name])::slotted(nord-icon:not([size])),
-slot:not([name])::slotted(nord-icon[size=xs]) {
+:host([size="s"]) slot:not([name])::slotted(kabal-icon:not([size])),
+slot:not([name])::slotted(kabal-icon[size=xs]) {
     transform: translateY(0)
 }
 
-::slotted(nord-icon:not([size])),
-nord-icon {
+::slotted(kabal-icon:not([size])),
+kabal-icon {
     --_n-icon-size: var(--_n-button-icon-size)
 }

@@ -21,7 +21,7 @@ Icon.registerIcon(closeIcon)
  * @slot - Default slot used for the toast text/message.
  * @fires dismiss - Fired when the toast is dismissed (via user action or auto-dismiss), and its exit animation has completed. This event should be used to remove the dismissed toast from the DOM.
  */
-@customElement("nord-toast")
+@customElement("kabal-toast")
 export default class Toast extends LitElement {
   static styles = [componentStyle, style]
 
@@ -75,7 +75,7 @@ export default class Toast extends LitElement {
         </div>
 
         <button class="n-dismiss" @click=${this.dismiss} aria-hidden="true">
-          <nord-icon name="interface-close" size="s"></nord-icon>
+          <kabal-icon name="interface-close" size="s"></kabal-icon>
         </button>
       </div>
     `
@@ -93,6 +93,6 @@ export default class Toast extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-toast": Toast
+    "kabal-toast": Toast
   }
 }

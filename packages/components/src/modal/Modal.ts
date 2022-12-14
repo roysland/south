@@ -31,7 +31,7 @@ Icon.registerIcon(closeIcon)
  * @cssprop [--n-modal-padding-block=var(--n-space-m)] - Controls the padding above and below the modal, using our [spacing tokens](/tokens/#space).
  * @cssprop [--n-modal-max-inline-size=620px] - Controls the width of the modal.
  */
-@customElement("nord-modal")
+@customElement("kabal-modal")
 export default class Modal extends LitElement {
   static styles = [componentStyle, style]
 
@@ -50,7 +50,7 @@ export default class Modal extends LitElement {
   private featureSlot = new SlotController(this, "feature")
   private footerSlot = new SlotController(this, "footer")
 
-  private localize = new LocalizeController<"nord-modal">(this)
+  private localize = new LocalizeController<"kabal-modal">(this)
   private modalController = new ModalController(this, {
     isOpen: () => this.open,
     onDismiss: () => this.handleDismiss(),
@@ -128,7 +128,7 @@ export default class Modal extends LitElement {
           <div class="n-modal-header n-rounded-top" ?hidden=${this.headerSlot.isEmpty}>
             <slot class="n-padded" name=${this.headerSlot.slotName}></slot>
             <button class="n-close" @click=${this.handleDismiss}>
-              <nord-icon name="interface-close-small" size="s" label=${this.localize.term("closeLabel")}></nord-icon>
+              <kabal-icon name="interface-close-small" size="s" label=${this.localize.term("closeLabel")}></kabal-icon>
             </button>
           </div>
 
@@ -170,6 +170,6 @@ export default class Modal extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-modal": Modal
+    "kabal-modal": Modal
   }
 }

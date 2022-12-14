@@ -19,7 +19,7 @@ import style from "./ProgressBar.scss"
  * @cssprop [--n-progress-border-radius=var(--n-border-radius-s)] - Controls how rounded the corners are, using [border radius tokens](/tokens/#border-radius).
  * @cssprop [--n-progress-color=var(--n-color-accent)] - Controls the color of the progress bar, using [color tokens](/tokens/#color).
  */
-@customElement("nord-progress-bar")
+@customElement("kabal-progress-bar")
 export default class ProgressBar extends FocusableMixin(LitElement) {
   static styles = [componentStyle, style]
 
@@ -51,7 +51,7 @@ export default class ProgressBar extends FocusableMixin(LitElement) {
      * https://bugs.chromium.org/p/chromium/issues/detail?id=1310779
      */
     return html`<label>
-      <nord-visually-hidden>${this.label}</nord-visually-hidden>
+      <kabal-visually-hidden>${this.label}</kabal-visually-hidden>
       <progress
         ${ref(this.focusableRef)}
         aria-valuenow=${ifDefined(this.value)}
@@ -67,6 +67,6 @@ export default class ProgressBar extends FocusableMixin(LitElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-progress-bar": ProgressBar
+    "kabal-progress-bar": ProgressBar
   }
 }

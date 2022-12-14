@@ -30,7 +30,7 @@ const iconMap: Record<Exclude<Badge["progress"], undefined>, string> = {
  * @category text
  * @slot - The badge content.
  */
-@customElement("nord-badge")
+@customElement("kabal-badge")
 export default class Badge extends LitElement {
   static styles = [componentStyle, style]
 
@@ -52,7 +52,7 @@ export default class Badge extends LitElement {
 
     return html`
       <span class="n-badge">
-        <nord-icon name=${icon} size="xxs" ?hidden=${!icon}></nord-icon>
+        <kabal-icon name=${icon} size="xxs" ?hidden=${!icon}></kabal-icon>
         <slot></slot>
       </span>
     `
@@ -61,6 +61,6 @@ export default class Badge extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-badge": Badge
+    "kabal-badge": Badge
   }
 }

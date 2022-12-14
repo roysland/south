@@ -51,12 +51,12 @@
     --n-button-border-radius: 0 0 var(--_n-button-group-border-radius) var(--_n-button-group-border-radius)
 }
 
-::slotted(nord-button[variant=primary]) {
+::slotted(kabal-button[variant=primary]) {
     position: relative
 }
 
-::slotted(nord-button[variant=primary]:not(:is(:focus, :first-child)))::before,
-::slotted(nord-button[variant=primary]:not(:is(:focus, :last-child)))::after {
+::slotted(kabal-button[variant=primary]:not(:is(:focus, :first-child)))::before,
+::slotted(kabal-button[variant=primary]:not(:is(:focus, :last-child)))::after {
     content: "";
     position: absolute;
     z-index: var(--n-index-mask);
@@ -64,22 +64,22 @@
     opacity: .25
 }
 
-:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::after,
-:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::before {
+:host([direction=horizontal]) ::slotted(kabal-button[variant=primary])::after,
+:host([direction=horizontal]) ::slotted(kabal-button[variant=primary])::before {
     inline-size: 1px;
     inset-block: 0
 }
 
-:host([direction=horizontal]) ::slotted(nord-button[variant=primary])::after {
+:host([direction=horizontal]) ::slotted(kabal-button[variant=primary])::after {
     inset-inline-end: 0
 }
 
-:host([direction=vertical]) ::slotted(nord-button[variant=primary])::after,
-:host([direction=vertical]) ::slotted(nord-button[variant=primary])::before {
+:host([direction=vertical]) ::slotted(kabal-button[variant=primary])::after,
+:host([direction=vertical]) ::slotted(kabal-button[variant=primary])::before {
     block-size: 1px;
     inset-inline: 0
 }
 
-:host([direction=vertical]) ::slotted(nord-button[variant=primary])::after {
+:host([direction=vertical]) ::slotted(kabal-button[variant=primary])::after {
     inset-block-end: 0
 }

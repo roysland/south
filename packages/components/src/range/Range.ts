@@ -32,7 +32,7 @@ import style from "./Range.scss"
  * @cssprop [--n-range-track-color-inactive=var(--n-color-border-strong)] - Controls the color of the portion of the track that represents the remaining value.
  * @cssprop [--n-range-track-size=3px] - Controls the height of the track.
  */
-@customElement("nord-range")
+@customElement("kabal-range")
 export default class Range extends FormAssociatedMixin(
   AutocompleteMixin(ReadonlyMixin(InputMixin(FocusableMixin(LitElement))))
 ) {
@@ -117,6 +117,6 @@ export default class Range extends FormAssociatedMixin(
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-range": Range
+    "kabal-range": Range
   }
 }

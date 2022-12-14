@@ -15,7 +15,7 @@ import style from "./Qrcode.scss"
  * @category image
  * @displayName QR Code
  */
-@customElement("nord-qrcode")
+@customElement("kabal-qrcode")
 export default class Qrcode extends LitElement {
   static styles = [componentStyle, style]
 
@@ -116,6 +116,6 @@ export default class Qrcode extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-qrcode": Qrcode
+    "kabal-qrcode": Qrcode
   }
 }

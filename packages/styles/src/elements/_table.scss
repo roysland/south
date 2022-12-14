@@ -1,4 +1,4 @@
-nord-table table {
+kabal-table table {
     inline-size: 100%;
     font-size: var(--n-font-size-m);
     font-family: var(--n-font-family);
@@ -10,7 +10,7 @@ nord-table table {
     color: var(--n-color-text);
     font-variant-numeric: tabular-nums;
 }
-nord-table th {
+kabal-table th {
     border-block-end: 1px solid var(--n-color-border);
     font-weight: var(--n-font-weight-active);
     font-size: var(--n-font-size-s);
@@ -19,7 +19,7 @@ nord-table th {
     background: var(--n-color-surface-raised);
 }
 
-nord-table td {
+kabal-table td {
     border-block-end: 1px solid var(--n-color-border);
     white-space: nowrap;
 }

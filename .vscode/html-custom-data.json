@@ -1,0 +1,2569 @@
+{
+  "version": 1,
+  "tags": [
+    {
+      "name": "kabal-avatar",
+      "description": "Avatar is used for showing a thumbnail representation of a user or entity.\r\nDefault avatar illustration is displayed when no src is specified.\n\nAttributes:\n\n  * `size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\"`} - The size of the avatar.\n\n  * `src` {`string | undefined`} - The URL of the avatar image uploaded by the user.\n\n  * `name` {`string`} - The name of the person.\n\n  * `variant` {`\"default\" | \"square\"`} - The style variant of the avatar.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `state` {`\"initial\" | \"loading\" | \"loaded\"`} - \n\n  * `size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\"`} - The size of the avatar.\n\n  * `src` {`string | undefined`} - The URL of the avatar image uploaded by the user.\n\n  * `name` {`string`} - The name of the person.\n\n  * `variant` {`\"default\" | \"square\"`} - The style variant of the avatar.",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\"`} - The size of the avatar.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "xl"
+            },
+            {
+              "name": "xxl"
+            }
+          ]
+        },
+        {
+          "name": "src",
+          "description": "`src` {`string | undefined`} - The URL of the avatar image uploaded by the user.\n\nProperty: src",
+          "values": []
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string`} - The name of the person.\n\nProperty: name\n\nDefault: "
+        },
+        {
+          "name": "variant",
+          "description": "`variant` {`\"default\" | \"square\"`} - The style variant of the avatar.\n\nProperty: variant\n\nDefault: default",
+          "values": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "square"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-badge",
+      "description": "Badges are used to inform users of the status of an object\r\nor of an action that’s been taken. Commonly used in tabular\r\ndata to indicate status.\n\nSlots:\n\n  * ` ` {} - The badge content.\n\nAttributes:\n\n  * `type` {`\"warning\" | \"success\" | \"danger\" | \"highlight\" | \"info\" | \"neutral\" | \"progress\" | undefined`} - The type of badge.\r\nDetermines the background color of the badge.\n\n  * `progress` {`\"cancelled\" | \"complete\" | \"incomplete\" | \"partially-complete\" | undefined`} - The progress of the badge. Displays a progress\r\nindicator next to the label.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `type` {`\"warning\" | \"success\" | \"danger\" | \"highlight\" | \"info\" | \"neutral\" | \"progress\" | undefined`} - The type of badge.\r\nDetermines the background color of the badge.\n\n  * `progress` {`\"cancelled\" | \"complete\" | \"incomplete\" | \"partially-complete\" | undefined`} - The progress of the badge. Displays a progress\r\nindicator next to the label.",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "`type` {`\"warning\" | \"success\" | \"danger\" | \"highlight\" | \"info\" | \"neutral\" | \"progress\" | undefined`} - The type of badge.\r\nDetermines the background color of the badge.\n\nProperty: type\n\nDefault: neutral",
+          "values": [
+            {
+              "name": "warning"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "danger"
+            },
+            {
+              "name": "highlight"
+            },
+            {
+              "name": "info"
+            },
+            {
+              "name": "neutral"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "progress",
+          "description": "`progress` {`\"cancelled\" | \"complete\" | \"incomplete\" | \"partially-complete\" | undefined`} - The progress of the badge. Displays a progress\r\nindicator next to the label.\n\nProperty: progress",
+          "values": [
+            {
+              "name": "cancelled"
+            },
+            {
+              "name": "complete"
+            },
+            {
+              "name": "incomplete"
+            },
+            {
+              "name": "partially-complete"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-banner",
+      "description": "Banner informs users about important changes or conditions in the\r\ninterface. Use this component if you need to communicate to users\r\nin a prominent way.\n\nSlots:\n\n  * ` ` {} - default slot\n\nAttributes:\n\n  * `variant` {`\"warning\" | \"success\" | \"danger\" | \"info\"`} - The style variant of the banner.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `variant` {`\"warning\" | \"success\" | \"danger\" | \"info\"`} - The style variant of the banner.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "`variant` {`\"warning\" | \"success\" | \"danger\" | \"info\"`} - The style variant of the banner.\n\nProperty: variant\n\nDefault: info",
+          "values": [
+            {
+              "name": "warning"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "danger"
+            },
+            {
+              "name": "info"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-button-group",
+      "description": "Button groups are designed to bring together button controls that are of a similar nature. For example text formatting controls.\n\nSlots:\n\n  * ` ` {} - The button group content\n\nAttributes:\n\n  * `direction` {`\"vertical\" | \"horizontal\"`} - The direction of the button group.\n\n  * `role` {`string`} - The appropriate role for the containing element.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `direction` {`\"vertical\" | \"horizontal\"`} - The direction of the button group.\n\n  * `role` {`string`} - The appropriate role for the containing element.\n\n  * `_warningLogged` {`boolean`} - ",
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "`direction` {`\"vertical\" | \"horizontal\"`} - The direction of the button group.\n\nProperty: direction\n\nDefault: horizontal",
+          "values": [
+            {
+              "name": "vertical"
+            },
+            {
+              "name": "horizontal"
+            }
+          ]
+        },
+        {
+          "name": "role",
+          "description": "`role` {`string`} - The appropriate role for the containing element.\n\nProperty: role\n\nDefault: group"
+        }
+      ]
+    },
+    {
+      "name": "kabal-button",
+      "description": "Buttons are used for interface actions. Primary style should be\r\nused only once per section for main call-to-action, while other\r\nstyles can appear more frequently.\n\nSlots:\n\n  * ` ` {} - The button content\n\n  * `start` {} - Used to place content at the start of button text. Typically used for icons.\n\n  * `end` {} - Used to place content at the end of button text. Typically used for icons.\n\nAttributes:\n\n  * `variant` {`\"default\" | \"danger\" | \"primary\" | \"dashed\" | \"plain\" | \"switch\"`} - The style variant of the button.\n\n  * `type` {`\"button\" | \"submit\" | \"reset\"`} - The type of the button.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the button.\r\nThis affects font-size and padding.\n\n  * `aria-expanded` {`\"true\" | \"false\" | undefined`} - \n\n  * `aria-haspopup` {`\"true\" | \"false\" | \"menu\" | \"listbox\" | \"tree\" | \"grid\" | \"dialog\" | undefined`} - \n\n  * `href` {`string | undefined`} - When provided, renders the button as a link,\r\nwith its href attribute set to the given value.\n\n  * `download` {`boolean`} - When provided together with a href property, the button will\r\ntrigger a file download instead of a page visit.\n\n  * `target` {`\"_self\" | \"_blank\" | \"_parent\" | \"_top\"`} - When provided together with a href property, determines where\r\nto open the linked URL. The keywords have special meanings for\r\nwhere to load the URL: “_self” means the current browsing context,\r\n“_blank” usually a new tab but users can configure browsers this to\r\nopen a new window instead, “_parent” means the parent browsing\r\ncontext of the current one, but if no parent exists, behaves as\r\n_self, and finally “top” means the topmost browsing context.\n\n  * `expand` {`boolean`} - Controls whether the button expands to fill the width of its container.\n\n  * `loading` {`boolean`} - Controls whether the button is in loading state. Please note that the spinner\r\nis hidden from assistive technologies, so you need to make sure to announce\r\nthe loading state to e.g. screen reader users. We also recommend disabling\r\nall user interactions on the button itself while in loading state.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `defaultSlot` - \n\n  * `buttonRef` - \n\n  * `events` - \n\n  * `lightDom` - \n\n  * `variant` {`\"default\" | \"danger\" | \"primary\" | \"dashed\" | \"plain\" | \"switch\"`} - The style variant of the button.\n\n  * `type` {`\"button\" | \"submit\" | \"reset\"`} - The type of the button.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the button.\r\nThis affects font-size and padding.\n\n  * `accessibleExpanded` {`\"true\" | \"false\" | undefined`} - \n\n  * `accessibleHasPopup` {`\"true\" | \"false\" | \"menu\" | \"listbox\" | \"tree\" | \"grid\" | \"dialog\" | undefined`} - \n\n  * `href` {`string | undefined`} - When provided, renders the button as a link,\r\nwith its href attribute set to the given value.\n\n  * `download` {`boolean`} - When provided together with a href property, the button will\r\ntrigger a file download instead of a page visit.\n\n  * `target` {`\"_self\" | \"_blank\" | \"_parent\" | \"_top\"`} - When provided together with a href property, determines where\r\nto open the linked URL. The keywords have special meanings for\r\nwhere to load the URL: “_self” means the current browsing context,\r\n“_blank” usually a new tab but users can configure browsers this to\r\nopen a new window instead, “_parent” means the parent browsing\r\ncontext of the current one, but if no parent exists, behaves as\r\n_self, and finally “top” means the topmost browsing context.\n\n  * `expand` {`boolean`} - Controls whether the button expands to fill the width of its container.\n\n  * `loading` {`boolean`} - Controls whether the button is in loading state. Please note that the spinner\r\nis hidden from assistive technologies, so you need to make sure to announce\r\nthe loading state to e.g. screen reader users. We also recommend disabling\r\nall user interactions on the button itself while in loading state.\n\n  * `handleOuterClick` - \n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "`variant` {`\"default\" | \"danger\" | \"primary\" | \"dashed\" | \"plain\" | \"switch\"`} - The style variant of the button.\n\nProperty: variant\n\nDefault: default",
+          "values": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "danger"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "dashed"
+            },
+            {
+              "name": "plain"
+            },
+            {
+              "name": "switch"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "`type` {`\"button\" | \"submit\" | \"reset\"`} - The type of the button.\n\nProperty: type\n\nDefault: submit",
+          "values": [
+            {
+              "name": "button"
+            },
+            {
+              "name": "submit"
+            },
+            {
+              "name": "reset"
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the button.\r\nThis affects font-size and padding.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "aria-expanded",
+          "description": "`aria-expanded` {`\"true\" | \"false\" | undefined`} - \n\nProperty: accessibleExpanded",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "aria-haspopup",
+          "description": "`aria-haspopup` {`\"true\" | \"false\" | \"menu\" | \"listbox\" | \"tree\" | \"grid\" | \"dialog\" | undefined`} - \n\nProperty: accessibleHasPopup",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            },
+            {
+              "name": "menu"
+            },
+            {
+              "name": "listbox"
+            },
+            {
+              "name": "tree"
+            },
+            {
+              "name": "grid"
+            },
+            {
+              "name": "dialog"
+            }
+          ]
+        },
+        {
+          "name": "href",
+          "description": "`href` {`string | undefined`} - When provided, renders the button as a link,\r\nwith its href attribute set to the given value.\n\nProperty: href",
+          "values": []
+        },
+        {
+          "name": "download",
+          "description": "`download` {`boolean`} - When provided together with a href property, the button will\r\ntrigger a file download instead of a page visit.\n\nProperty: download\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "target",
+          "description": "`target` {`\"_self\" | \"_blank\" | \"_parent\" | \"_top\"`} - When provided together with a href property, determines where\r\nto open the linked URL. The keywords have special meanings for\r\nwhere to load the URL: “_self” means the current browsing context,\r\n“_blank” usually a new tab but users can configure browsers this to\r\nopen a new window instead, “_parent” means the parent browsing\r\ncontext of the current one, but if no parent exists, behaves as\r\n_self, and finally “top” means the topmost browsing context.\n\nProperty: target\n\nDefault: _self",
+          "values": [
+            {
+              "name": "_self"
+            },
+            {
+              "name": "_blank"
+            },
+            {
+              "name": "_parent"
+            },
+            {
+              "name": "_top"
+            }
+          ]
+        },
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the button expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "loading",
+          "description": "`loading` {`boolean`} - Controls whether the button is in loading state. Please note that the spinner\r\nis hidden from assistive technologies, so you need to make sure to announce\r\nthe loading state to e.g. screen reader users. We also recommend disabling\r\nall user interactions on the button itself while in loading state.\n\nProperty: loading\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-calendar",
+      "description": "Calendar allows user to pick a date. It comes with built-in\r\nfunctionality that allows you to set a minimum and a maximum allowed date.\r\nPlease note that the date must be passed in ISO-8601 format.\n\nEvents:\n\n  * `change` - Dispatched when a date is selected and the value changes.\n\n  * `kabal-focus-date` - Dispatched when the calendar's focused date changes.\n\nAttributes:\n\n  * `value` {`string`} - The selected date on the calendar. Must be in IS0-8601 format: YYYY-MM-DD.\n\n  * `firstDayOfWeek` {`DaysOfWeek`} - Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.\n\n  * `min` {`string`} - Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.\n\n  * `max` {`string`} - Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.\n\n  * `expand` {`boolean`} - Controls whether the calendar expands to fill the width of its container.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `monthSelectNode` {`HTMLElement`} - \n\n  * `focusedDayNode` {`HTMLButtonElement`} - \n\n  * `direction` - \n\n  * `swipe` - \n\n  * `shortcuts` {`EventListener`} - \n\n  * `localize` - \n\n  * `dateFormatShort` {`DateTimeFormat`} - Whilst dateAdapter is used for handling the formatting/parsing dates in the input,\r\nthese are used to format dates exclusively for the benefit of screen readers.\r\n\r\nWe prefer DateTimeFormat over date.toLocaleDateString, as the former has\r\nbetter performance when formatting large number of dates. See:\r\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString#Performance\n\n  * `monthNames` {`string[]`} - \n\n  * `monthNamesShort` {`string[]`} - \n\n  * `dayNames` {`string[]`} - \n\n  * `dayNamesShort` {`string[]`} - \n\n  * `value` {`string`} - The selected date on the calendar. Must be in IS0-8601 format: YYYY-MM-DD.\n\n  * `firstDayOfWeek` {`DaysOfWeek`} - Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.\n\n  * `min` {`string`} - Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.\n\n  * `max` {`string`} - Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.\n\n  * `expand` {`boolean`} - Controls whether the calendar expands to fill the width of its container.\n\n  * `isDateDisabled` - Controls which days are disabled and therefore disallowed.\r\nFor example, this can be used to disallow selection of weekends.\n\n  * `isDateHighlighted` - Controls which days are highlighted with a small indicator.\r\nReturning a \"falsy\" value will not show an indicator.\r\nReturning \"truthy\" value will show the indicator, but without an accessible label.\r\nReturning a string will show the indicator, and use the string as accessible label.\r\nIt is recommended to return a string rather than a truthy value whenever possible.\n\n  * `activeFocus` {`boolean`} - \n\n  * `focusedDay` {`Date`} - \n\n  * `handleDaySelect` - \n\n  * `handleMonthSelect` - \n\n  * `handleYearSelect` - \n\n  * `handleNextMonthClick` - \n\n  * `handlePreviousMonthClick` - \n\n  * `enableActiveFocus` - \n\n  * `disableActiveFocus` - ",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The selected date on the calendar. Must be in IS0-8601 format: YYYY-MM-DD.\n\nProperty: value\n\nDefault: "
+        },
+        {
+          "name": "firstDayOfWeek",
+          "description": "`firstDayOfWeek` {`DaysOfWeek`} - Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.\n\nProperty: firstDayOfWeek\n\nDefault: 1",
+          "values": [
+            {
+              "name": "0"
+            },
+            {
+              "name": "1"
+            },
+            {
+              "name": "2"
+            },
+            {
+              "name": "3"
+            },
+            {
+              "name": "4"
+            },
+            {
+              "name": "5"
+            },
+            {
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "name": "min",
+          "description": "`min` {`string`} - Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.\n\nProperty: min\n\nDefault: "
+        },
+        {
+          "name": "max",
+          "description": "`max` {`string`} - Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.\n\nProperty: max\n\nDefault: "
+        },
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the calendar expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "onchange",
+          "description": "`change` - Dispatched when a date is selected and the value changes."
+        },
+        {
+          "name": "onkabal-focus-date",
+          "description": "`kabal-focus-date` - Dispatched when the calendar's focused date changes."
+        }
+      ]
+    },
+    {
+      "name": "kabal-card",
+      "description": "Cards are shadowed surfaces that display content and actions on a\r\nsingle topic. They should be easy to scan for relevant and\r\nactionable information.\n\nSlots:\n\n  * ` ` {} - The card content.\n\n  * `header` {} - Optional slot that holds a header for the card.\n\n  * `header-end` {} - Optional slot that positions content at the end of the header. Useful for actions or additional info.\n\n  * `footer` {} - Optional slot that holds footer content for the card.\n\nAttributes:\n\n  * `padding` {`\"m\" | \"l\" | \"none\"`} - Controls the padding of the card component. When set to “none”,\r\nthe header and footer slots will still have padding.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `headerSlot` - \n\n  * `headerEndSlot` - \n\n  * `footerSlot` - \n\n  * `padding` {`\"m\" | \"l\" | \"none\"`} - Controls the padding of the card component. When set to “none”,\r\nthe header and footer slots will still have padding.",
+      "attributes": [
+        {
+          "name": "padding",
+          "description": "`padding` {`\"m\" | \"l\" | \"none\"`} - Controls the padding of the card component. When set to “none”,\r\nthe header and footer slots will still have padding.\n\nProperty: padding\n\nDefault: m",
+          "values": [
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-checkbox",
+      "description": "Checkboxes allow user to choose one or more options from a limited set of options.\r\nIf you have more than 10 options, please use Select component instead.\n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Optional slot that holds hint text for the input.\n\n  * `error` {} - Optional slot that holds error text for the input.\n\nAttributes:\n\n  * `indeterminate` {`boolean`} - Controls whether the checkbox is in an indeterminate state.\n\n  * `checked` {`boolean`} - Controls whether the checkbox is checked or not.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `indeterminate` {`boolean`} - Controls whether the checkbox is in an indeterminate state.\n\n  * `checked` {`boolean`} - Controls whether the checkbox is checked or not.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `formData` - \n\n  * `formValue` {`string | undefined`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "indeterminate",
+          "description": "`indeterminate` {`boolean`} - Controls whether the checkbox is in an indeterminate state.\n\nProperty: indeterminate\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "checked",
+          "description": "`checked` {`boolean`} - Controls whether the checkbox is checked or not.\n\nProperty: checked\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-command-menu",
+      "description": "Command Menu allows users to navigate and use an app without\r\ntouching the mouse and helps them transform into “power users”\r\nwho can harness more advanced features far faster.\n\nEvents:\n\n  * `open` {} - The command menu was opened.\n\n  * `close` {} - The command menu was closed.\n\n  * `kabal-select` - User selected a command from the menu.\n\nSlots:\n\n  * `footer` {} - Used to replace the default footer contents.\n\nAttributes:\n\n  * `open` {`boolean`} - Show or hide the command menu.\n\n  * `placeholder` {`string`} - Hint text to display in the Command Menu search field.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `inputRef` - \n\n  * `listRef` - \n\n  * `previousFocus` {`HTMLElement | undefined`} - \n\n  * `localize` - \n\n  * `dismissController` - \n\n  * `keyboardController` - \n\n  * `open` {`boolean`} - Show or hide the command menu.\n\n  * `placeholder` {`string`} - Hint text to display in the Command Menu search field.\n\n  * `commands` {`any[]`} - Array of commands to be included in the menu.\r\nPlease see “Commands data” section for more documentation.\n\n  * `parent` - \n\n  * `search` {`string`} - \n\n  * `bump` {`boolean`} - \n\n  * `selectedIndex` {`number`} - \n\n  * `filteredCommands` {`any[]`} - \n\n  * `selected` - ",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "`open` {`boolean`} - Show or hide the command menu.\n\nProperty: open\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string`} - Hint text to display in the Command Menu search field.\n\nProperty: placeholder\n\nDefault: Type a command or search..."
+        },
+        {
+          "name": "onopen",
+          "description": "`open` {} - The command menu was opened."
+        },
+        {
+          "name": "onclose",
+          "description": "`close` {} - The command menu was closed."
+        },
+        {
+          "name": "onkabal-select",
+          "description": "`kabal-select` - User selected a command from the menu."
+        }
+      ]
+    },
+    {
+      "name": "kabal-command-menu-action",
+      "description": "Command Menu Action displays a single action that can be executed by the user. For usage examples, please see Command Menu component.\n\nAttributes:\n\n  * `command` - \n\n  * `selected` {`boolean`} - \n\nProperties:\n\n  * `styles` - \n\n  * `direction` - \n\n  * `command` - \n\n  * `selected` {`boolean`} - ",
+      "attributes": [
+        {
+          "name": "command",
+          "description": "`command` - \n\nProperty: command"
+        },
+        {
+          "name": "selected",
+          "description": "`selected` {`boolean`} - \n\nProperty: selected\n\nDefault: false",
+          "valueSet": "v"
+        }
+      ]
+    },
+    {
+      "name": "kabal-date-picker",
+      "description": "\r\nDate Picker allows user to enter a date either through text input,\r\nor by choosing a date from the calendar. Please note that the date\r\nmust be passed in ISO-8601 format: YYYY-MM-DD.\n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Use when a hint requires more than plain text.\n\n  * `error` {} - Optional slot that holds error text for the input.\n\nAttributes:\n\n  * `open` {`boolean`} - Controls whether date picker dialog is open or not.\n\n  * `min` {`string`} - Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.\n\n  * `max` {`string`} - Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.\n\n  * `direction` {`\"left\" | \"right\"`} - This is deprecated, the popout will now adjust automatically based on available space.\r\nForces the opening direction of the calendar modal to be always left or right.\n\n  * `first-day-of-week` {`DaysOfWeek`} - Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.\n\n  * `expand` {`boolean`} - Controls whether the date picker expands to fill the width of its container.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - Date value. Must be in IS0-8601 format: YYYY-MM-DD.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `toggleButton` - \n\n  * `closeButton` {`HTMLButtonElement`} - \n\n  * `calendar` - \n\n  * `popout` - \n\n  * `swipe` - \n\n  * `localize` - \n\n  * `dateFormatLong` {`DateTimeFormat`} - Whilst dateAdapter is used for handling the formatting/parsing dates in the input,\r\nthese are used to format dates exclusively for the benefit of screen readers.\r\n\r\nWe prefer DateTimeFormat over date.toLocaleDateString, as the former has\r\nbetter performance when formatting large number of dates. See:\r\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString#Performance\n\n  * `valueAsDate` {`Date | undefined`} - Get/set the value of the picker as a Date object.\n\n  * `valueAsNumber` {`number`} - Get/set the value of the picker as the number of milliseconds elapsed since the UNIX epoch.\n\n  * `open` {`boolean`} - Controls whether date picker dialog is open or not.\n\n  * `min` {`string`} - Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.\n\n  * `max` {`string`} - Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.\n\n  * `direction` {`\"left\" | \"right\"`} - This is deprecated, the popout will now adjust automatically based on available space.\r\nForces the opening direction of the calendar modal to be always left or right.\n\n  * `firstDayOfWeek` {`DaysOfWeek`} - Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.\n\n  * `dateAdapter` {`DateAdapter`} - Date adapter, for custom parsing/formatting.\r\nMust be object with a `parse` function which accepts a `string` and returns a `Date`,\r\nand a `format` function which accepts a `Date` and returns a `string`.\r\nDefault is IS0-8601 parsing and formatting.\n\n  * `isDateDisabled` - Controls which days are disabled and therefore disallowed.\r\nFor example, this can be used to disallow selection of weekends.\n\n  * `isDateHighlighted` - Controls which days are highlighted with a small indicator.\r\nReturning `false` will not show an indicator.\r\nReturning `true` will show the indicator, but without an accessible label. Therefore\r\nReturning a string will show the indicator, and use the string as accessible label.\r\nIt is recommended to return a string rather than `true` whenever possible.\n\n  * `expand` {`boolean`} - Controls whether the date picker expands to fill the width of its container.\n\n  * `handleDaySelect` - \n\n  * `handleBlur` - \n\n  * `handleFocus` - \n\n  * `handleInputChange` - \n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `formData` - \n\n  * `formValue` {`string`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - Date value. Must be in IS0-8601 format: YYYY-MM-DD.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "`open` {`boolean`} - Controls whether date picker dialog is open or not.\n\nProperty: open\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "min",
+          "description": "`min` {`string`} - Minimum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the max property.\n\nProperty: min\n\nDefault: "
+        },
+        {
+          "name": "max",
+          "description": "`max` {`string`} - Maximum date allowed to be picked. Must be in IS0-8601 format: YYYY-MM-DD.\r\nThis setting can be used alone or together with the min property.\n\nProperty: max\n\nDefault: "
+        },
+        {
+          "name": "direction",
+          "description": "`direction` {`\"left\" | \"right\"`} - This is deprecated, the popout will now adjust automatically based on available space.\r\nForces the opening direction of the calendar modal to be always left or right.\n\nProperty: direction\n\nDefault: right",
+          "values": [
+            {
+              "name": "left"
+            },
+            {
+              "name": "right"
+            }
+          ]
+        },
+        {
+          "name": "first-day-of-week",
+          "description": "`first-day-of-week` {`DaysOfWeek`} - Which day is considered first day of the week? `0` for Sunday, `1` for Monday, etc.\r\nDefault is Monday.\n\nProperty: firstDayOfWeek\n\nDefault: 1",
+          "values": [
+            {
+              "name": "0"
+            },
+            {
+              "name": "1"
+            },
+            {
+              "name": "2"
+            },
+            {
+              "name": "3"
+            },
+            {
+              "name": "4"
+            },
+            {
+              "name": "5"
+            },
+            {
+              "name": "6"
+            }
+          ]
+        },
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the date picker expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "readonly",
+          "description": "`readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\nProperty: readonly\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - Date value. Must be in IS0-8601 format: YYYY-MM-DD.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-divider",
+      "description": "Divider components are used to separate and distinguish sections of\r\ncontent or groups of menu items. Visually, they look like\r\nhorizontal or vertical lines.\n\nAttributes:\n\n  * `direction` {`\"vertical\" | \"horizontal\"`} - The direction of the divider.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `direction` {`\"vertical\" | \"horizontal\"`} - The direction of the divider.",
+      "attributes": [
+        {
+          "name": "direction",
+          "description": "`direction` {`\"vertical\" | \"horizontal\"`} - The direction of the divider.\n\nProperty: direction\n\nDefault: horizontal",
+          "values": [
+            {
+              "name": "vertical"
+            },
+            {
+              "name": "horizontal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-drawer",
+      "description": "Drawer is used to display context-sensitive actions and  information.\r\nDrawer doesn’t block users from completing their task, like a modal would.\n\nSlots:\n\n  * `header` {} - Optional slot that holds a header for the drawer.\n\n  * ` ` {} - Default slot.\n\n  * `footer` {} - Optional slot that holds footer content for the drawer.\n\nAttributes:\n\n  * `padding` {`\"m\" | \"none\"`} - Controls the padding of the drawer component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `footerSlot` - \n\n  * `padding` {`\"m\" | \"none\"`} - Controls the padding of the drawer component.\n\n  * `_warningLogged` {`boolean`} - ",
+      "attributes": [
+        {
+          "name": "padding",
+          "description": "`padding` {`\"m\" | \"none\"`} - Controls the padding of the drawer component.\n\nProperty: padding\n\nDefault: m",
+          "values": [
+            {
+              "name": "m"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-dropdown-group",
+      "description": "Dropdown group includes all the actions or items in a single dropdown\r\ngroup and is used for grouping items into related categories.\n\nSlots:\n\n  * ` ` {} - The dropdown group content.\n\nAttributes:\n\n  * `heading` {`string | undefined`} - Heading and accessible label for the dropdown group.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `heading` {`string | undefined`} - Heading and accessible label for the dropdown group.",
+      "attributes": [
+        {
+          "name": "heading",
+          "description": "`heading` {`string | undefined`} - Heading and accessible label for the dropdown group.\n\nProperty: heading",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "kabal-dropdown-item",
+      "description": "Dropdown item populates dropdown with actions. Items can be\r\nplaced either inside a dropdown group or directly inside a\r\ndropdown component.\n\nSlots:\n\n  * ` ` {} - The dropdown item content.\n\n  * `start` {} - Used to place content before dropdown item text. Typically used for icons.\n\n  * `end` {} - Used to place content after dropdown item text. Typically used for icons.\n\nAttributes:\n\n  * `href` {`string | undefined`} - The url the dropdown item should link to.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `href` {`string | undefined`} - The url the dropdown item should link to.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "`href` {`string | undefined`} - The url the dropdown item should link to.\n\nProperty: href",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "kabal-dropdown",
+      "description": "Dropdown menu displays a list of actions or selectable options for\r\na user. Dropdown uses popout component internally to create\r\nthe overlay functionality.\n\nSlots:\n\n  * ` ` {} - The dropdown content.\n\n  * `toggle` {} - Used to place the toggle for dropdown.\n\nAttributes:\n\n  * `expand` {`boolean`} - Controls whether the toggle slot expands to fill the width of its container.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the dropdown. This affects the minimum and maximum inline-size\r\nof the dropdown.\n\n  * `open` {`boolean`} - Controls whether the component is open or not.\n\n  * `align` {`\"start\" | \"end\"`} - Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.\n\n  * `position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - we delegate focus, to ensure focus does not move to body if you click\r\nsome whitespace or a dropdown-group heading, as this would close the dropdown\n\n  * `popout` - \n\n  * `expand` {`boolean`} - Controls whether the toggle slot expands to fill the width of its container.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the dropdown. This affects the minimum and maximum inline-size\r\nof the dropdown.\n\n  * `open` {`boolean`} - Controls whether the component is open or not.\n\n  * `align` {`\"start\" | \"end\"`} - Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.\n\n  * `position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.",
+      "attributes": [
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the toggle slot expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the dropdown. This affects the minimum and maximum inline-size\r\nof the dropdown.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "open",
+          "description": "`open` {`boolean`} - Controls whether the component is open or not.\n\nProperty: open\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "align",
+          "description": "`align` {`\"start\" | \"end\"`} - Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.\n\nProperty: align\n\nDefault: start",
+          "values": [
+            {
+              "name": "start"
+            },
+            {
+              "name": "end"
+            }
+          ]
+        },
+        {
+          "name": "position",
+          "description": "`position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.\n\nProperty: position\n\nDefault: block-end",
+          "values": [
+            {
+              "name": "block-end"
+            },
+            {
+              "name": "block-start"
+            },
+            {
+              "name": "inline-start"
+            },
+            {
+              "name": "inline-end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-empty-state",
+      "description": "Empty state can be used when there is no data to display to\r\ndescribe what the user can do next. Empty state provides\r\nexplanation and guidance to help user progress.\n\nSlots:\n\n  * ` ` {} - default slot\n\nProperties:\n\n  * `styles` {`any[]`} - ",
+      "attributes": []
+    },
+    {
+      "name": "kabal-fieldset",
+      "description": "Fieldset is used for grouping sets of input components.\r\nIt is necessary to use a fieldset with radio and checkbox components.\r\nIt can also be useful for logically grouping other types of inputs.\n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Optional slot that holds hint text for the fieldset.\n\n  * `error` {} - Optional slot that holds error text for the fieldset.\n\nAttributes:\n\n  * `label` {`string`} - Label for the fieldset.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the fieldset. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the fieldset is required or not.\r\nA fieldset marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `label` {`string`} - Label for the fieldset.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the fieldset. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the fieldset is required or not.\r\nA fieldset marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - ",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the fieldset.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the fieldset. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the fieldset is required or not.\r\nA fieldset marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        }
+      ]
+    },
+    {
+      "name": "kabal-header",
+      "description": "The header is a block of designated space for labelling the currently\r\nviewed context as well as providing primary actions.\n\nSlots:\n\n  * ` ` {} - The header content.\n\n  * `end` {} - Optional slot for buttons, toggles, etc.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `endSlot` - ",
+      "attributes": []
+    },
+    {
+      "name": "kabal-icon",
+      "description": "Icons are used to provide additional meaning or in places where text label doesn’t fit.\r\nIcon component allows you to display an icon from the Nordicons library.\n\nSlots:\n\n  * ` ` {} - The default slot used for placing a custom SVG icon.\n\nAttributes:\n\n  * `name` {`string`} - The name of the icon to display, as defined by [nordicons](/nordicons/).\n\n  * `size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xxs\" | \"xs\" | undefined`} - The size of the icon.\n\n  * `color` {`string | undefined`} - The color of the icon.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `label` {`string | undefined`} - An accessible label for the icon.\r\nIf no label is supplied, the icon is hidden from assistive technology.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `resolver` - \n\n  * `registeredIcons` {`Map<string, string>`} - \n\n  * `name` {`string`} - The name of the icon to display, as defined by [nordicons](/nordicons/).\n\n  * `size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xxs\" | \"xs\" | undefined`} - The size of the icon.\n\n  * `color` {`string | undefined`} - The color of the icon.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `label` {`string | undefined`} - An accessible label for the icon.\r\nIf no label is supplied, the icon is hidden from assistive technology.\n\n  * `svg` {`string`} - ",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "`name` {`string`} - The name of the icon to display, as defined by [nordicons](/nordicons/).\n\nProperty: name\n\nDefault: "
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xxs\" | \"xs\" | undefined`} - The size of the icon.\n\nProperty: size",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "xl"
+            },
+            {
+              "name": "xxl"
+            },
+            {
+              "name": "xxs"
+            },
+            {
+              "name": "xs"
+            }
+          ]
+        },
+        {
+          "name": "color",
+          "description": "`color` {`string | undefined`} - The color of the icon.\r\nCan accept any valid CSS color value, including custom properties.\n\nProperty: color",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string | undefined`} - An accessible label for the icon.\r\nIf no label is supplied, the icon is hidden from assistive technology.\n\nProperty: label",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "kabal-input",
+      "description": "Inputs are used to allow users to provide text input when the expected input is short.\r\nAs well as plain text, Input supports various types of text, including passwords and numbers.\n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Optional slot that holds hint text for the input.\n\n  * `error` {} - Optional slot that holds error text for the input.\n\n  * `start` {} - Optional slot used to place an icon or prefix at the start of the input.\n\n  * `end` {} - Optional slot used to place an icon or suffix at the end of the input.\n\nAttributes:\n\n  * `type` {`\"number\" | \"search\" | \"text\" | \"email\" | \"password\" | \"tel\" | \"url\"`} - The type of the input.\n\n  * `expand` {`boolean`} - Controls whether the input expands to fill the width of its container.\n\n  * `disallow-pattern` {`string | undefined`} - Optionally disallow certain characters from being used inside the input, using a regex pattern.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `startSlot` - \n\n  * `endSlot` - \n\n  * `direction` - \n\n  * `type` {`\"number\" | \"search\" | \"text\" | \"email\" | \"password\" | \"tel\" | \"url\"`} - The type of the input.\n\n  * `expand` {`boolean`} - Controls whether the input expands to fill the width of its container.\n\n  * `disallowPattern` {`string | undefined`} - Optionally disallow certain characters from being used inside the input, using a regex pattern.\n\n  * `handleInputChange` - \n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `formData` - \n\n  * `formValue` {`string`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "`type` {`\"number\" | \"search\" | \"text\" | \"email\" | \"password\" | \"tel\" | \"url\"`} - The type of the input.\n\nProperty: type\n\nDefault: text",
+          "values": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "text"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "password"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "url"
+            }
+          ]
+        },
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the input expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disallow-pattern",
+          "description": "`disallow-pattern` {`string | undefined`} - Optionally disallow certain characters from being used inside the input, using a regex pattern.\n\nProperty: disallowPattern\n\nDefault: undefined",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "autocomplete",
+          "description": "`autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\nProperty: autocomplete\n\nDefault: off",
+          "values": [
+            {
+              "name": "name"
+            },
+            {
+              "name": "on"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "off"
+            },
+            {
+              "name": "honorific-prefix"
+            },
+            {
+              "name": "given-name"
+            },
+            {
+              "name": "additional-name"
+            },
+            {
+              "name": "family-name"
+            },
+            {
+              "name": "honorific-suffix"
+            },
+            {
+              "name": "nickname"
+            },
+            {
+              "name": "username"
+            },
+            {
+              "name": "new-password"
+            },
+            {
+              "name": "current-password"
+            },
+            {
+              "name": "one-time-code"
+            },
+            {
+              "name": "organization-title"
+            },
+            {
+              "name": "organization"
+            },
+            {
+              "name": "street-address"
+            },
+            {
+              "name": "address-line1"
+            },
+            {
+              "name": "address-line2"
+            },
+            {
+              "name": "address-line3"
+            },
+            {
+              "name": "address-level4"
+            },
+            {
+              "name": "address-level3"
+            },
+            {
+              "name": "address-level2"
+            },
+            {
+              "name": "address-level1"
+            },
+            {
+              "name": "country"
+            },
+            {
+              "name": "country-name"
+            },
+            {
+              "name": "postal-code"
+            },
+            {
+              "name": "cc-name"
+            },
+            {
+              "name": "cc-given-name"
+            },
+            {
+              "name": "cc-additional-name"
+            },
+            {
+              "name": "cc-family-name"
+            },
+            {
+              "name": "cc-number"
+            },
+            {
+              "name": "cc-exp"
+            },
+            {
+              "name": "cc-exp-month"
+            },
+            {
+              "name": "cc-exp-year"
+            },
+            {
+              "name": "cc-csc"
+            },
+            {
+              "name": "cc-type"
+            },
+            {
+              "name": "transaction-currency"
+            },
+            {
+              "name": "transaction-amount"
+            },
+            {
+              "name": "language"
+            },
+            {
+              "name": "bday"
+            },
+            {
+              "name": "bday-day"
+            },
+            {
+              "name": "bday-month"
+            },
+            {
+              "name": "bday-year"
+            },
+            {
+              "name": "sex"
+            },
+            {
+              "name": "tel-country-code"
+            },
+            {
+              "name": "tel-national"
+            },
+            {
+              "name": "tel-area-code"
+            },
+            {
+              "name": "tel-local"
+            },
+            {
+              "name": "tel-extension"
+            },
+            {
+              "name": "impp"
+            },
+            {
+              "name": "photo"
+            }
+          ]
+        },
+        {
+          "name": "readonly",
+          "description": "`readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\nProperty: readonly\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-layout",
+      "description": "Layout component is used to create the main layout of an app. Layout\r\ncurrently comes with one main configuration: two-column.\n\nSlots:\n\n  * ` ` {} - The default main section content.\n\n  * `nav` {} - Used to place content inside the navigation sidebar.\n\n  * `header` {} - Used to place content inside the header section.\n\n  * `drawer` {} - Used to place additional content/details relating to a selected item.\n\n  * `nav-toggle` {} - Used to place a own nav-toggle component, for cases where you might need to add a tooltip.\n\nAttributes:\n\n  * `nav-open` {`boolean`} - Controls whether the navigation is hidden off-screen or not.\r\nDefaults to `true` for wide viewports, and `false` otherwise.\n\n  * `nav-toggle` {`string | undefined`} - ID reference of element used to toggle the navigation.\r\nThis is deprecated, the layout component will now render its own nav toggle to simplify usage.\n\n  * `padding` {`\"m\" | \"none\"`} - Controls the padding of the default main section slot. When set to “none”,\r\nthe nav and header slots will still have padding.\n\n  * `sticky` {`boolean`} - Controls whether the layout's header has sticky positioning.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `peekTimeoutId` {`number | undefined`} - \n\n  * `resizeObserver` {`ResizeObserver`} - \n\n  * `navSlot` - \n\n  * `drawerSlot` - \n\n  * `direction` - \n\n  * `events` - \n\n  * `lightDismiss` - \n\n  * `stickyElement` {`HTMLDivElement`} - \n\n  * `navEl` {`HTMLDivElement`} - \n\n  * `navWidth` {`number`} - \n\n  * `isDragging` {`boolean`} - \n\n  * `navState` {`\"closed\" | \"opened\" | \"peek\" | \"unpeek\" | \"wait\" | \"blocked\"`} - \n\n  * `wideScreen` {`boolean`} - \n\n  * `stickySize` {`number | null`} - \n\n  * `navOpen` {`boolean`} - Controls whether the navigation is hidden off-screen or not.\r\nDefaults to `true` for wide viewports, and `false` otherwise.\n\n  * `navToggle` {`string | undefined`} - ID reference of element used to toggle the navigation.\r\nThis is deprecated, the layout component will now render its own nav toggle to simplify usage.\n\n  * `padding` {`\"m\" | \"none\"`} - Controls the padding of the default main section slot. When set to “none”,\r\nthe nav and header slots will still have padding.\n\n  * `sticky` {`boolean`} - Controls whether the layout's header has sticky positioning.\n\n  * `handleMediaQueryChange` - \n\n  * `handleToggleClick` - \n\n  * `handleNavFocus` - \n\n  * `handleMainFocus` - \n\n  * `handleMouseEnter` - \n\n  * `handleMouseLeave` - \n\n  * `handleTransitionEnd` - ",
+      "attributes": [
+        {
+          "name": "nav-open",
+          "description": "`nav-open` {`boolean`} - Controls whether the navigation is hidden off-screen or not.\r\nDefaults to `true` for wide viewports, and `false` otherwise.\n\nProperty: navOpen\n\nDefault: this.navState === \"opened\"",
+          "valueSet": "v"
+        },
+        {
+          "name": "nav-toggle",
+          "description": "`nav-toggle` {`string | undefined`} - ID reference of element used to toggle the navigation.\r\nThis is deprecated, the layout component will now render its own nav toggle to simplify usage.\n\nProperty: navToggle",
+          "values": []
+        },
+        {
+          "name": "padding",
+          "description": "`padding` {`\"m\" | \"none\"`} - Controls the padding of the default main section slot. When set to “none”,\r\nthe nav and header slots will still have padding.\n\nProperty: padding\n\nDefault: m",
+          "values": [
+            {
+              "name": "m"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        },
+        {
+          "name": "sticky",
+          "description": "`sticky` {`boolean`} - Controls whether the layout's header has sticky positioning.\n\nProperty: sticky\n\nDefault: false",
+          "valueSet": "v"
+        }
+      ]
+    },
+    {
+      "name": "kabal-modal",
+      "description": "Modal component is used to display content that temporarily blocks interactions\r\nwith the main view of an application. Modal should be used sparingly and\r\nonly when necessary.\n\nEvents:\n\n  * `cancel` {} - Dispatched before the modal has closed when a user attempts to dismiss a modal. Call `preventDefault()` on the event to prevent the modal closing.\n\n  * `close` {} - Dispatched when a modal is closed for any reason.\n\nSlots:\n\n  * ` ` {} - Default slot\n\n  * `header` {} - Slot which holds the header of the modal, positioned next to the close button.\n\n  * `footer` {} - Slot which is typically used to hold call to action buttons, but can also be used to build custom footers.\n\nAttributes:\n\n  * `open` {`boolean`} - Controls whether the modal is open or not.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - Controls the max-width of the modal when open.\n\n  * `scrollable` {`boolean`} - By default if a modal is too big for the browser window,\r\nthe entire modal will scroll. This setting changes that behavior\r\nso that the body of the modal scrolls instead, with the modal\r\nitself remaining fixed.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `modal` {`HTMLDivElement`} - \n\n  * `backdrop` {`HTMLDivElement`} - \n\n  * `headerSlot` - \n\n  * `featureSlot` - \n\n  * `footerSlot` - \n\n  * `localize` - \n\n  * `modalController` - \n\n  * `open` {`boolean`} - Controls whether the modal is open or not.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - Controls the max-width of the modal when open.\n\n  * `returnValue` {`string`} - The reason why the modal was closed. This typically indicates\r\nwhich button the user pressed to close the modal, though any value\r\ncan be supplied if the modal is programmatically closed.\n\n  * `scrollable` {`boolean`} - By default if a modal is too big for the browser window,\r\nthe entire modal will scroll. This setting changes that behavior\r\nso that the body of the modal scrolls instead, with the modal\r\nitself remaining fixed.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "`open` {`boolean`} - Controls whether the modal is open or not.\n\nProperty: open\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - Controls the max-width of the modal when open.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "scrollable",
+          "description": "`scrollable` {`boolean`} - By default if a modal is too big for the browser window,\r\nthe entire modal will scroll. This setting changes that behavior\r\nso that the body of the modal scrolls instead, with the modal\r\nitself remaining fixed.\n\nProperty: scrollable\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "oncancel",
+          "description": "`cancel` {} - Dispatched before the modal has closed when a user attempts to dismiss a modal. Call `preventDefault()` on the event to prevent the modal closing."
+        },
+        {
+          "name": "onclose",
+          "description": "`close` {} - Dispatched when a modal is closed for any reason."
+        }
+      ]
+    },
+    {
+      "name": "kabal-nav-group",
+      "description": "Navigation group includes all the actions or items in a single\r\ngroup and is used for grouping items into related categories.\n\nSlots:\n\n  * ` ` {} - The default slot used for the nav items.\n\nAttributes:\n\n  * `heading` {`string | undefined`} - Heading and accessible label for the nav group\n\nProperties:\n\n  * `styles` - \n\n  * `heading` {`string | undefined`} - Heading and accessible label for the nav group",
+      "attributes": [
+        {
+          "name": "heading",
+          "description": "`heading` {`string | undefined`} - Heading and accessible label for the nav group\n\nProperty: heading",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "kabal-nav-item",
+      "description": "Navigation item populates sidebar navigation with links.\r\nEvery item should be placed inside a navigation group.\n\nEvents:\n\n  * `toggle` {} - Dispatched whenever a nav item's state changes between open and closed.\n\nSlots:\n\n  * ` ` {} - The default slot used for the nav item's text.\n\n  * `subnav` {} - Used for nesting navigation. When used the nav-item becomes a button to collapse the subnav, rather than a link.\n\nAttributes:\n\n  * `active` {`boolean`} - Used for indicating the current page. This gives a prominent background to the nav item,\r\nand marks the item as the current page for assistive technology.\n\n  * `icon` {`string | undefined`} - The name of an icon from Nordicons to display for the nav item.\n\n  * `href` {`string | undefined`} - The url the nav item should link to.\r\nNote: this is not used if you have nested navigation using the \"subnav\" slot.\n\n  * `badge` {`string | undefined`} - Allows you to add a notification badge with a number next to the nav item.\n\n  * `open` {`boolean`} - When the nav items contains a subnav, controls whether the section is expanded or not.\r\nNote: this is only used if you have nested navigation using the \"subnav\" slot.\n\nProperties:\n\n  * `styles` - \n\n  * `subnavSlot` - \n\n  * `direction` - \n\n  * `active` {`boolean`} - Used for indicating the current page. This gives a prominent background to the nav item,\r\nand marks the item as the current page for assistive technology.\n\n  * `icon` {`string | undefined`} - The name of an icon from Nordicons to display for the nav item.\n\n  * `href` {`string | undefined`} - The url the nav item should link to.\r\nNote: this is not used if you have nested navigation using the \"subnav\" slot.\n\n  * `badge` {`string | undefined`} - Allows you to add a notification badge with a number next to the nav item.\n\n  * `open` {`boolean`} - When the nav items contains a subnav, controls whether the section is expanded or not.\r\nNote: this is only used if you have nested navigation using the \"subnav\" slot.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "active",
+          "description": "`active` {`boolean`} - Used for indicating the current page. This gives a prominent background to the nav item,\r\nand marks the item as the current page for assistive technology.\n\nProperty: active\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "icon",
+          "description": "`icon` {`string | undefined`} - The name of an icon from Nordicons to display for the nav item.\n\nProperty: icon",
+          "values": []
+        },
+        {
+          "name": "href",
+          "description": "`href` {`string | undefined`} - The url the nav item should link to.\r\nNote: this is not used if you have nested navigation using the \"subnav\" slot.\n\nProperty: href",
+          "values": []
+        },
+        {
+          "name": "badge",
+          "description": "`badge` {`string | undefined`} - Allows you to add a notification badge with a number next to the nav item.\n\nProperty: badge",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "`open` {`boolean`} - When the nav items contains a subnav, controls whether the section is expanded or not.\r\nNote: this is only used if you have nested navigation using the \"subnav\" slot.\n\nProperty: open\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "ontoggle",
+          "description": "`toggle` {} - Dispatched whenever a nav item's state changes between open and closed."
+        }
+      ]
+    },
+    {
+      "name": "kabal-nav-toggle",
+      "description": "Nav toggle is meant for hiding and showing the primary navigation.\r\nThis component is used internally in the Layout component, but can also be\r\nused separate to further customize the behaviour.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `direction` - \n\n  * `localization` - \n\n  * `focusableRef` - ",
+      "attributes": []
+    },
+    {
+      "name": "kabal-navigation",
+      "description": "Navigation is used to display the primary navigation in the sidebar\r\nof an application. Navigation includes a list of links that users\r\nuse to move between sections of the application.\n\nSlots:\n\n  * ` ` {} - The main section of the sidebar, for holding nav components.\n\n  * `header` {} - The top section of the sidebar.\n\n  * `footer` {} - The bottom section of the sidebar.\n\nProperties:\n\n  * `styles` - ",
+      "attributes": []
+    },
+    {
+      "name": "kabal-popout",
+      "description": "Popouts are small overlays that open on demand. They let users access additional content and actions without cluttering the page.\n\nSlots:\n\n  * ` ` {} - The popout content.\n\nAttributes:\n\n  * `id` {`string`} - The id for the active element to reference via aria-controls.\n\n  * `anchor` {`string | undefined`} - Set an optional anchor element to align against, replacing the triggering element.\n\n  * `open` {`boolean`} - Controls whether the component is open or not.\n\n  * `align` {`\"start\" | \"end\"`} - Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.\n\n  * `position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `targetElement` {`HTMLElement`} - \n\n  * `anchorElement` {`Element`} - \n\n  * `cleanupAutoUpdate` - \n\n  * `popout` {`HTMLDivElement`} - \n\n  * `scrollBar` - \n\n  * `dismiss` - Handle dismissal of the popout, clicking outside the target button and popout.\n\n  * `events` - \n\n  * `direction` - \n\n  * `computedPosition` {`Placement | undefined`} - \n\n  * `smallViewport` {`boolean`} - \n\n  * `id` {`string`} - The id for the active element to reference via aria-controls.\n\n  * `anchor` {`string | undefined`} - Set an optional anchor element to align against, replacing the triggering element.\n\n  * `enableScroll` - \n\n  * `updatePosition` - Get the position of the element toggling the popout\r\nand position the popout underneath it, taking into account the optional placement.\n\n  * `toggleOpen` - Toggle the popout open or closed using state.\r\nUpdating the position to underneath the target button before the popout is opened.\n\n  * `handleMediaQueryChange` - Update the smallViewport flag to switch between \"sheet\" and \"floating\".\r\nautoUpdate is needed when a viewport gets larger and the popout is open.\n\n  * `open` {`boolean`} - Controls whether the component is open or not.\n\n  * `align` {`\"start\" | \"end\"`} - Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.\n\n  * `position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.",
+      "attributes": [
+        {
+          "name": "id",
+          "description": "`id` {`string`} - The id for the active element to reference via aria-controls.\n\nProperty: id\n\nDefault: "
+        },
+        {
+          "name": "anchor",
+          "description": "`anchor` {`string | undefined`} - Set an optional anchor element to align against, replacing the triggering element.\n\nProperty: anchor",
+          "values": []
+        },
+        {
+          "name": "open",
+          "description": "`open` {`boolean`} - Controls whether the component is open or not.\n\nProperty: open\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "align",
+          "description": "`align` {`\"start\" | \"end\"`} - Set the alignment in relation to the toggle (or anchor) depending on the position.\r\n`start` will align it to the left of the toggle (or anchor).\r\n`end` will align it to the right of the toggle (or anchor).\r\nSetting the `position` to `inline-start` or `inline-end` will switch\r\n`start` and `end` to the top and bottom respectively.\n\nProperty: align\n\nDefault: start",
+          "values": [
+            {
+              "name": "start"
+            },
+            {
+              "name": "end"
+            }
+          ]
+        },
+        {
+          "name": "position",
+          "description": "`position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Set the position in relation to the toggle (or anchor).\r\nOptions follow logical properties.\r\n`block-start` and `block-end` referring to top and bottom respectively,\r\n`inline-start` and `inline-end` referring to left and right respectively.\n\nProperty: position\n\nDefault: block-end",
+          "values": [
+            {
+              "name": "block-end"
+            },
+            {
+              "name": "block-start"
+            },
+            {
+              "name": "inline-start"
+            },
+            {
+              "name": "inline-end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-progress-bar",
+      "description": "Progress Bar is used to visually represent the completion\r\nof a task or process. It shows how much of the task has\r\nbeen completed and how much is still left.\n\nAttributes:\n\n  * `value` {`number | undefined`} - Specifies how much of the task has been completed. Must be a valid floating\r\npoint number between 0 and max, or between 0 and 100 if max is omitted. If\r\nthere is no value, the progress bar is indeterminate; this indicates that\r\nan activity is ongoing with no indication of how long it’s expected to take.\n\n  * `max` {`number`} - Describes how much work the task indicated by the progress element requires.\r\nThe max attribute, if present, must have a value greater than 0 and be a\r\nvalid floating point number.\n\n  * `label` {`string`} - Accessible label for the progress indicator. Visually hidden, but shown\r\nfor assistive technology.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `value` {`number | undefined`} - Specifies how much of the task has been completed. Must be a valid floating\r\npoint number between 0 and max, or between 0 and 100 if max is omitted. If\r\nthere is no value, the progress bar is indeterminate; this indicates that\r\nan activity is ongoing with no indication of how long it’s expected to take.\n\n  * `max` {`number`} - Describes how much work the task indicated by the progress element requires.\r\nThe max attribute, if present, must have a value greater than 0 and be a\r\nvalid floating point number.\n\n  * `label` {`string`} - Accessible label for the progress indicator. Visually hidden, but shown\r\nfor assistive technology.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "`value` {`number | undefined`} - Specifies how much of the task has been completed. Must be a valid floating\r\npoint number between 0 and max, or between 0 and 100 if max is omitted. If\r\nthere is no value, the progress bar is indeterminate; this indicates that\r\nan activity is ongoing with no indication of how long it’s expected to take.\n\nProperty: value",
+          "values": []
+        },
+        {
+          "name": "max",
+          "description": "`max` {`number`} - Describes how much work the task indicated by the progress element requires.\r\nThe max attribute, if present, must have a value greater than 0 and be a\r\nvalid floating point number.\n\nProperty: max\n\nDefault: 100"
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Accessible label for the progress indicator. Visually hidden, but shown\r\nfor assistive technology.\n\nProperty: label\n\nDefault: Current progress"
+        }
+      ]
+    },
+    {
+      "name": "kabal-qrcode",
+      "description": "QR Code component is used for providing information or links\r\nto users which they can quickly scan with their smartphone.\n\nAttributes:\n\n  * `value` {`string`} - The value of the QR Code, most commonly an URL.\n\n  * `label` {`string`} - Label used by assistive technology. If unspecified, the value will\r\nbe used instead.\n\n  * `size` {`number`} - The size of the rendered QR Code in pixels.\n\n  * `color` {`string`} - The fill color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `background` {`string`} - The background color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `correction` {`\"L\" | \"M\" | \"Q\" | \"H\"`} - Error correction level makes the QR Code bigger and helps users to\r\nscan it without issues. L, M, Q and H values will use 7%, 15%, 25%\r\nand 30% of the QR code for error correction respectively.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `canvas` {`HTMLElement`} - \n\n  * `computed` {`HTMLElement`} - \n\n  * `value` {`string`} - The value of the QR Code, most commonly an URL.\n\n  * `label` {`string`} - Label used by assistive technology. If unspecified, the value will\r\nbe used instead.\n\n  * `size` {`number`} - The size of the rendered QR Code in pixels.\n\n  * `color` {`string`} - The fill color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `background` {`string`} - The background color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `correction` {`\"L\" | \"M\" | \"Q\" | \"H\"`} - Error correction level makes the QR Code bigger and helps users to\r\nscan it without issues. L, M, Q and H values will use 7%, 15%, 25%\r\nand 30% of the QR code for error correction respectively.",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the QR Code, most commonly an URL.\n\nProperty: value\n\nDefault: "
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label used by assistive technology. If unspecified, the value will\r\nbe used instead.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "size",
+          "description": "`size` {`number`} - The size of the rendered QR Code in pixels.\n\nProperty: size\n\nDefault: 128"
+        },
+        {
+          "name": "color",
+          "description": "`color` {`string`} - The fill color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.\n\nProperty: color\n\nDefault: var(--n-color-text)"
+        },
+        {
+          "name": "background",
+          "description": "`background` {`string`} - The background color of the QR Code.\r\nCan accept any valid CSS color value, including custom properties.\n\nProperty: background\n\nDefault: var(--n-color-surface)"
+        },
+        {
+          "name": "correction",
+          "description": "`correction` {`\"L\" | \"M\" | \"Q\" | \"H\"`} - Error correction level makes the QR Code bigger and helps users to\r\nscan it without issues. L, M, Q and H values will use 7%, 15%, 25%\r\nand 30% of the QR code for error correction respectively.\n\nProperty: correction\n\nDefault: H",
+          "values": [
+            {
+              "name": "L"
+            },
+            {
+              "name": "M"
+            },
+            {
+              "name": "Q"
+            },
+            {
+              "name": "H"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-radio",
+      "description": "Radio buttons are graphical user interface elements that allow user to choose only one option from\r\na predefined set of mutually exclusive options.\n\nEvents:\n\n  * `blur` {`Event`} - \n\n  * `focus` {`Event`} - \n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Optional slot that holds hint text for the input.\n\n  * `error` {} - Optional slot that holds error text for the input.\n\nAttributes:\n\n  * `checked` {`boolean`} - Controls whether the checkbox is checked or not.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `inputSlot` - \n\n  * `checked` {`boolean`} - Controls whether the checkbox is checked or not.\n\n  * `handleBlur` - \n\n  * `handleFocus` - \n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - For accessibility reasons, we render some parts of the component to the light DOM.\n\n  * `formData` - \n\n  * `formValue` {`undefined`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "`checked` {`boolean`} - Controls whether the checkbox is checked or not.\n\nProperty: checked\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        },
+        {
+          "name": "onblur",
+          "description": "`blur` {`Event`} - "
+        },
+        {
+          "name": "onfocus",
+          "description": "`focus` {`Event`} - "
+        }
+      ]
+    },
+    {
+      "name": "kabal-range",
+      "description": "Range input lets user specify a numeric value using a slider which\r\nmust be no less than a given value, and no more than another given value.\n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Optional slot that holds hint text for the input.\n\n  * `error` {} - Optional slot that holds error text for the input.\n\nAttributes:\n\n  * `min` {`number`} - Minimum value for the range slider.\n\n  * `max` {`number`} - Maximum value for the range slider.\n\n  * `step` {`number`} - Step amount for the range slider.\n\n  * `expand` {`boolean`} - Controls whether the input expands to fill the width of its container.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `direction` - \n\n  * `min` {`number`} - Minimum value for the range slider.\n\n  * `max` {`number`} - Maximum value for the range slider.\n\n  * `step` {`number`} - Step amount for the range slider.\n\n  * `expand` {`boolean`} - Controls whether the input expands to fill the width of its container.\n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `formData` - \n\n  * `formValue` {`string`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "min",
+          "description": "`min` {`number`} - Minimum value for the range slider.\n\nProperty: min\n\nDefault: 0"
+        },
+        {
+          "name": "max",
+          "description": "`max` {`number`} - Maximum value for the range slider.\n\nProperty: max\n\nDefault: 10"
+        },
+        {
+          "name": "step",
+          "description": "`step` {`number`} - Step amount for the range slider.\n\nProperty: step\n\nDefault: 1"
+        },
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the input expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "autocomplete",
+          "description": "`autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\nProperty: autocomplete\n\nDefault: off",
+          "values": [
+            {
+              "name": "name"
+            },
+            {
+              "name": "on"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "off"
+            },
+            {
+              "name": "honorific-prefix"
+            },
+            {
+              "name": "given-name"
+            },
+            {
+              "name": "additional-name"
+            },
+            {
+              "name": "family-name"
+            },
+            {
+              "name": "honorific-suffix"
+            },
+            {
+              "name": "nickname"
+            },
+            {
+              "name": "username"
+            },
+            {
+              "name": "new-password"
+            },
+            {
+              "name": "current-password"
+            },
+            {
+              "name": "one-time-code"
+            },
+            {
+              "name": "organization-title"
+            },
+            {
+              "name": "organization"
+            },
+            {
+              "name": "street-address"
+            },
+            {
+              "name": "address-line1"
+            },
+            {
+              "name": "address-line2"
+            },
+            {
+              "name": "address-line3"
+            },
+            {
+              "name": "address-level4"
+            },
+            {
+              "name": "address-level3"
+            },
+            {
+              "name": "address-level2"
+            },
+            {
+              "name": "address-level1"
+            },
+            {
+              "name": "country"
+            },
+            {
+              "name": "country-name"
+            },
+            {
+              "name": "postal-code"
+            },
+            {
+              "name": "cc-name"
+            },
+            {
+              "name": "cc-given-name"
+            },
+            {
+              "name": "cc-additional-name"
+            },
+            {
+              "name": "cc-family-name"
+            },
+            {
+              "name": "cc-number"
+            },
+            {
+              "name": "cc-exp"
+            },
+            {
+              "name": "cc-exp-month"
+            },
+            {
+              "name": "cc-exp-year"
+            },
+            {
+              "name": "cc-csc"
+            },
+            {
+              "name": "cc-type"
+            },
+            {
+              "name": "transaction-currency"
+            },
+            {
+              "name": "transaction-amount"
+            },
+            {
+              "name": "language"
+            },
+            {
+              "name": "bday"
+            },
+            {
+              "name": "bday-day"
+            },
+            {
+              "name": "bday-month"
+            },
+            {
+              "name": "bday-year"
+            },
+            {
+              "name": "sex"
+            },
+            {
+              "name": "tel-country-code"
+            },
+            {
+              "name": "tel-national"
+            },
+            {
+              "name": "tel-area-code"
+            },
+            {
+              "name": "tel-local"
+            },
+            {
+              "name": "tel-extension"
+            },
+            {
+              "name": "impp"
+            },
+            {
+              "name": "photo"
+            }
+          ]
+        },
+        {
+          "name": "readonly",
+          "description": "`readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\nProperty: readonly\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-select",
+      "description": "Select lets users choose one option from an options menu.\r\nConsider using select when you have 5 or more options to choose from.\n\nSlots:\n\n  * ` ` {} - Default slot for holding <option> elements.\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Use when a hint requires more than plain text.\n\n  * `error` {} - Optional slot that holds error text for the input.\n\nAttributes:\n\n  * `expand` {`boolean`} - Controls whether the select expands to fill the width of its container.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `defaultSlot` - \n\n  * `expand` {`boolean`} - Controls whether the select expands to fill the width of its container.\n\n  * `options` {`HTMLOptionElement[]`} - \n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `formData` - \n\n  * `formValue` {`string | undefined`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the select expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "autocomplete",
+          "description": "`autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\nProperty: autocomplete\n\nDefault: off",
+          "values": [
+            {
+              "name": "name"
+            },
+            {
+              "name": "on"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "off"
+            },
+            {
+              "name": "honorific-prefix"
+            },
+            {
+              "name": "given-name"
+            },
+            {
+              "name": "additional-name"
+            },
+            {
+              "name": "family-name"
+            },
+            {
+              "name": "honorific-suffix"
+            },
+            {
+              "name": "nickname"
+            },
+            {
+              "name": "username"
+            },
+            {
+              "name": "new-password"
+            },
+            {
+              "name": "current-password"
+            },
+            {
+              "name": "one-time-code"
+            },
+            {
+              "name": "organization-title"
+            },
+            {
+              "name": "organization"
+            },
+            {
+              "name": "street-address"
+            },
+            {
+              "name": "address-line1"
+            },
+            {
+              "name": "address-line2"
+            },
+            {
+              "name": "address-line3"
+            },
+            {
+              "name": "address-level4"
+            },
+            {
+              "name": "address-level3"
+            },
+            {
+              "name": "address-level2"
+            },
+            {
+              "name": "address-level1"
+            },
+            {
+              "name": "country"
+            },
+            {
+              "name": "country-name"
+            },
+            {
+              "name": "postal-code"
+            },
+            {
+              "name": "cc-name"
+            },
+            {
+              "name": "cc-given-name"
+            },
+            {
+              "name": "cc-additional-name"
+            },
+            {
+              "name": "cc-family-name"
+            },
+            {
+              "name": "cc-number"
+            },
+            {
+              "name": "cc-exp"
+            },
+            {
+              "name": "cc-exp-month"
+            },
+            {
+              "name": "cc-exp-year"
+            },
+            {
+              "name": "cc-csc"
+            },
+            {
+              "name": "cc-type"
+            },
+            {
+              "name": "transaction-currency"
+            },
+            {
+              "name": "transaction-amount"
+            },
+            {
+              "name": "language"
+            },
+            {
+              "name": "bday"
+            },
+            {
+              "name": "bday-day"
+            },
+            {
+              "name": "bday-month"
+            },
+            {
+              "name": "bday-year"
+            },
+            {
+              "name": "sex"
+            },
+            {
+              "name": "tel-country-code"
+            },
+            {
+              "name": "tel-national"
+            },
+            {
+              "name": "tel-area-code"
+            },
+            {
+              "name": "tel-local"
+            },
+            {
+              "name": "tel-extension"
+            },
+            {
+              "name": "impp"
+            },
+            {
+              "name": "photo"
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-skeleton",
+      "description": "Skeletons are used to provide a low fidelity representation of content\r\nbefore it appears in a view. This improves the perceived loading time\r\nfor our users.\n\nAttributes:\n\n  * `effect` {`\"none\" | \"pulse\" | \"sheen\"`} - Determines which animation effect the skeleton will use.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `effect` {`\"none\" | \"pulse\" | \"sheen\"`} - Determines which animation effect the skeleton will use.",
+      "attributes": [
+        {
+          "name": "effect",
+          "description": "`effect` {`\"none\" | \"pulse\" | \"sheen\"`} - Determines which animation effect the skeleton will use.\n\nProperty: effect\n\nDefault: none",
+          "values": [
+            {
+              "name": "none"
+            },
+            {
+              "name": "pulse"
+            },
+            {
+              "name": "sheen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-spinner",
+      "description": "Spinner component is used to indicate users that their action is being\r\nprocessed. You can customize the size and color of the spinner with the\r\nprovided properties.\n\nAttributes:\n\n  * `size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xs\"`} - The size of the spinner.\n\n  * `color` {`string | undefined`} - The color of the spinner.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `label` {`string | undefined`} - An accessible label for the spinner.\r\nIf no label is supplied, the spinner is hidden from assistive technology.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xs\"`} - The size of the spinner.\n\n  * `color` {`string | undefined`} - The color of the spinner.\r\nCan accept any valid CSS color value, including custom properties.\n\n  * `label` {`string | undefined`} - An accessible label for the spinner.\r\nIf no label is supplied, the spinner is hidden from assistive technology.",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"xs\"`} - The size of the spinner.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "xl"
+            },
+            {
+              "name": "xxl"
+            },
+            {
+              "name": "xs"
+            }
+          ]
+        },
+        {
+          "name": "color",
+          "description": "`color` {`string | undefined`} - The color of the spinner.\r\nCan accept any valid CSS color value, including custom properties.\n\nProperty: color",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string | undefined`} - An accessible label for the spinner.\r\nIf no label is supplied, the spinner is hidden from assistive technology.\n\nProperty: label",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "kabal-stack",
+      "description": "Stack component manages layout of immediate children along the\r\nvertical or horizontal axis with optional spacing between each child.\n\nSlots:\n\n  * ` ` {} - The stack content.\n\nAttributes:\n\n  * `gap` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"none\"`} - The space injected between components.\n\n  * `direction` {`\"vertical\" | \"horizontal\"`} - The direction of the stack.\n\n  * `align-items` {`\"start\" | \"end\" | \"center\" | \"stretch\" | undefined`} - How to align the child items inside the stack.\n\n  * `responsive` {`boolean`} - This property is deprecated and will be removed in a future version. We recommend using standard [CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) over this property. Please see the [updated usage example](/components/stack/?example=using+responsive+media+query).\n\n  * `wrap` {`boolean`} - Defines whether the Stack items are forced in a single line\r\nor can be flowed into multiple lines.\n\n  * `justify-content` {`\"start\" | \"end\" | \"center\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined`} - How to justify the child items inside the stack.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `gap` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"none\"`} - The space injected between components.\n\n  * `direction` {`\"vertical\" | \"horizontal\"`} - The direction of the stack.\n\n  * `alignItems` {`\"start\" | \"end\" | \"center\" | \"stretch\" | undefined`} - How to align the child items inside the stack.\n\n  * `responsive` {`boolean`} - This property is deprecated and will be removed in a future version. We recommend using standard [CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) over this property. Please see the [updated usage example](/components/stack/?example=using+responsive+media+query).\n\n  * `wrap` {`boolean`} - Defines whether the Stack items are forced in a single line\r\nor can be flowed into multiple lines.\n\n  * `justifyContent` {`\"start\" | \"end\" | \"center\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined`} - How to justify the child items inside the stack.",
+      "attributes": [
+        {
+          "name": "gap",
+          "description": "`gap` {`\"s\" | \"m\" | \"l\" | \"xl\" | \"xxl\" | \"none\"`} - The space injected between components.\n\nProperty: gap\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "xl"
+            },
+            {
+              "name": "xxl"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        },
+        {
+          "name": "direction",
+          "description": "`direction` {`\"vertical\" | \"horizontal\"`} - The direction of the stack.\n\nProperty: direction\n\nDefault: vertical",
+          "values": [
+            {
+              "name": "vertical"
+            },
+            {
+              "name": "horizontal"
+            }
+          ]
+        },
+        {
+          "name": "align-items",
+          "description": "`align-items` {`\"start\" | \"end\" | \"center\" | \"stretch\" | undefined`} - How to align the child items inside the stack.\n\nProperty: alignItems\n\nDefault: stretch",
+          "values": [
+            {
+              "name": "start"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "stretch"
+            }
+          ]
+        },
+        {
+          "name": "responsive",
+          "description": "`responsive` {`boolean`} - This property is deprecated and will be removed in a future version. We recommend using standard [CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) over this property. Please see the [updated usage example](/components/stack/?example=using+responsive+media+query).\n\nProperty: responsive\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "wrap",
+          "description": "`wrap` {`boolean`} - Defines whether the Stack items are forced in a single line\r\nor can be flowed into multiple lines.\n\nProperty: wrap\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "justify-content",
+          "description": "`justify-content` {`\"start\" | \"end\" | \"center\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined`} - How to justify the child items inside the stack.\n\nProperty: justifyContent",
+          "values": [
+            {
+              "name": "start"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "baseline"
+            },
+            {
+              "name": "space-between"
+            },
+            {
+              "name": "space-around"
+            },
+            {
+              "name": "space-evenly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "kabal-tab-group",
+      "description": "Tab Group allows multiple panels to be contained within a single window,\r\nusing tabs as a navigational element.\n\nSlots:\n\n  * ` ` {} - The element which contains the content to be revealed.\n\n  * `tab` {} - The element which contains all tabs to reveal tabbed content.\n\nAttributes:\n\n  * `label` {`string`} - Adds an accessible label to the tab list container.\n\n  * `padding` {`\"m\" | \"l\" | \"none\" | undefined`} - Controls the padding of the tab group component.\n\n  * `sticky` {`boolean`} - Whether the tab list sticks to the top of the tab group as you scroll.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `direction` - \n\n  * `observer` {`MutationObserver | undefined`} - \n\n  * `observerOptions` {`{ attributes: boolean; subtree: boolean; attributeFilter: string[]; attributeOldValue: boolean; }`} - \n\n  * `tabGroupId` {`string`} - Unique ID for each tab group component present.\n\n  * `label` {`string`} - Adds an accessible label to the tab list container.\n\n  * `padding` {`\"m\" | \"l\" | \"none\" | undefined`} - Controls the padding of the tab group component.\n\n  * `sticky` {`boolean`} - Whether the tab list sticks to the top of the tab group as you scroll.\n\n  * `selectedTab` {`Element | null`} - The current tab node selected in the tab group.\n\n  * `handleMutation` - If the selected tab is selected programmatically update all the tabs.\n\n  * `initialSelectedTab` {`Element | null`} - Get the selected tab button, or the first tab button.",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Adds an accessible label to the tab list container.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "padding",
+          "description": "`padding` {`\"m\" | \"l\" | \"none\" | undefined`} - Controls the padding of the tab group component.\n\nProperty: padding\n\nDefault: m",
+          "values": [
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        },
+        {
+          "name": "sticky",
+          "description": "`sticky` {`boolean`} - Whether the tab list sticks to the top of the tab group as you scroll.\n\nProperty: sticky\n\nDefault: false",
+          "valueSet": "v"
+        }
+      ]
+    },
+    {
+      "name": "kabal-tab-panel",
+      "description": "The panel which contains content that can be revealed using a tab\r\nin the tab group component.\n\nSlots:\n\n  * ` ` {} - The tab panel content.\n\nProperties:\n\n  * `styles` {`any[]`} - ",
+      "attributes": []
+    },
+    {
+      "name": "kabal-tab",
+      "description": "The interactive tab button for use within the tab group component.\n\nSlots:\n\n  * ` ` {} - The tab button content.\n\nAttributes:\n\n  * `selected` {`boolean`} - Whether the tab item is selected\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `defaultSlot` - \n\n  * `selected` {`boolean`} - Whether the tab item is selected",
+      "attributes": [
+        {
+          "name": "selected",
+          "description": "`selected` {`boolean`} - Whether the tab item is selected\n\nProperty: selected\n\nDefault: false",
+          "valueSet": "v"
+        }
+      ]
+    },
+    {
+      "name": "kabal-table",
+      "description": "Table is used to organize and display information from a data set.\r\nProvides table styles in addition to features like sticky\r\nheaders and support for narrow viewports.\n\nSlots:\n\n  * ` ` {} - Default slot which holds the HTML `<table>` element.\n\nAttributes:\n\n  * `density` {`\"default\" | \"condensed\" | \"relaxed\"`} - Controls the density of the table's rows and headers.\r\nRelaxed increases space, condensed reduces space.\n\n  * `scroll-snap` {`boolean`} - Enables scroll-snapping, meaning the scroll position is always column-aligned.\n\n  * `striped` {`boolean`} - Controls whether to use zebra striping on tables, which can improve readability.\n\nProperties:\n\n  * `density` {`\"default\" | \"condensed\" | \"relaxed\"`} - Controls the density of the table's rows and headers.\r\nRelaxed increases space, condensed reduces space.\n\n  * `scrollSnap` {`boolean`} - Enables scroll-snapping, meaning the scroll position is always column-aligned.\n\n  * `striped` {`boolean`} - Controls whether to use zebra striping on tables, which can improve readability.",
+      "attributes": [
+        {
+          "name": "density",
+          "description": "`density` {`\"default\" | \"condensed\" | \"relaxed\"`} - Controls the density of the table's rows and headers.\r\nRelaxed increases space, condensed reduces space.\n\nProperty: density\n\nDefault: default",
+          "values": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "condensed"
+            },
+            {
+              "name": "relaxed"
+            }
+          ]
+        },
+        {
+          "name": "scroll-snap",
+          "description": "`scroll-snap` {`boolean`} - Enables scroll-snapping, meaning the scroll position is always column-aligned.\n\nProperty: scrollSnap\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "striped",
+          "description": "`striped` {`boolean`} - Controls whether to use zebra striping on tables, which can improve readability.\n\nProperty: striped\n\nDefault: false",
+          "valueSet": "v"
+        }
+      ]
+    },
+    {
+      "name": "kabal-textarea",
+      "description": "Textarea is a component that allows user to write text over\r\nmultiple rows. Used when the expected user input is long.\r\nFor shorter input, use the Input component.\n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Optional slot that holds hint text for the textarea.\n\n  * `error` {} - Optional slot that holds error text for the textarea.\n\nAttributes:\n\n  * `resize` {`\"vertical\" | \"auto\"`} - Controls whether the textarea is resizable.\r\nBy default is manually resizable vertically.\r\nSet to \"auto\" to enable auto-resizing as content grows.\n\n  * `expand` {`boolean`} - Controls whether the textarea expands to fill the width of its container.\n\n  * `maxlength` {`number | undefined`} - Controls the max allowed length for the textarea.\n\n  * `character-counter` {`boolean`} - Controls whether to show a count of the number of characters in the textarea.\r\nWhen combined with `maxlength`, both the count and the max length are shown.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `lengthMeasurer` - \n\n  * `localize` - \n\n  * `resize` {`\"vertical\" | \"auto\"`} - Controls whether the textarea is resizable.\r\nBy default is manually resizable vertically.\r\nSet to \"auto\" to enable auto-resizing as content grows.\n\n  * `expand` {`boolean`} - Controls whether the textarea expands to fill the width of its container.\n\n  * `maxLength` {`number | undefined`} - Controls the max allowed length for the textarea.\n\n  * `characterCounter` {`boolean`} - Controls whether to show a count of the number of characters in the textarea.\r\nWhen combined with `maxlength`, both the count and the max length are shown.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `formData` - \n\n  * `formValue` {`string`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\n  * `readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "resize",
+          "description": "`resize` {`\"vertical\" | \"auto\"`} - Controls whether the textarea is resizable.\r\nBy default is manually resizable vertically.\r\nSet to \"auto\" to enable auto-resizing as content grows.\n\nProperty: resize\n\nDefault: vertical",
+          "values": [
+            {
+              "name": "vertical"
+            },
+            {
+              "name": "auto"
+            }
+          ]
+        },
+        {
+          "name": "expand",
+          "description": "`expand` {`boolean`} - Controls whether the textarea expands to fill the width of its container.\n\nProperty: expand\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "maxlength",
+          "description": "`maxlength` {`number | undefined`} - Controls the max allowed length for the textarea.\n\nProperty: maxLength",
+          "values": []
+        },
+        {
+          "name": "character-counter",
+          "description": "`character-counter` {`boolean`} - Controls whether to show a count of the number of characters in the textarea.\r\nWhen combined with `maxlength`, both the count and the max length are shown.\n\nProperty: characterCounter\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the component.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "autocomplete",
+          "description": "`autocomplete` {`AutocompleteAttribute`} - Specifies the data type of the field, so that the browser may attempt to fill out the field automatically on behalf of the user.\n\nProperty: autocomplete\n\nDefault: off",
+          "values": [
+            {
+              "name": "name"
+            },
+            {
+              "name": "on"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "off"
+            },
+            {
+              "name": "honorific-prefix"
+            },
+            {
+              "name": "given-name"
+            },
+            {
+              "name": "additional-name"
+            },
+            {
+              "name": "family-name"
+            },
+            {
+              "name": "honorific-suffix"
+            },
+            {
+              "name": "nickname"
+            },
+            {
+              "name": "username"
+            },
+            {
+              "name": "new-password"
+            },
+            {
+              "name": "current-password"
+            },
+            {
+              "name": "one-time-code"
+            },
+            {
+              "name": "organization-title"
+            },
+            {
+              "name": "organization"
+            },
+            {
+              "name": "street-address"
+            },
+            {
+              "name": "address-line1"
+            },
+            {
+              "name": "address-line2"
+            },
+            {
+              "name": "address-line3"
+            },
+            {
+              "name": "address-level4"
+            },
+            {
+              "name": "address-level3"
+            },
+            {
+              "name": "address-level2"
+            },
+            {
+              "name": "address-level1"
+            },
+            {
+              "name": "country"
+            },
+            {
+              "name": "country-name"
+            },
+            {
+              "name": "postal-code"
+            },
+            {
+              "name": "cc-name"
+            },
+            {
+              "name": "cc-given-name"
+            },
+            {
+              "name": "cc-additional-name"
+            },
+            {
+              "name": "cc-family-name"
+            },
+            {
+              "name": "cc-number"
+            },
+            {
+              "name": "cc-exp"
+            },
+            {
+              "name": "cc-exp-month"
+            },
+            {
+              "name": "cc-exp-year"
+            },
+            {
+              "name": "cc-csc"
+            },
+            {
+              "name": "cc-type"
+            },
+            {
+              "name": "transaction-currency"
+            },
+            {
+              "name": "transaction-amount"
+            },
+            {
+              "name": "language"
+            },
+            {
+              "name": "bday"
+            },
+            {
+              "name": "bday-day"
+            },
+            {
+              "name": "bday-month"
+            },
+            {
+              "name": "bday-year"
+            },
+            {
+              "name": "sex"
+            },
+            {
+              "name": "tel-country-code"
+            },
+            {
+              "name": "tel-national"
+            },
+            {
+              "name": "tel-area-code"
+            },
+            {
+              "name": "tel-local"
+            },
+            {
+              "name": "tel-extension"
+            },
+            {
+              "name": "impp"
+            },
+            {
+              "name": "photo"
+            }
+          ]
+        },
+        {
+          "name": "readonly",
+          "description": "`readonly` {`boolean`} - Makes the component readonly, so that it is not editable.\r\nReadonly differs from disabled in that readonly fields are still focusable and will be submitted with a form.\n\nProperty: readonly\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-toast-group",
+      "description": "Toast group is used to position and style a group of toasts, whilst ensuring they are announced by screen readers.\n\nSlots:\n\n  * ` ` {} - Default slot in which to place toasts.\n\nProperties:\n\n  * `styles` {`any[]`} - ",
+      "attributes": []
+    },
+    {
+      "name": "kabal-toast",
+      "description": "Toasts are non-disruptive messages that appear in the interface\r\nto provide quick, at-a-glance feedback on the outcome of an action.\n\nEvents:\n\n  * `dismiss` {} - Fired when the toast is dismissed (via user action or auto-dismiss), and its exit animation has completed. This event should be used to remove the dismissed toast from the DOM.\n\nSlots:\n\n  * ` ` {} - Default slot used for the toast text/message.\n\nAttributes:\n\n  * `variant` {`\"default\" | \"danger\"`} - The style variant of the toast.\n\n  * `auto-dismiss` {`number | undefined`} - Timeout in milliseconds before the toast is automatically dismissed.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `timeoutId` {`number | undefined`} - \n\n  * `events` - \n\n  * `toast` {`HTMLElement`} - \n\n  * `dismissed` {`boolean`} - \n\n  * `variant` {`\"default\" | \"danger\"`} - The style variant of the toast.\n\n  * `autoDismiss` {`number | undefined`} - Timeout in milliseconds before the toast is automatically dismissed.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "`variant` {`\"default\" | \"danger\"`} - The style variant of the toast.\n\nProperty: variant\n\nDefault: default",
+          "values": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "danger"
+            }
+          ]
+        },
+        {
+          "name": "auto-dismiss",
+          "description": "`auto-dismiss` {`number | undefined`} - Timeout in milliseconds before the toast is automatically dismissed.\n\nProperty: autoDismiss\n\nDefault: 10000",
+          "values": []
+        },
+        {
+          "name": "ondismiss",
+          "description": "`dismiss` {} - Fired when the toast is dismissed (via user action or auto-dismiss), and its exit animation has completed. This event should be used to remove the dismissed toast from the DOM."
+        }
+      ]
+    },
+    {
+      "name": "kabal-toggle",
+      "description": "Toggle switch gives control over a feature or option that can be\r\nturned on or off. If a physical switch would work for the action, a\r\ntoggle is probably the best component to use.\n\nSlots:\n\n  * `label` {} - Use when a label requires more than plain text.\n\n  * `hint` {} - Optional slot that holds hint text for the input.\n\n  * `error` {} - Optional slot that holds error text for the input.\n\nAttributes:\n\n  * `checked` {`boolean`} - Controls whether the toggle is checked or not.\n\n  * `reverse` {`boolean`} - Controls whether the contents are displayed in reverse order,\r\nputting the label before the toggle.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the toggle switch.\n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `checked` {`boolean`} - Controls whether the toggle is checked or not.\n\n  * `reverse` {`boolean`} - Controls whether the contents are displayed in reverse order,\r\nputting the label before the toggle.\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - The size of the toggle switch.\n\n  * `labelSlot` - \n\n  * `errorSlot` - \n\n  * `hintSlot` - \n\n  * `formData` - \n\n  * `formValue` {`string | undefined`} - \n\n  * `inputId` {`string`} - \n\n  * `errorId` {`string`} - \n\n  * `hintId` {`string`} - \n\n  * `label` {`string`} - Label for the input.\n\n  * `hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\n  * `hideLabel` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\n  * `placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\n  * `error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\n  * `required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\n  * `hideRequired` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\n  * `hasHint` {`boolean`} - \n\n  * `hasError` {`boolean`} - \n\n  * `disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\n  * `name` {`string | undefined`} - The name of the form component.\n\n  * `value` {`string`} - The value of the form component.\n\n  * `form` {`HTMLFormElement | null`} - Gets the form, if any, associated with the form element.\n\n  * `focusableRef` - ",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "`checked` {`boolean`} - Controls whether the toggle is checked or not.\n\nProperty: checked\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "reverse",
+          "description": "`reverse` {`boolean`} - Controls whether the contents are displayed in reverse order,\r\nputting the label before the toggle.\n\nProperty: reverse\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "size",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - The size of the toggle switch.\n\nProperty: size\n\nDefault: m",
+          "values": [
+            {
+              "name": "s"
+            },
+            {
+              "name": "m"
+            },
+            {
+              "name": "l"
+            }
+          ]
+        },
+        {
+          "name": "label",
+          "description": "`label` {`string`} - Label for the input.\n\nProperty: label\n\nDefault: "
+        },
+        {
+          "name": "hint",
+          "description": "`hint` {`string | undefined`} - Optional hint text to be displayed with the input. Alternatively use the hint slot.\n\nProperty: hint",
+          "values": []
+        },
+        {
+          "name": "hide-label",
+          "description": "`hide-label` {`boolean`} - Visually hide the label, but still show it to assistive technologies like screen readers.\n\nProperty: hideLabel\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "placeholder",
+          "description": "`placeholder` {`string | undefined`} - Placeholder text to display within the input.\n\nProperty: placeholder",
+          "values": []
+        },
+        {
+          "name": "error",
+          "description": "`error` {`string | undefined`} - Optional error to be shown with the input. Alternatively use the error slot.\n\nProperty: error",
+          "values": []
+        },
+        {
+          "name": "required",
+          "description": "`required` {`boolean`} - Determines whether the input is required or not.\r\nAn input marked as required will be announced as such to users of assistive technology.\r\nWhen using this property you need to also set “novalidate” attribute on a form element to prevent browser from displaying its own validation errors.\n\nProperty: required\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "hide-required",
+          "description": "`hide-required` {`boolean`} - Visually hide the required indicator, but still show\r\nrequired attribute to assistive technologies like screen readers.\n\nProperty: hideRequired\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "disabled",
+          "description": "`disabled` {`boolean`} - Makes the component disabled. This prevents users from\r\nbeing able to interact with the component, and conveys\r\nits inactive state to assistive technologies.\n\nProperty: disabled\n\nDefault: false",
+          "valueSet": "v"
+        },
+        {
+          "name": "name",
+          "description": "`name` {`string | undefined`} - The name of the form component.\n\nProperty: name",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "`value` {`string`} - The value of the form component.\n\nProperty: value\n\nDefault: "
+        }
+      ]
+    },
+    {
+      "name": "kabal-tooltip",
+      "description": "Tooltips are floating containers for displaying additional information\r\nfor the currently focused element. A tooltip can be useful when you want\r\nto e.g. give a hint about an existing Command Menu shortcut.\n\nSlots:\n\n  * ` ` {} - The tooltip content\n\n  * `shortcut` {} - Optional slot that holds shortcut keys to access the subject\n\nAttributes:\n\n  * `position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Control the position of the tooltip component.\r\nWhen set to \"none\", the tooltip will be shown above\r\nbut accommodate for browser boundaries.\n\n  * `role` {`string`} - The tooltip role, set on the component by default.\n\n  * `id` {`string`} - The id for the active element to reference via aria-describedby.\n\n  * `delay` {`number`} - The delay in milliseconds before the tooltip is opened.\n\nProperties:\n\n  * `styles` {`any[]`} - \n\n  * `lastOpened` - \n\n  * `shortcutSlot` - \n\n  * `events` - \n\n  * `currentElement` {`FocusableElement | undefined`} - \n\n  * `timeoutId` {`number | undefined`} - \n\n  * `proxy` {`HTMLSpanElement`} - the proxy element is for cases where the targetElement is a web component,\r\nand the WC has a focusable child in its shadow root e.g. a button component.\r\nin this case, when the tooltip is shown, we inject the proxy into targetElement's shadow root\r\nand wire up aria-describedby from the focusable element to the proxy.\r\nwhen the tooltip is hidden, we remove the proxy and remove the aria-describedby relationship.\n\n  * `state` {`\"hidden\" | \"waiting\" | \"visible\" | \"positioning\"`} - The current state of the tooltip, dependent on the state machine\n\n  * `coords` {`[number, number]`} - \n\n  * `position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Control the position of the tooltip component.\r\nWhen set to \"none\", the tooltip will be shown above\r\nbut accommodate for browser boundaries.\n\n  * `role` {`string`} - The tooltip role, set on the component by default.\n\n  * `id` {`string`} - The id for the active element to reference via aria-describedby.\n\n  * `delay` {`number`} - The delay in milliseconds before the tooltip is opened.\n\n  * `updatePosition` - Setting and updating the position of the tooltip\n\n  * `hideTooltip` - \n\n  * `reposition` - \n\n  * `handleShow` - \n\n  * `handleHide` - \n\n  * `hideOnEscape` - \n\n  * `addDescribedBy` - \n\n  * `removeDescribedBy` - ",
+      "attributes": [
+        {
+          "name": "position",
+          "description": "`position` {`\"block-end\" | \"block-start\" | \"inline-start\" | \"inline-end\"`} - Control the position of the tooltip component.\r\nWhen set to \"none\", the tooltip will be shown above\r\nbut accommodate for browser boundaries.\n\nProperty: position\n\nDefault: block-start",
+          "values": [
+            {
+              "name": "block-end"
+            },
+            {
+              "name": "block-start"
+            },
+            {
+              "name": "inline-start"
+            },
+            {
+              "name": "inline-end"
+            }
+          ]
+        },
+        {
+          "name": "role",
+          "description": "`role` {`string`} - The tooltip role, set on the component by default.\n\nProperty: role\n\nDefault: tooltip"
+        },
+        {
+          "name": "id",
+          "description": "`id` {`string`} - The id for the active element to reference via aria-describedby.\n\nProperty: id\n\nDefault: "
+        },
+        {
+          "name": "delay",
+          "description": "`delay` {`number`} - The delay in milliseconds before the tooltip is opened.\n\nProperty: delay\n\nDefault: 500"
+        }
+      ]
+    },
+    {
+      "name": "kabal-visually-hidden",
+      "description": "Visually hidden is used when an element needs to be available\r\nto assistive technologies like screen readers, but be otherwise\r\nhidden.\n\nSlots:\n\n  * ` ` {} - The visually hidden content.\n\nProperties:\n\n  * `styles` - ",
+      "attributes": []
+    }
+  ],
+  "globalAttributes": [],
+  "valueSets": []
+}

@@ -18,7 +18,7 @@ import style from "./DropdownItem.scss"
  * @slot start - Used to place content before dropdown item text. Typically used for icons.
  * @slot end - Used to place content after dropdown item text. Typically used for icons.
  */
-@customElement("nord-dropdown-item")
+@customElement("kabal-dropdown-item")
 export default class DropdownItem extends FocusableMixin(LitElement) {
   static styles = [componentStyle, style]
 
@@ -45,6 +45,6 @@ export default class DropdownItem extends FocusableMixin(LitElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-dropdown-item": DropdownItem
+    "kabal-dropdown-item": DropdownItem
   }
 }

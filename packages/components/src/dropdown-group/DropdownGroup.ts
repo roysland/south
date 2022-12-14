@@ -12,7 +12,7 @@ import style from "./DropdownGroup.scss"
  * @category action
  * @slot - The dropdown group content.
  */
-@customElement("nord-dropdown-group")
+@customElement("kabal-dropdown-group")
 export default class DropdownGroup extends LitElement {
   static styles = [componentStyle, style]
 
@@ -37,6 +37,6 @@ export default class DropdownGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-dropdown-group": DropdownGroup
+    "kabal-dropdown-group": DropdownGroup
   }
 }

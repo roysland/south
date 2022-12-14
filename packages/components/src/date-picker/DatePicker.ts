@@ -53,7 +53,7 @@ const isDateHighlighted = () => false
  * @status ready
  * @category form
  */
-@customElement("nord-date-picker")
+@customElement("kabal-date-picker")
 export default class DatePicker extends SizeMixin(
   FormAssociatedMixin(ReadonlyMixin(InputMixin(FocusableMixin(LitElement))))
 ) {
@@ -61,7 +61,7 @@ export default class DatePicker extends SizeMixin(
 
   @query(`.n-date-picker-toggle`, true) private toggleButton!: Button
   @query(`.n-date-picker-close-button`, true) private closeButton!: HTMLButtonElement
-  @query(`nord-calendar`, true) private calendar!: Calendar
+  @query(`kabal-calendar`, true) private calendar!: Calendar
   @query(`[role="dialog"]`, true) private popout!: Popout
 
   private swipe = new SwipeController(this, {
@@ -70,7 +70,7 @@ export default class DatePicker extends SizeMixin(
     onSwipeEnd: () => this.hide(),
   })
 
-  private localize = new LocalizeController<"nord-date-picker">(this, {
+  private localize = new LocalizeController<"kabal-date-picker">(this, {
     onLangChange: () => this.createDateFormatters(),
   })
 
@@ -174,7 +174,7 @@ export default class DatePicker extends SizeMixin(
     const formattedDate = valueAsDate ? this.dateAdapter.format(valueAsDate) : ""
 
     return html`
-      <nord-input
+      <kabal-input
         class="n-date-picker-input"
         value=${formattedDate}
         label=${ifDefined(this.label)}
@@ -198,7 +198,7 @@ export default class DatePicker extends SizeMixin(
       >
         ${!this.hintSlot.isEmpty ? html`<slot name="hint" slot="hint"></slot>` : nothing}
         ${!this.labelSlot.isEmpty ? html`<slot name="label" slot="label"></slot>` : nothing}
-        <nord-button
+        <kabal-button
           size=${this.size}
           ?disabled=${this.disabled || this.readonly}
           slot="end"
@@ -206,8 +206,8 @@ export default class DatePicker extends SizeMixin(
           aria-controls="popout"
           type="button"
         >
-          <nord-icon name="interface-calendar"></nord-icon>
-          <nord-visually-hidden>
+          <kabal-icon name="interface-calendar"></kabal-icon>
+          <kabal-visually-hidden>
             ${this.localize.term("buttonLabel")}
             ${valueAsDate
               ? html`
@@ -216,10 +216,10 @@ export default class DatePicker extends SizeMixin(
                   </span>
                 `
               : nothing}
-          </nord-visually-hidden>
-        </nord-button>
-      </nord-input>
-      <nord-popout
+          </kabal-visually-hidden>
+        </kabal-button>
+      </kabal-input>
+      <kabal-popout
         id="popout"
         anchor=${this.inputId}
         align="end"
@@ -233,21 +233,21 @@ export default class DatePicker extends SizeMixin(
       >
         <div aria-hidden="true" tabindex="0" @focus=${this.focusLast}></div>
 
-        <nord-stack class="n-date-picker-header" direction="horizontal" justify-content="space-between">
+        <kabal-stack class="n-date-picker-header" direction="horizontal" justify-content="space-between">
           <div class="n-date-picker-heading" id="header">${this.localize.term("modalHeading")}</div>
-          <nord-button
+          <kabal-button
             class="n-date-picker-close-button"
             type="button"
             size="s"
             variant="plain"
             @click=${this.handleClose}
           >
-            <nord-visually-hidden>${this.localize.term("closeLabel")}</nord-visually-hidden>
-            <nord-icon name="interface-close-small"></nord-icon>
-          </nord-button>
-        </nord-stack>
+            <kabal-visually-hidden>${this.localize.term("closeLabel")}</kabal-visually-hidden>
+            <kabal-icon name="interface-close-small"></kabal-icon>
+          </kabal-button>
+        </kabal-stack>
 
-        <nord-calendar
+        <kabal-calendar
           class="n-date-picker-calendar"
           expand
           value=${this.value}
@@ -257,10 +257,10 @@ export default class DatePicker extends SizeMixin(
           .isDateDisabled=${this.isDateDisabled}
           .isDateHighlighted=${this.isDateHighlighted}
           @change=${this.handleDaySelect}
-        ></nord-calendar>
+        ></kabal-calendar>
 
         <div aria-hidden="true" tabindex="0" @focus=${this.focusFirst}></div>
-      </nord-popout>
+      </kabal-popout>
     `
   }
 
@@ -337,6 +337,6 @@ export default class DatePicker extends SizeMixin(
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-date-picker": DatePicker
+    "kabal-date-picker": DatePicker
   }
 }

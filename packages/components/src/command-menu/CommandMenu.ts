@@ -41,13 +41,13 @@ Icon.registerIcon(backspaceIcon)
  * @slot footer - Used to replace the default footer contents.
  * @fires open - The command menu was opened.
  * @fires close - The command menu was closed.
- * @fires {SelectEvent} nord-select - User selected a command from the menu.
+ * @fires {SelectEvent} kabal-select - User selected a command from the menu.
  *
  * @cssprop [--n-command-menu-inline-size=640px] - Controls the max inline size, or width, of the command menu.
  * @cssprop [--n-command-menu-block-size=290px] - Controls the max block size, or height, of the command menu.
  * @cssprop [--n-command-menu-block-start=16%] - Controls the command menu offset from the block start, or top, of the screen.
  */
-@customElement("nord-command-menu")
+@customElement("kabal-command-menu")
 export default class CommandMenu extends LitElement {
   static styles = [componentStyle, style]
 
@@ -55,7 +55,7 @@ export default class CommandMenu extends LitElement {
   private listRef = createRef<HTMLElement>()
   private previousFocus?: HTMLElement
 
-  private localize = new LocalizeController<"nord-command-menu">(this)
+  private localize = new LocalizeController<"kabal-command-menu">(this)
   private dismissController = new LightDismissController(this, {
     isOpen: () => this.open,
     onDismiss: () => this.close(),
@@ -158,7 +158,7 @@ export default class CommandMenu extends LitElement {
           })}
         >
           <div class="n-search-wrapper">
-            <nord-visually-hidden id="instructions"> ${this.localize.term("instructions")} </nord-visually-hidden>
+            <kabal-visually-hidden id="instructions"> ${this.localize.term("instructions")} </kabal-visually-hidden>
             <input
               type="text"
               id="search"
@@ -191,16 +191,16 @@ export default class CommandMenu extends LitElement {
           <slot name="footer">
             <div class="n-modal-footer">
               <span class="n-help">
-                <nord-icon label="Arrow keys" name=${navigateIcon.title}></nord-icon>
+                <kabal-icon label="Arrow keys" name=${navigateIcon.title}></kabal-icon>
                 ${this.localize.term("footerArrowKeys")}
               </span>
               <span class="n-help">
-                <nord-icon label="Enter key" name=${enterIcon.title}></nord-icon>
+                <kabal-icon label="Enter key" name=${enterIcon.title}></kabal-icon>
                 ${this.localize.term("footerEnterKey")}
               </span>
               <span class="n-help">${this.localize.term("footerEscapeKey")}</span>
               <span class="n-help n-backspace">
-                <nord-icon label="Backspace key" name=${backspaceIcon.title}></nord-icon>
+                <kabal-icon label="Backspace key" name=${backspaceIcon.title}></kabal-icon>
                 ${this.localize.term("footerBackspaceKey")}
               </span>
             </div>
@@ -230,14 +230,14 @@ export default class CommandMenu extends LitElement {
           commands,
           command => command.id,
           command => html`
-            <nord-command-menu-action
+            <kabal-command-menu-action
               id=${command.id}
               .command=${command}
               ?selected=${this.open && command.id === this.selected?.id}
               @click=${() => this.select(command)}
               role="option"
               aria-selected=${cond(command.id === this.selected?.id, "true")}
-            ></nord-command-menu-action>
+            ></kabal-command-menu-action>
           `
         )}
       </div>
@@ -364,6 +364,6 @@ export default class CommandMenu extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-command-menu": CommandMenu
+    "kabal-command-menu": CommandMenu
   }
 }

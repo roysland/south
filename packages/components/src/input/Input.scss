@@ -41,20 +41,20 @@ slot[name=end] {
     --n-button-border-radius: 0 var(--n-border-radius-s) var(--n-border-radius-s) 0
 }
 
-:is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
-nord-icon {
+:is([name=start], [name=end])::slotted(:not(kabal-button, kabal-dropdown)),
+kabal-icon {
     margin-inline-start: var(--n-space-m);
     margin-inline-end: var(--n-space-m)
 }
 
-:host([size="s"]) :is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
-:host([size="s"]) nord-icon {
+:host([size="s"]) :is([name=start], [name=end])::slotted(:not(kabal-button, kabal-dropdown)),
+:host([size="s"]) kabal-icon {
     margin-inline-start: var(--n-space-s);
     margin-inline-end: var(--n-space-s)
 }
 
-:host([size="l"]) :is([name=start], [name=end])::slotted(:not(nord-button, nord-dropdown)),
-:host([size="l"]) nord-icon {
+:host([size="l"]) :is([name=start], [name=end])::slotted(:not(kabal-button, kabal-dropdown)),
+:host([size="l"]) kabal-icon {
     margin-inline-start: var(--n-space-m);
     margin-inline-end: var(--n-space-m)
 }
@@ -85,32 +85,32 @@ nord-icon {
     padding-inline-end: calc(var(--n-space-xl) * 1.1)
 }
 
-::slotted(nord-button:not([disabled])),
-::slotted(nord-dropdown) {
+::slotted(kabal-button:not([disabled])),
+::slotted(kabal-dropdown) {
     pointer-events: auto;
     position: relative;
     --n-button-box-shadow: none
 }
 
-::slotted(nord-button:active),
-::slotted(nord-dropdown:active:not([open])) {
+::slotted(kabal-button:active),
+::slotted(kabal-dropdown:active:not([open])) {
     inset-block-start: -1px
 }
 
-::slotted(nord-button[disabled]) {
+::slotted(kabal-button[disabled]) {
     --n-button-background-color: transparent
 }
 
-.n-input-container:hover:not(:focus-within) ::slotted(:is(nord-button, nord-dropdown)),
-.n-label-container:hover~.n-input-container:not(:focus-within) ::slotted(:is(nord-button, nord-dropdown)) {
+.n-input-container:hover:not(:focus-within) ::slotted(:is(kabal-button, kabal-dropdown)),
+.n-label-container:hover~.n-input-container:not(:focus-within) ::slotted(:is(kabal-button, kabal-dropdown)) {
     --n-button-border-color: var(--n-input-border-color, var(--n-color-border-hover))
 }
 
-.n-input-container:focus-within ::slotted(:is(nord-button, nord-dropdown:not([open]))) {
+.n-input-container:focus-within ::slotted(:is(kabal-button, kabal-dropdown:not([open]))) {
     --n-button-border-color: var(--n-input-border-color, var(--n-color-accent))
 }
 
-:host([error]) .n-input-container ::slotted(:is(nord-button:not(:focus), nord-dropdown:not(:focus-within), nord-dropdown[open])) {
+:host([error]) .n-input-container ::slotted(:is(kabal-button:not(:focus), kabal-dropdown:not(:focus-within), kabal-dropdown[open])) {
     --n-button-border-color: var(--n-input-border-color, var(--n-color-status-danger))
 }
 
@@ -138,7 +138,7 @@ nord-icon {
     padding-inline-end: calc(var(--n-space-l) * 2.5)
 }
 
-:host([size="s"]) ::slotted(nord-button) {
+:host([size="s"]) ::slotted(kabal-button) {
     --_n-button-padding-inline: calc(var(--n-space-s) * 1.4)
 }
 
@@ -154,7 +154,7 @@ nord-icon {
     --_n-input-icon-size: var(--n-size-icon-m)
 }
 
-::slotted(nord-icon:not([size])),
-nord-icon {
+::slotted(kabal-icon:not([size])),
+kabal-icon {
     --_n-icon-size: var(--_n-input-icon-size)
 }

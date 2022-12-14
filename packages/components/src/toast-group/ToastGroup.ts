@@ -14,7 +14,7 @@ type ToastOptions = Partial<Pick<Toast, "variant" | "autoDismiss">>
  * @category feedback
  * @slot - Default slot in which to place toasts.
  */
-@customElement("nord-toast-group")
+@customElement("kabal-toast-group")
 export default class ToastGroup extends LitElement {
   static styles = [componentStyle, style]
 
@@ -34,7 +34,7 @@ export default class ToastGroup extends LitElement {
    */
   addToast(text: string, options: ToastOptions = {}) {
     const { variant, autoDismiss } = options
-    const toast = document.createElement("nord-toast")
+    const toast = document.createElement("kabal-toast")
 
     if (variant) {
       toast.variant = variant
@@ -53,6 +53,6 @@ export default class ToastGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "nord-toast-group": ToastGroup
+    "kabal-toast-group": ToastGroup
   }
 }
